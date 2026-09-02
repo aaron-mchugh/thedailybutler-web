@@ -1,0 +1,13 @@
+# QA screenshots / throwaway
+qa/
+*.log
+.DS_Store
+
+# The generated site (index.html, css/, js/, episode/, reader/, sitemap.xml,
+# robots.txt, 404.html) is COMMITTED on purpose — Vercel deploys the static files
+# straight from the repo. Do not gitignore the HTML.
+#
+# Keep only these out of version control:
+__pycache__/
+*.pyc
+build/__pycache__/
