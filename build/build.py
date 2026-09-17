@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """The Daily Butler — static site generator.
 
-Reads (from the daily-saints project + the Butler corpus):
-  - ~/AI/daily-saints/episodes/<date>/podcast.json   (episode metadata)
-  - ~/AI/daily-saints/registry/<date>_storyboard.json (hero art = first shot)
-  - ~/AI/daily-saints/assets/branding/                (logo/cover)
-  - ~/books/butler-saints/butler-complete.md           (the source text)
+Reads (from the primary the-daily-butler project + the Butler corpus):
+  - ~/AI/the-daily-butler/episodes/<date>--<slug>/episode.json
+  - .../06-publish/podcast.json (historical published episodes)
+  - .../06-publish/podcast-receipt.json (native published episodes)
+  - .../06-publish/storyboard.json or 04-video/drafts/storyboard.json
+  - ~/books/butler-saints/butler-complete.md (the source text)
 
 Generates the full static site into the repo ROOT (committed so Vercel deploys):
   index.html, archive/, about/, episode/<date>/, reader/<MM-DD>/, css/, js/,
@@ -19,11 +20,15 @@ Run:
   python3 build/build.py                  # local build, no R2 upload
   python3 build/build.py --upload-art     # also push new hero art to R2 (public)
 """
-import os, re, sys, json, datetime, html, hashlib, urllib.parse, urllib.request
+import os, re, sys, json, datetime, html, hashlib, subprocess, urllib.parse, urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # repo root (output dir)
-SAINTS = os.path.expanduser("~/AI/daily-saints")
-CORPUS = os.path.expanduser("~/books/butler-saints/butler-complete.md")
+DAILY_BUTLER = os.path.abspath(os.path.expanduser(
+    os.environ.get("DAILY_BUTLER_REPO", "~/AI/the-daily-butler")
+))
+CORPUS = os.path.abspath(os.path.expanduser(
+    os.environ.get("BUTLER_CORPUS", "~/books/butler-saints/butler-complete.md")
+))
 UPLOAD_ART = "--upload-art" in sys.argv
 
 R2_HOST = "feed.thedailybutler.com"
@@ -115,54 +120,137 @@ def parse_corpus():
 
 
 # ---------------------------------------------------------------- episodes
-def hero_art(date_str):
-    """Hero = first shot of the storyboard. Returns (local_path, r2_key) or None."""
-    sb_path = os.path.join(SAINTS, "registry", f"{date_str}_storyboard.json")
-    if not os.path.exists(sb_path):
-        return None
+def read_json(path, default=None):
     try:
-        sb = json.load(open(sb_path))
-        shots = sb.get("shots") or []
-        if not shots:
-            return None
-        asset = shots[0]["asset"]          # e.g. assets/saints/st_giles_abbot/st_giles_*.jpg
-        local = os.path.join(SAINTS, asset)
-        if not os.path.exists(local):
-            return None
-        return local, f"art/{date_str}.jpg"
-    except Exception:
+        with open(path, encoding="utf-8") as fh:
+            return json.load(fh)
+    except (OSError, json.JSONDecodeError):
+        return default
+
+
+def _existing_episode_file(episode_dir, value):
+    """Resolve an episode-relative path without allowing it to escape the repo."""
+    if not value:
         return None
+    candidate = os.path.realpath(os.path.join(episode_dir, str(value)))
+    project = os.path.realpath(DAILY_BUTLER)
+    if candidate != project and not candidate.startswith(project + os.sep):
+        return None
+    return candidate if os.path.isfile(candidate) else None
+
+
+def _imported_asset(episode_dir, storyboard_asset):
+    """Map an imported legacy storyboard path to its new immutable destination."""
+    manifest = read_json(os.path.join(episode_dir, "06-publish", "import-manifest.json"), {})
+    wanted = str(storyboard_asset or "").replace("\\", "/")
+    wanted_name = os.path.basename(wanted)
+    for record in manifest.get("files", []):
+        source = str(record.get("source") or "").replace("\\", "/")
+        if source == wanted or source.endswith("/" + wanted) or os.path.basename(source) == wanted_name:
+            resolved = _existing_episode_file(episode_dir, record.get("destination"))
+            if resolved:
+                return resolved
+    return None
+
+
+def _indexed_asset(episode_dir, asset_id=None, asset_path=None):
+    index = read_json(os.path.join(episode_dir, "02-images", "index.json"), {})
+    wanted_name = os.path.basename(str(asset_path or ""))
+    approved_fallback = None
+    for record in index.get("assets", []):
+        if record.get("status") != "approved":
+            continue
+        resolved = _existing_episode_file(episode_dir, record.get("file"))
+        if not resolved:
+            continue
+        if approved_fallback is None:
+            approved_fallback = resolved
+        if asset_id and asset_id in (record.get("id"), record.get("sha256")):
+            return resolved
+        if wanted_name and os.path.basename(str(record.get("file") or "")) == wanted_name:
+            return resolved
+    return approved_fallback
+
+
+def hero_art(episode_dir, date_str):
+    """Return the first approved storyboard image and its stable R2 object key."""
+    storyboard = None
+    for relative in (
+        os.path.join("06-publish", "storyboard.json"),
+        os.path.join("04-video", "drafts", "storyboard.json"),
+    ):
+        storyboard = read_json(os.path.join(episode_dir, relative))
+        if storyboard:
+            break
+
+    first = ((storyboard or {}).get("shots") or [{}])[0]
+    asset_path = first.get("source_path") or first.get("asset")
+    local = _existing_episode_file(episode_dir, asset_path)
+    if not local and asset_path:
+        local = _existing_episode_file(DAILY_BUTLER, asset_path)
+    if not local and asset_path:
+        local = _imported_asset(episode_dir, asset_path)
+    if not local:
+        local = _indexed_asset(episode_dir, first.get("asset_id"), asset_path)
+    if not local:
+        return None
+    return local, f"art/{date_str}.jpg"
+
+
+def _published_item(episode_dir):
+    """Load the canonical public podcast item for native or imported episodes."""
+    receipt = read_json(os.path.join(episode_dir, "06-publish", "podcast-receipt.json"), {})
+    item = receipt.get("item") if isinstance(receipt, dict) else None
+    if isinstance(item, dict):
+        return item, receipt
+    historical = read_json(os.path.join(episode_dir, "06-publish", "podcast.json"))
+    if isinstance(historical, dict):
+        return historical, {}
+    return None, {}
 
 
 def load_episodes():
     eps = []
-    ep_root = os.path.join(SAINTS, "episodes")
+    ep_root = os.path.join(DAILY_BUTLER, "episodes")
     if not os.path.isdir(ep_root):
         return eps
     for d in sorted(os.listdir(ep_root)):
-        pj = os.path.join(ep_root, d, "podcast.json")
-        if not os.path.isfile(pj):
+        if not re.match(r"^\d{4}-\d{2}-\d{2}(?:--.+)?$", d):
             continue
+        episode_dir = os.path.join(ep_root, d)
+        if not os.path.isdir(episode_dir):
+            continue
+        metadata = read_json(os.path.join(episode_dir, "episode.json"), {})
+        item, receipt = _published_item(episode_dir)
+        if not item or metadata.get("hold") is True or item.get("hold") is True:
+            continue
+        date = item.get("date") or metadata.get("date") or d[:10]
         try:
-            j = json.load(open(pj))
-        except Exception:
+            dt = datetime.date.fromisoformat(date)
+        except (TypeError, ValueError):
             continue
-        date = j.get("date") or d
-        dt = datetime.date.fromisoformat(date)
-        ha = hero_art(date)
+        ha = hero_art(episode_dir, date)
+        channels = metadata.get("channels") or {}
+        podcast_channel = channels.get("podcast") or {}
+        youtube_channel = channels.get("youtube") or {}
+        video_id = item.get("video_id") or youtube_channel.get("video_id")
+        mp3_url = receipt.get("audio_url") or podcast_channel.get("audio_url")
+        saints = item.get("saints") or []
+        if not saints and metadata.get("saint"):
+            saints = [metadata["saint"]]
         eps.append({
             "date": date,
             "mmdd": f"{dt.month:02d}-{dt.day:02d}",
             "month_num": dt.month,
-            "title": j.get("title", date),
-            "saints": j.get("saints", []),
-            "video_id": j.get("video_id"),
-            "mp3_url": f"https://{R2_HOST}/mp3/{date}.mp3",
+            "title": item.get("title") or metadata.get("title") or date,
+            "saints": saints,
+            "video_id": video_id,
+            "mp3_url": mp3_url or f"https://{R2_HOST}/mp3/{date}.mp3",
             "art_url": (f"https://{R2_HOST}/{ha[1]}" if ha else None),
             "art_local": (ha[0] if ha else None),
-            "description": j.get("description", ""),
-            "pub_date": j.get("pub_date", ""),
-            "duration_s": j.get("duration_s", 0),
+            "description": item.get("description", ""),
+            "pub_date": item.get("pub_date") or receipt.get("verified_at", ""),
+            "duration_s": item.get("duration_s", 0),
         })
     eps.sort(key=lambda x: x["date"])
     return eps
@@ -309,7 +397,7 @@ def render_home(eps, days):
     today = datetime.date.today()
     today_mmdd = f"{today.month:02d}-{today.day:02d}"
     latest = eps[-1] if eps else None
-    recent = list(reversed(eps[:6]))
+    recent = list(reversed(eps[-6:]))
 
     # latest "listen now"
     if latest:
@@ -411,6 +499,8 @@ def render_episode(ep, eps, day_lookup):
     video = (f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{ep["video_id"]}" '
              f'title="{e(ep["title"])}" allow="accelerated playback; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" '
              f'allowfullscreen loading="lazy"></iframe></div>') if ep["video_id"] else ""
+    youtube_cta = (f'<a class="btn ghost" href="https://youtu.be/{ep["video_id"]}" '
+                   f'style="margin-left:8px">Watch on YouTube</a>') if ep["video_id"] else ""
 
     notes = e(ep["description"]) if ep["description"] else ""
 
@@ -447,7 +537,7 @@ def render_episode(ep, eps, day_lookup):
     <div class="notes">{notes}</div>
     <p style="margin-top:22px">
       <a class="btn" href="/reader/{ep['mmdd']}/">Read the full text →</a>
-      <a class="btn ghost" href="https://youtu.be/{ep['video_id']}" style="margin-left:8px">Watch on YouTube</a>
+      {youtube_cta}
     </p>
     <div class="nav-ep">
       {nav_link(prev, 'prev')}
@@ -670,40 +760,81 @@ Sitemap: https://{SITE}/sitemap.xml
 
 # ---------------------------------------------------------------- R2 art upload
 def upload_art_to_r2(eps):
-    creds = {}
-    env_file = os.path.join(SAINTS, ".env")
-    if os.path.exists(env_file):
-        for line in open(env_file):
-            line = line.strip()
-            if line and not line.startswith("#") and "=" in line:
-                k, v = line.split("=", 1)
-                creds[k.strip()] = v.strip()
-    missing = [k for k in ("R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY")
-               if not creds.get(k)]
-    if missing:
-        print("  R2 art upload skipped — missing", missing)
-        return
-    import boto3
-    acct = creds["R2_ACCOUNT_ID"]
+    creds = dict(os.environ)
+    for env_file in (
+        os.path.expanduser("~/.config/the-daily-butler/runtime.env"),
+        os.path.join(DAILY_BUTLER, ".env"),
+    ):
+        if not os.path.exists(env_file):
+            continue
+        with open(env_file, encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if line and not line.startswith("#") and "=" in line:
+                    key, value = line.split("=", 1)
+                    creds.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+    required = ("R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY")
+    use_s3 = all(creds.get(key) for key in required)
     bucket = creds.get("R2_BUCKET", "thedailybutler")
-    s3 = boto3.client("s3", endpoint_url=f"https://{acct}.r2.cloudflarestorage.com",
-                      aws_access_key_id=creds["R2_ACCESS_KEY_ID"],
-                      aws_secret_access_key=creds["R2_SECRET_ACCESS_KEY"],
-                      region_name="auto")
+    s3 = None
+    if use_s3:
+        try:
+            import boto3
+        except ImportError as exc:
+            raise RuntimeError("boto3 is required for environment-based R2 uploads") from exc
+        acct = creds["R2_ACCOUNT_ID"]
+        s3 = boto3.client("s3", endpoint_url=f"https://{acct}.r2.cloudflarestorage.com",
+                          aws_access_key_id=creds["R2_ACCESS_KEY_ID"],
+                          aws_secret_access_key=creds["R2_SECRET_ACCESS_KEY"],
+                          region_name="auto")
+    else:
+        try:
+            auth = subprocess.run(
+                ["npx", "--yes", "wrangler", "whoami"],
+                check=True, capture_output=True, text=True,
+            )
+            if "not authenticated" in (auth.stdout + auth.stderr).lower():
+                raise RuntimeError("Wrangler is not authenticated")
+        except (FileNotFoundError, subprocess.CalledProcessError) as exc:
+            missing = [key for key in required if not creds.get(key)]
+            raise RuntimeError(
+                "R2 upload needs either `npx wrangler login` or these environment "
+                f"variables: {', '.join(missing)}"
+            ) from exc
+        except RuntimeError as exc:
+            missing = [key for key in required if not creds.get(key)]
+            raise RuntimeError(
+                "R2 upload needs either `npx wrangler login` or these environment "
+                f"variables: {', '.join(missing)}"
+            ) from exc
+
     for ep in eps:
         if not ep["art_local"]:
             continue
-        key = ep["art_url"].split("/")[-1]  # art/<date>.jpg
         key = f"art/{ep['date']}.jpg"
         size = os.path.getsize(ep["art_local"])
-        try:
-            if s3.head_object(Bucket=bucket, Key=key)["ContentLength"] == size:
-                print(f"  = art/{ep['date']}.jpg (already uploaded)")
-                continue
-        except Exception:
-            pass
-        s3.upload_file(ep["art_local"], bucket, key, ExtraArgs={"ContentType": "image/jpeg",
-                                                                "CacheControl": "public, max-age=604800, immutable"})
+        ext = os.path.splitext(ep["art_local"])[1].lower()
+        content_type = "image/png" if ext == ".png" else "image/jpeg"
+        if s3:
+            try:
+                if s3.head_object(Bucket=bucket, Key=key)["ContentLength"] == size:
+                    print(f"  = {key} (already uploaded)")
+                    continue
+            except Exception:
+                pass
+            s3.upload_file(ep["art_local"], bucket, key, ExtraArgs={
+                "ContentType": content_type,
+                "CacheControl": "public, max-age=604800, immutable",
+            })
+        else:
+            subprocess.run([
+                "npx", "--yes", "wrangler", "r2", "object", "put",
+                f"{bucket}/{key}", "--file", ep["art_local"],
+                "--content-type", content_type,
+                "--cache-control", "public, max-age=604800, immutable",
+                "--remote", "--force",
+            ], check=True)
         print(f"  + art/{ep['date']}.jpg")
 
 

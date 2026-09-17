@@ -11,3 +11,6 @@ qa/
 __pycache__/
 *.pyc
 build/__pycache__/
+.wrangler/
+.vercel
+.env*
