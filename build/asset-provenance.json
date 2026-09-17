@@ -12,6 +12,12 @@
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
+    "asset": "channel-logo-purple.webp",
+    "source": "/home/aaron/AI/the-daily-butler/assets/brand/logo.png",
+    "sha256": "bfd310bfada1c09f84b33f422b19af059d5361d127ec6afd024c7537f1c4848c",
+    "provenance": "Canonical channel logo with its original purple background, used in the footer."
+  },
+  {
     "asset": "channel-logo.webp",
     "source": "/home/aaron/AI/the-daily-butler-web/build/brand/channel-logo.webp",
     "sha256": "36e4543fc6653790a71b3c381a0cea6fd34fd75a0d1dde99e18c16af41e958e3",

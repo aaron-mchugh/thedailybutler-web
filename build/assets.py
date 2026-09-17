@@ -27,6 +27,8 @@ def prepare_assets(root, project, episodes):
     image(project / "assets/brand/banner.png", "channel-banner", 1920,
           "Aaron-selected Butler Library banner, qa-v4, 17 September 2026.")
     image(project / "assets/brand/podcast-cover-1400.jpg", "podcast-cover", 640)
+    image(project / "assets/brand/logo.png", "channel-logo-purple", 240,
+          "Canonical channel logo with its original purple background, used in the footer.")
     # A retained derivative of the exact transparent mark used in the banner.
     # No ongoing dependency on the read-only legacy production repository.
     mark = root / "build/brand/channel-logo.webp"

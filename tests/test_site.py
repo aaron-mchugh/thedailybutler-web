@@ -20,6 +20,20 @@ class Links(HTMLParser):
 
 
 class PublishedSiteTests(unittest.TestCase):
+    def test_public_contact_and_about_copy(self):
+        page = (ROOT / 'about/index.html').read_text()
+        self.assertIn('mailto:info@thedailybutler.com', page)
+        self.assertNotIn('@gmail.com', page)
+        self.assertNotIn('Ron Gelinas', page)
+        self.assertNotIn('Satisfied (Original Mix)', page)
+
+    def test_footer_uses_purple_logo(self):
+        for page in (ROOT / 'index.html', ROOT / 'about/index.html',
+                     ROOT / 'reader/01-01/index.html'):
+            footer = page.read_text().split('<footer class="site-footer">', 1)[1]
+            self.assertIn('/assets/channel-logo-purple.webp', footer)
+            self.assertNotIn('/assets/channel-logo.webp', footer)
+
     def test_internal_destinations_exist(self):
         files = [ROOT / 'index.html', ROOT / '404.html']
         for folder in ('about', 'subscribe', 'archive', 'reader', 'episode'):
