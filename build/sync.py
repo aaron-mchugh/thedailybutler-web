@@ -145,8 +145,8 @@ def sync(root, production, *, check=False, episode=None, timeout=300):
         result['pushed'] = bool(paths)
         # Only fast-forward our local checkout. Never reset, stash or overwrite user edits.
         if not git(root, 'status', '--porcelain') and git(root, 'rev-parse', 'HEAD') == head:
-            git(root, 'fetch', str(stage), 'HEAD')
-            git(root, 'merge', '--ff-only', 'FETCH_HEAD')
+            git(root, 'fetch', remote, 'refs/heads/main:refs/remotes/origin/main')
+            git(root, 'merge', '--ff-only', result['commit'])
         else:
             result['local_checkout_note'] = 'Concurrent local edits preserved; fast-forward main before next sync'
         print('Verifying the live Vercel website…', file=sys.stderr, flush=True)

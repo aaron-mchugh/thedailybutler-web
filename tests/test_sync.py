@@ -56,6 +56,7 @@ class SyncTests(unittest.TestCase):
         self.assertTrue(result['pushed'])
         self.assertNotEqual(self.remote_head(), self.initial)
         self.assertEqual(self.remote_head(), sync.git(self.repo, 'rev-parse', 'HEAD'))
+        self.assertEqual(self.remote_head(), sync.git(self.repo, 'rev-parse', 'origin/main'))
         self.assertEqual(sync.git(self.repo, 'status', '--porcelain'), '')
         again = sync.sync(self.repo, self.production)
         self.assertFalse(again['pushed'])
