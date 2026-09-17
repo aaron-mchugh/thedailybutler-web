@@ -10,9 +10,9 @@
       ]
     },
     {
-      "source": "/dist/(.*\\.(?:css|js|png|jpg|jpeg|webp|svg|ico|woff2?))",
+      "source": "/(assets|css|js)/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=604800, immutable" }
+        { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
     }
   ],

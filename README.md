@@ -12,15 +12,20 @@ static HTML; **Vercel deploys them straight from this repo** — no build step o
 
 ```
 build/build.py        the generator (run locally; see below)
+build/presentation.py editorial page templates
+build/assets.py       local WebP derivatives of existing channel artwork
+build/asset-provenance.json  image provenance and attribution ledger
 build/css/site.css    source CSS (copied to /css/ by the build)
-build/js/site.js      source JS (newsletter form, archive search) → /js/
+build/js/site.js      audio, video, archive search, navigation, reader controls → /js/
 api/subscribe.js      Vercel serverless function: POST /api/subscribe → Resend
 vercel.json           static rewrites + cache headers + function config
 css/ js/              generated (committed)
 index.html            home
 archive/index.html    searchable episode archive
 about/index.html      about
-subscribe/index.html  newsletter page
+subscribe/index.html  podcast / YouTube follow page
+assets/              optimized channel art, thumbnails, self-hosted fonts + licenses
+reader/index.html    complete twelve-month reading calendar
 episode/<date>/index.html   per-episode (video + audio + notes + read link)
 reader/<MM-DD>/index.html   online reader (year-independent; 366 pages)
 sitemap.xml robots.txt 404.html
@@ -44,6 +49,7 @@ included. Override the default local paths with `DAILY_BUTLER_REPO` and
 
 ```bash
 # from this repo root
+python3 -m pip install -r build/requirements.txt
 python3 build/build.py                # generate the site into ./ (committed)
 python3 build/build.py --upload-art   # also push new hero art to R2 (public)
 git add -A && git commit -m "site: <date>" && git push
@@ -53,10 +59,19 @@ git add -A && git commit -m "site: <date>" && git push
 Run this after the podcast R2 sync so the website only sees the final publication
 receipt and public media URLs.
 
-### Hero art on R2
+### Website artwork and optional R2 export
+The build generates local WebP images from the approved channel banner, published
+thumbnails, and existing episode artwork. Native episodes use the explicitly
+approved-and-published thumbnail candidate; imported episodes use their final
+thumbnail, supporting PNG and JPEG. The canonical transparent logo derivative is
+retained in `build/brand/`, so no legacy checkout is needed to build this site.
+
+Original provenance is retained in `build/asset-provenance.json`. Responsive
+480px/960px thumbnails and self-hosted WOFF2 fonts keep the pages lightweight.
+
 Episode artwork is uploaded to `feed.thedailybutler.com/art/<date>.jpg`
-(public) by `--upload-art`. Run that option for newly published episodes before
-deploying pages that reference their art URL.
+(public) by the optional `--upload-art` export. The redesigned website uses local
+assets, so this export is no longer required for website image delivery.
 
 For an operator-run upload, authenticate once with `npx wrangler login`; no R2
 secret is written to this repository. Unattended runs can instead provide
@@ -71,8 +86,11 @@ secret is written to this repository. Unattended runs can instead provide
 | `RESEND_API_KEY` | your Resend API key |
 | `RESEND_AUDIENCE_ID` | `9fda8618-5b83-4763-8ee1-4620bad0cf7c` (audience "thedailybutler") |
 
-`/api/subscribe` adds the submitted email to that audience (422 = already
-subscribed, treated as success). Fails closed if the vars are missing.
+The legacy `/api/subscribe` function remains in the repo, but is not exposed in
+the redesigned interface while newsletter credentials/delivery are unfinished.
+`/subscribe/` now offers working follow links. Apple and Spotify currently link
+to platform search; replace the URLs in `build/build.py` when exact show URLs are
+confirmed. No signup is required to read or listen on the site.
 
 ## Domain
 
@@ -81,7 +99,29 @@ Vercel shows after the domain is attached.
 
 ## Design
 
-Synthwave identity (matches the video brand): dark violet→magenta gradient,
-chrome BUTLER wordmark, striped-sun motif, neon-pink accents. The **reader pane**
-is the deliberate contrast: warm serif on parchment, framed by the synthwave
-chrome, so the 1894 text reads like a book.
+The approved Butler Library banner sets the direction: deep ink, antique gold,
+warm paper, and Cormorant Garamond editorial headings. The exact channel logo and
+published thumbnails retain their identity; the website uses restrained rules,
+spacing, and typography instead of neon effects or synthetic metallic text.
+
+The reading room includes every date, with the complete source text preserved.
+Today's links follow the visitor's local date. Text size is adjustable and stored
+locally. Native audio and mobile navigation remain available without JavaScript;
+YouTube embeds load only on request. Original episode notes and music credits
+are retained. All existing episode and reader URLs are preserved.
+
+## Verification
+
+```bash
+python3 -m unittest discover -s tests -v
+python3 -m http.server 4173 --bind 127.0.0.1
+# With Playwright installed (or PLAYWRIGHT_MODULE pointing to an installation):
+node tests/browser.cjs
+```
+
+The Python checks cover publication/hold filtering, all internal link targets,
+and preservation of every original reader paragraph and reflection. Browser
+checks cover ten page types at 1440, 768, 390, and 320px; keyboard/mobile navigation;
+search and empty states; leap-day navigation; text-size persistence; real audio
+playback, seeking and speed; click-to-load video; and no-JavaScript fallbacks.
+Screenshots are written to the ignored `qa/` directory.

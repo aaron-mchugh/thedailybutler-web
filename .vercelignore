@@ -1,0 +1,8 @@
+.env*
+.git/
+.wrangler/
+qa/
+build/
+tests/
+README.md
+__pycache__/
