@@ -202,10 +202,11 @@ def _published_item(episode_dir):
     """Load the canonical public podcast item for native or imported episodes."""
     receipt = read_json(os.path.join(episode_dir, "06-publish", "podcast-receipt.json"), {})
     item = receipt.get("item") if isinstance(receipt, dict) else None
-    if isinstance(item, dict):
+    if isinstance(item, dict) and receipt.get("verified_at") and receipt.get("audio_url"):
         return item, receipt
     historical = read_json(os.path.join(episode_dir, "06-publish", "podcast.json"))
-    if isinstance(historical, dict):
+    metadata = read_json(os.path.join(episode_dir, "episode.json"), {})
+    if isinstance(historical, dict) and metadata.get("status") == "historical_published":
         return historical, {}
     return None, {}
 
@@ -214,7 +215,7 @@ def load_episodes():
     eps = []
     ep_root = os.path.join(DAILY_BUTLER, "episodes")
     if not os.path.isdir(ep_root):
-        return eps
+        raise RuntimeError(f"Production episode directory is missing: {ep_root}")
     for d in sorted(os.listdir(ep_root)):
         if not re.match(r"^\d{4}-\d{2}-\d{2}(?:--.+)?$", d):
             continue
@@ -223,7 +224,7 @@ def load_episodes():
             continue
         metadata = read_json(os.path.join(episode_dir, "episode.json"), {})
         item, receipt = _published_item(episode_dir)
-        if not item or metadata.get("hold") is True or item.get("hold") is True:
+        if not item or metadata.get("hold") is not False or item.get("hold") is True:
             continue
         date = item.get("date") or metadata.get("date") or d[:10]
         try:
@@ -361,11 +362,26 @@ def upload_art_to_r2(eps):
 
 
 # ---------------------------------------------------------------- main
+def prune_episode_outputs(root, live_dates):
+    """Remove only generated pages/art belonging to withdrawn episode dates."""
+    from pathlib import Path
+    root = Path(root)
+    for page in (root / 'episode').glob('*/index.html'):
+        if re.fullmatch(r'\d{4}-\d{2}-\d{2}', page.parent.name) and page.parent.name not in live_dates:
+            page.unlink()
+    for asset in (root / 'assets').glob('*.webp'):
+        match = re.fullmatch(r'(?:episode|art)-(\d{4}-\d{2}-\d{2})(?:-small)?\.webp', asset.name)
+        if match and match[1] not in live_dates:
+            asset.unlink()
+
+
 def main():
     from assets import prepare_assets
     from presentation import Site
     print("Parsing corpus…")
     days = parse_corpus()
+    if len(days) != 366:
+        raise RuntimeError("Refusing to build without the complete 366-day corpus")
     print(f"  {len(days)} day-sections")
 
     print("Loading episodes…")
@@ -406,6 +422,23 @@ def main():
 
     for d in days:
         write(f"reader/{d['mmdd']}/index.html", site.reader(d))
+
+    # Remove only generated episode pages/art for withdrawn or newly held episodes.
+    # Never recursively delete directories or touch production media.
+    from pathlib import Path
+    live_dates = {ep['date'] for ep in eps}
+    prune_episode_outputs(ROOT, live_dates)
+
+    # A deterministic public marker allows sync to verify the exact generated release.
+    public_files = [Path(ROOT) / name for name in ('index.html', '404.html', 'sitemap.xml', 'robots.txt')]
+    for folder in ('about', 'archive', 'subscribe', 'episode', 'reader', 'assets', 'css', 'js'):
+        public_files.extend(p for p in (Path(ROOT) / folder).rglob('*') if p.is_file())
+    digest = hashlib.sha256()
+    for path in sorted(public_files):
+        digest.update(path.relative_to(ROOT).as_posix().encode() + b'\0')
+        digest.update(hashlib.sha256(path.read_bytes()).digest())
+    write('site-version.json', json.dumps({'schema_version': 1, 'content_sha256': digest.hexdigest(),
+          'episode_dates': sorted(live_dates)}, indent=2) + '\n')
 
     print(f"Generated: 1 home, 1 archive, 1 about, 1 subscribe, {len(eps)} episodes, {len(days)} reader pages")
 

@@ -5,4 +5,5 @@ qa/
 build/
 tests/
 README.md
+AGENTS.md
 __pycache__/

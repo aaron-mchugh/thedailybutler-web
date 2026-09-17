@@ -47,12 +47,51 @@ included. Override the default local paths with `DAILY_BUTLER_REPO` and
 
 ## Build & deploy
 
+### Normal episode updates (one-way production → website)
+
+From the production checkout, after successful, approved media publication and final
+receipt/thumbnail updates:
+
+```bash
+cd /home/aaron/AI/the-daily-butler
+.venv/bin/daily-butler sync-website --episode 2026-09-17
+# Build/tests only, without deploying:
+.venv/bin/daily-butler sync-website --check
+```
+
+The transitional `scripts/publish_approved_episode.py` invokes the same handoff after
+saving its verified podcast receipt. That publisher is September-17-specific, not a
+general daily publisher. Future publishers must call `butler.website.sync_website` after
+their verified receipts are saved. For other/manual publishing routes, the command above
+is the final release step. Nothing watches arbitrary edits or uploads to YouTube directly.
+
+The sync builds in a temporary Git checkout, runs the full Python suite, commits only
+allowlisted generated files, pushes website `main`, and waits up to five minutes for the
+exact `site-version.json` marker and page/asset hashes to appear on the live Vercel domain.
+No media is uploaded and no approval/hold is changed. Unverified/draft or held episodes
+are excluded; stale generated episode pages/art are removed when withdrawn. The source
+media is never deleted. The 366-day reader remains complete.
+
+Prerequisites: both local checkouts and the full corpus, Python/Pillow, Git push access,
+and the existing Vercel Git integration. The website checkout must be clean, on `main`,
+and equal to remote `main`; the production checkout can contain working media edits.
+No extra Vercel or Cloudflare credentials are needed for the website sync. Override paths
+with `DAILY_BUTLER_WEB_REPO`, `DAILY_BUTLER_REPO`, and `BUTLER_CORPUS` as appropriate.
+
+Receipts live in the production checkout at `var/website-sync/latest.json` and, when an
+episode is supplied, `06-publish/website-receipt.json`. If sync fails, media publication
+remains intact. Resolve the stated Git/test/access/deployment problem and rerun
+`sync-website`; do not republish media. A rerun with unchanged content makes no new commit
+but still verifies the live site. There is no scheduled/background sync service.
+
+### Website design/code changes
+
 ```bash
 # from this repo root
 python3 -m pip install -r build/requirements.txt
 python3 build/build.py                # generate the site into ./ (committed)
 python3 build/build.py --upload-art   # also push new hero art to R2 (public)
-git add -A && git commit -m "site: <date>" && git push
+# Review git diff, stage only intended source/generated changes, then commit and push.
 # → Vercel auto-deploys the static files to thedailybutler.com
 ```
 

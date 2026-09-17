@@ -19,7 +19,10 @@ def prepare_assets(root, project, episodes):
             picture = ImageOps.exif_transpose(original).convert("RGBA" if original.mode == "RGBA" else "RGB")
             picture.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
             picture.save(destination, "WEBP", quality=86, method=6)
-        provenance.append({"asset": destination.name, "source": str(source),
+        source_label = ("production/" + source.relative_to(project).as_posix()
+                        if source.is_relative_to(project)
+                        else "website/" + source.relative_to(root).as_posix())
+        provenance.append({"asset": destination.name, "source": source_label,
                            "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
                            "provenance": notes or "Existing channel artwork; resized and encoded for the website."})
         return f"/assets/{destination.name}"

@@ -1,43 +1,43 @@
 [
   {
     "asset": "channel-banner.webp",
-    "source": "/home/aaron/AI/the-daily-butler/assets/brand/banner.png",
+    "source": "production/assets/brand/banner.png",
     "sha256": "89bca69feeae6cea83babf9032f21ca7c7b3a4047354e74146cb9e588e1694f5",
     "provenance": "Aaron-selected Butler Library banner, qa-v4, 17 September 2026."
   },
   {
     "asset": "podcast-cover.webp",
-    "source": "/home/aaron/AI/the-daily-butler/assets/brand/podcast-cover-1400.jpg",
+    "source": "production/assets/brand/podcast-cover-1400.jpg",
     "sha256": "cc443d19547a9979448749dbebd4f817e93f0c43f3d7b2a761c3c083ffa3d72b",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "channel-logo-purple.webp",
-    "source": "/home/aaron/AI/the-daily-butler/assets/brand/logo.png",
+    "source": "production/assets/brand/logo.png",
     "sha256": "bfd310bfada1c09f84b33f422b19af059d5361d127ec6afd024c7537f1c4848c",
     "provenance": "Canonical channel logo with its original purple background, used in the footer."
   },
   {
     "asset": "channel-logo.webp",
-    "source": "/home/aaron/AI/the-daily-butler-web/build/brand/channel-logo.webp",
+    "source": "website/build/brand/channel-logo.webp",
     "sha256": "36e4543fc6653790a71b3c381a0cea6fd34fd75a0d1dde99e18c16af41e958e3",
     "provenance": "Canonical transparent logo; see build/brand/README.md for original provenance."
   },
   {
     "asset": "episode-2026-09-01.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-01--st-giles-abbot/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-01--st-giles-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "a4d2670cfae74432e49d7276e0d9c6beddd55f730b802ed3e5b55a438549c9a8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-01-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-01--st-giles-abbot/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-01--st-giles-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "a4d2670cfae74432e49d7276e0d9c6beddd55f730b802ed3e5b55a438549c9a8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-01.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-01--st-giles-abbot/02-images/approved/87f5f9ad1a--st-giles-244fa126.jpg",
+    "source": "production/episodes/2026-09-01--st-giles-abbot/02-images/approved/87f5f9ad1a--st-giles-244fa126.jpg",
     "sha256": "87f5f9ad1a68b86b2cb4587ac5c3167c80522d1b14ee520e9dc19135b8e91d77",
     "provenance": {
       "id": "87f5f9ad1a68b86b2cb4587ac5c3167c80522d1b14ee520e9dc19135b8e91d77",
@@ -56,19 +56,19 @@
   },
   {
     "asset": "episode-2026-09-02.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-02--st-stephen-king/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-02--st-stephen-king/05-thumbnail/final/thumbnail.png",
     "sha256": "1a528e9b9667090a7cf5be3a55fc9917dbfed7eb3782cd9e28edeb2b3f4c9b43",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-02-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-02--st-stephen-king/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-02--st-stephen-king/05-thumbnail/final/thumbnail.png",
     "sha256": "1a528e9b9667090a7cf5be3a55fc9917dbfed7eb3782cd9e28edeb2b3f4c9b43",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-02.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-02--st-stephen-king/02-images/approved/a487348412--st-stephen-king-a3ed535b-up107.jpg",
+    "source": "production/episodes/2026-09-02--st-stephen-king/02-images/approved/a487348412--st-stephen-king-a3ed535b-up107.jpg",
     "sha256": "a48734841267741bb10666a6cae52ea4d1ed341795fef617e96151e5be71c820",
     "provenance": {
       "id": "a48734841267741bb10666a6cae52ea4d1ed341795fef617e96151e5be71c820",
@@ -87,19 +87,19 @@
   },
   {
     "asset": "episode-2026-09-03.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/final/thumbnail.png",
     "sha256": "83080814ab22a44e75f37f96d8cbd9323d7ab87577a4e8636814367a8348e632",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-03-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/final/thumbnail.png",
     "sha256": "83080814ab22a44e75f37f96d8cbd9323d7ab87577a4e8636814367a8348e632",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-03.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-03--st-seraphia-virgin-and-martyr/02-images/approved/c51dc0564c--st-seraphia-icon-cross.jpg",
+    "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/02-images/approved/c51dc0564c--st-seraphia-icon-cross.jpg",
     "sha256": "c51dc0564c8718e6bdbcd7ab76f1f86a1c5ff82c17d0461169713db6b2922330",
     "provenance": {
       "id": "c51dc0564c8718e6bdbcd7ab76f1f86a1c5ff82c17d0461169713db6b2922330",
@@ -118,19 +118,19 @@
   },
   {
     "asset": "episode-2026-09-04.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/final/thumbnail.png",
     "sha256": "9657aa798c6b8979443002edef9e9da10f7b5870d69e92719bef9d565f4c3f79",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-04-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/final/thumbnail.png",
     "sha256": "9657aa798c6b8979443002edef9e9da10f7b5870d69e92719bef9d565f4c3f79",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-04.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-04--st-rosalia-virgin/02-images/approved/b125599f43--rosalia-baroque-sculpture-up186.jpg",
+    "source": "production/episodes/2026-09-04--st-rosalia-virgin/02-images/approved/b125599f43--rosalia-baroque-sculpture-up186.jpg",
     "sha256": "b125599f4378400951c47fbd7daa710fcb3e261244985af903c4c66234a8bd2a",
     "provenance": {
       "id": "b125599f4378400951c47fbd7daa710fcb3e261244985af903c4c66234a8bd2a",
@@ -149,19 +149,19 @@
   },
   {
     "asset": "episode-2026-09-05.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/final/thumbnail.png",
     "sha256": "834ecbbdd27e51daf1456b9bd56bc09f8b8a6bce5f335d42c06ea6bc58bc9882",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-05-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/final/thumbnail.png",
     "sha256": "834ecbbdd27e51daf1456b9bd56bc09f8b8a6bce5f335d42c06ea6bc58bc9882",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-05.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-05--st-laurence-justinian/02-images/approved/e9ae34c6fd--370f04e2-dc25-4454-9af6-83f438036a6c.jpg",
+    "source": "production/episodes/2026-09-05--st-laurence-justinian/02-images/approved/e9ae34c6fd--370f04e2-dc25-4454-9af6-83f438036a6c.jpg",
     "sha256": "e9ae34c6fd26105a700e26bbe35a51b69fad8bfcfa72195c89cf2bc2a8c0162f",
     "provenance": {
       "id": "e9ae34c6fd26105a700e26bbe35a51b69fad8bfcfa72195c89cf2bc2a8c0162f",
@@ -180,19 +180,19 @@
   },
   {
     "asset": "episode-2026-09-06.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "c3cb44e715a64aa0abe395625e74a16cdff897a4e4a8cfbae4cba2304cff09dc",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-06-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "c3cb44e715a64aa0abe395625e74a16cdff897a4e4a8cfbae4cba2304cff09dc",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-06.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-06--st-eleutherius-abbot/02-images/approved/71b7306175--st-eleutherius-a4328d8d.jpg",
+    "source": "production/episodes/2026-09-06--st-eleutherius-abbot/02-images/approved/71b7306175--st-eleutherius-a4328d8d.jpg",
     "sha256": "71b7306175d188c15d67da7830d80d9334769e77c4521826a41450215eecc8c7",
     "provenance": {
       "id": "71b7306175d188c15d67da7830d80d9334769e77c4521826a41450215eecc8c7",
@@ -211,19 +211,19 @@
   },
   {
     "asset": "episode-2026-09-07.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/final/thumbnail.png",
     "sha256": "36c7e0e3ddb530cf55fe7845500a4a4c9ef7488b1635e086ea76e10e9cdc5c3f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-07-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/final/thumbnail.png",
     "sha256": "36c7e0e3ddb530cf55fe7845500a4a4c9ef7488b1635e086ea76e10e9cdc5c3f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-07.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-07--st-cloud-confessor/02-images/approved/ba5175a6a3--st-cloud-confessor-ef1dc9a8-up250.jpg",
+    "source": "production/episodes/2026-09-07--st-cloud-confessor/02-images/approved/ba5175a6a3--st-cloud-confessor-ef1dc9a8-up250.jpg",
     "sha256": "ba5175a6a3a76c0e238a4833cb41655870cc59f9b34bbfe44640b5bcaae7ae95",
     "provenance": {
       "id": "ba5175a6a3a76c0e238a4833cb41655870cc59f9b34bbfe44640b5bcaae7ae95",
@@ -242,19 +242,19 @@
   },
   {
     "asset": "episode-2026-09-08.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/final/thumbnail.jpg",
+    "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/final/thumbnail.jpg",
     "sha256": "1aab4b942b74804cd54681041b3cc76a4e77983e437f6375572389ba9753167a",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-08-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/final/thumbnail.jpg",
+    "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/final/thumbnail.jpg",
     "sha256": "1aab4b942b74804cd54681041b3cc76a4e77983e437f6375572389ba9753167a",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-08.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/02-images/approved/d9a68904f2--nativity-1358.png",
+    "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/02-images/approved/d9a68904f2--nativity-1358.png",
     "sha256": "d9a68904f2b50c39d4905ef872a4821113b673f78a52a7836236a9d61801026d",
     "provenance": {
       "id": "d9a68904f2b50c39d4905ef872a4821113b673f78a52a7836236a9d61801026d",
@@ -273,19 +273,19 @@
   },
   {
     "asset": "episode-2026-09-09.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/final/thumbnail.png",
     "sha256": "6fdd3a6e5acc9ab7c4e86dfbafc3b7753b36459334b701be4f1ddbc8ad803dd5",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-09-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/final/thumbnail.png",
     "sha256": "6fdd3a6e5acc9ab7c4e86dfbafc3b7753b36459334b701be4f1ddbc8ad803dd5",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-09.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/02-images/approved/3b4dfad830--art-st-peter-claver-0.jpg",
+    "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/02-images/approved/3b4dfad830--art-st-peter-claver-0.jpg",
     "sha256": "3b4dfad830aa4c4080bfd998c4babc780c5670a8b9a0322f26cf8c82fa9b2038",
     "provenance": {
       "id": "3b4dfad830aa4c4080bfd998c4babc780c5670a8b9a0322f26cf8c82fa9b2038",
@@ -304,19 +304,19 @@
   },
   {
     "asset": "episode-2026-09-10.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/final/thumbnail.png",
     "sha256": "e3f33c9b8c8a9cbf283d4e0ea9a84c192e0fe254d3665d28ba1d26f42abe0ced",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-10-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/final/thumbnail.png",
     "sha256": "e3f33c9b8c8a9cbf283d4e0ea9a84c192e0fe254d3665d28ba1d26f42abe0ced",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-10.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-10--st-nicholas-of-tolentino/02-images/approved/d5f3a16166--st-nicholas-of-tolentino-7dd5b28c05751d6a3652be4a519e1fd2.jpg",
+    "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/02-images/approved/d5f3a16166--st-nicholas-of-tolentino-7dd5b28c05751d6a3652be4a519e1fd2.jpg",
     "sha256": "d5f3a1616633ef72e5360c4389e4946439694ea4f70a63c0c438dd5b001e6c50",
     "provenance": {
       "id": "d5f3a1616633ef72e5360c4389e4946439694ea4f70a63c0c438dd5b001e6c50",
@@ -335,19 +335,19 @@
   },
   {
     "asset": "episode-2026-09-11.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/final/thumbnail.png",
     "sha256": "ca68abb7ed456f45178553fad1833b2a8b86b8436ddfb1962e2eac7d19172128",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-11-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/final/thumbnail.png",
     "sha256": "ca68abb7ed456f45178553fad1833b2a8b86b8436ddfb1962e2eac7d19172128",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-11.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-11--st-paphnutius-bishop/02-images/approved/1ed14287a1--art-st-paphnutius-bishop-2.jpg",
+    "source": "production/episodes/2026-09-11--st-paphnutius-bishop/02-images/approved/1ed14287a1--art-st-paphnutius-bishop-2.jpg",
     "sha256": "1ed14287a12618c0314bff44866d36950313420ed425b85cc7996e24cf56a27a",
     "provenance": {
       "id": "1ed14287a12618c0314bff44866d36950313420ed425b85cc7996e24cf56a27a",
@@ -366,19 +366,19 @@
   },
   {
     "asset": "episode-2026-09-13.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
     "sha256": "aaea90438906a079d13424f7a5cf9b9642af4d4b837959df7a905cf9faa0930f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-13-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
+    "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
     "sha256": "aaea90438906a079d13424f7a5cf9b9642af4d4b837959df7a905cf9faa0930f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-13.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/02-images/approved/4a3d56c841--aaron-eulogius-01.jpg",
+    "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/02-images/approved/4a3d56c841--aaron-eulogius-01.jpg",
     "sha256": "4a3d56c84124f78cae537219f5c57d4947bb9f7bda163d39fa89d771fca7a8c7",
     "provenance": {
       "id": "4a3d56c84124f78cae537219f5c57d4947bb9f7bda163d39fa89d771fca7a8c7",
@@ -397,19 +397,19 @@
   },
   {
     "asset": "episode-2026-09-16.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/final/thumbnail.jpg",
+    "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/final/thumbnail.jpg",
     "sha256": "7074c0d1cb9eaa3e166f4ee9f13a8aee36a3415b85a5898a9b36407138e44413",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-16-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/final/thumbnail.jpg",
+    "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/final/thumbnail.jpg",
     "sha256": "7074c0d1cb9eaa3e166f4ee9f13a8aee36a3415b85a5898a9b36407138e44413",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-16.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-16--st-cyprian-bishop-martyr/02-images/approved/19314eec72--aaron-drive-01.png",
+    "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/02-images/approved/19314eec72--aaron-drive-01.png",
     "sha256": "19314eec724a440641595ba4470efe5978c6bd9a97c97d25d5a04ef0eb3ca31d",
     "provenance": {
       "id": "19314eec724a440641595ba4470efe5978c6bd9a97c97d25d5a04ef0eb3ca31d",
@@ -428,19 +428,19 @@
   },
   {
     "asset": "episode-2026-09-17.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/candidates/higgsfield-v6/thumbnail-1280x720.png",
+    "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/candidates/higgsfield-v6/thumbnail-1280x720.png",
     "sha256": "3f68173f170eefe5efd8a7a31c47804321a80a9f414151040778b529f5f36c16",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-17-small.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/candidates/higgsfield-v6/thumbnail-1280x720.png",
+    "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/candidates/higgsfield-v6/thumbnail-1280x720.png",
     "sha256": "3f68173f170eefe5efd8a7a31c47804321a80a9f414151040778b529f5f36c16",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-17.webp",
-    "source": "/home/aaron/AI/the-daily-butler/episodes/2026-09-17--st-lambert-bishop-martyr/02-images/approved/649f4898ae--lambert-photo2-source.jpg",
+    "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/02-images/approved/649f4898ae--lambert-photo2-source.jpg",
     "sha256": "649f4898ae268f8b13680a8b4a025f6601dbf1a5e81e3312b119c6479f647a57",
     "provenance": {
       "id": "649f4898ae268f8b13680a8b4a025f6601dbf1a5e81e3312b119c6479f647a57",

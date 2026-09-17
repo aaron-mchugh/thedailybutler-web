@@ -39,6 +39,7 @@ class EpisodeLoadingTests(unittest.TestCase):
             "channels": {"youtube": {"video_id": "youtube-id"}},
         })
         write_json(episode / "06-publish" / "podcast-receipt.json", {
+            "verified_at": "2026-09-17T00:00:00Z",
             "audio_url": "https://media.example/episode.mp3",
             "item": {
                 "date": "2026-09-17",
@@ -90,6 +91,37 @@ class EpisodeLoadingTests(unittest.TestCase):
 
         self.assertEqual([item["date"] for item in episodes], ["2026-09-01"])
         self.assertEqual(episodes[0]["art_local"], str(imported))
+
+    def test_draft_manifest_unverified_receipt_and_missing_hold_are_excluded(self):
+        for day, meta, receipt in (
+            ('18', {'hold': False, 'status': 'draft'}, {}),
+            ('19', {'hold': False}, {'item': {'date': '2026-09-19'}}),
+            ('20', {}, {'item': {'date': '2026-09-20'}, 'verified_at': 'now', 'audio_url': 'https://example.test/audio'}),
+        ):
+            episode = self.project / 'episodes' / f'2026-09-{day}--draft'
+            write_json(episode / 'episode.json', meta)
+            write_json(episode / '06-publish/podcast.json', {'date': f'2026-09-{day}'})
+            write_json(episode / '06-publish/podcast-receipt.json', receipt)
+        self.assertEqual(site_build.load_episodes(), [])
+
+    def test_missing_production_source_fails_closed(self):
+        with self.assertRaisesRegex(RuntimeError, 'missing'):
+            site_build.load_episodes()
+
+    def test_withdrawn_pages_and_art_removed_without_touching_other_files(self):
+        removed = ('episode/2026-09-18/index.html', 'assets/art-2026-09-18.webp',
+                   'assets/episode-2026-09-18-small.webp')
+        kept = ('episode/2026-09-17/index.html', 'episode/2026-09-18/notes.txt',
+                'assets/channel-logo.webp', 'assets/episode-2026-09-17.webp')
+        for relative in removed + kept:
+            path = self.project / relative
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text('fixture')
+        site_build.prune_episode_outputs(self.project, {'2026-09-17'})
+        for relative in removed:
+            self.assertFalse((self.project / relative).exists())
+        for relative in kept:
+            self.assertTrue((self.project / relative).exists())
 
 
 if __name__ == "__main__":
