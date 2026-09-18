@@ -456,5 +456,24 @@
         "reviewed_at": "2026-09-16T09:14:56.011902+00:00"
       }
     }
+  },
+  {
+    "asset": "art-2026-09-18.webp",
+    "source": "production/episodes/2026-09-18--st-thomas-of-villanova/02-images/approved/69c7b8ffcf--01-camilo-prado.jpg",
+    "sha256": "69c7b8ffcfed253e19c74d52b58db941d3bf491547c60fed91829fc2ac637fe4",
+    "provenance": {
+      "id": "69c7b8ffcfed253e19c74d52b58db941d3bf491547c60fed91829fc2ac637fe4",
+      "file": "02-images/approved/69c7b8ffcf--01-camilo-prado.jpg",
+      "sha256": "69c7b8ffcfed253e19c74d52b58db941d3bf491547c60fed91829fc2ac637fe4",
+      "status": "approved",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Camilo-santo_tomas_de_villanueva-prado.jpg",
+      "notes": "Francisco Camilo, Santo Tom\u00e1s de Villanueva, 17th century; Museo Nacional del Prado source; public domain; 1536x2926. Faithful episcopal portrait.",
+      "added_at": "2026-09-17T06:25:42.851772+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved authentic Saint Thomas of Villanova artwork shortlist for artwork-only episode.",
+        "reviewed_at": "2026-09-17T22:42:00.255392+00:00"
+      }
+    }
   }
 ]
