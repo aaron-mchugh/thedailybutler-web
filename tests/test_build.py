@@ -60,6 +60,57 @@ class EpisodeLoadingTests(unittest.TestCase):
         self.assertEqual(episodes[0]["mp3_url"], "https://media.example/episode.mp3")
         self.assertEqual(episodes[0]["art_local"], str(image))
 
+    def test_loads_verified_split_native_manifest_and_receipt(self):
+        episode = self.project / "episodes" / "2026-09-21--st-matthew"
+        write_json(episode / "episode.json", {
+            "date": "2026-09-21",
+            "status": "published",
+            "hold": False,
+            "channels": {"youtube": {"video_id": "youtube-id"}},
+        })
+        write_json(episode / "06-publish" / "podcast.json", {
+            "date": "2026-09-21",
+            "guid": "tdb-2026-09-21",
+            "title": "21 September — Saint Matthew",
+            "saints": ["Saint Matthew"],
+            "duration_s": 121,
+            "hold": False,
+        })
+        write_json(episode / "06-publish" / "podcast-receipt.json", {
+            "status": "published",
+            "verified_at": "2026-09-21T11:44:18Z",
+            "audio_url": "https://media.example/2026-09-21.mp3",
+            "guid": "tdb-2026-09-21",
+        })
+
+        episodes = site_build.load_episodes()
+
+        self.assertEqual(len(episodes), 1)
+        self.assertEqual(episodes[0]["date"], "2026-09-21")
+        self.assertEqual(episodes[0]["video_id"], "youtube-id")
+        self.assertEqual(episodes[0]["mp3_url"], "https://media.example/2026-09-21.mp3")
+
+    def test_split_native_manifest_requires_matching_published_receipt(self):
+        for day, status, receipt_guid in (
+            ("19", "pending", "tdb-2026-09-19"),
+            ("20", "published", "tdb-another-episode"),
+        ):
+            episode = self.project / "episodes" / f"2026-09-{day}--native"
+            write_json(episode / "episode.json", {
+                "date": f"2026-09-{day}", "status": "published", "hold": False,
+            })
+            write_json(episode / "06-publish" / "podcast.json", {
+                "date": f"2026-09-{day}", "guid": f"tdb-2026-09-{day}", "hold": False,
+            })
+            write_json(episode / "06-publish" / "podcast-receipt.json", {
+                "status": status,
+                "verified_at": "2026-09-21T11:44:18Z",
+                "audio_url": f"https://media.example/2026-09-{day}.mp3",
+                "guid": receipt_guid,
+            })
+
+        self.assertEqual(site_build.load_episodes(), [])
+
     def test_resolves_imported_storyboard_and_excludes_holds(self):
         published = self.project / "episodes" / "2026-09-01--st-giles"
         imported = published / "02-images" / "approved" / "digest--giles.png"

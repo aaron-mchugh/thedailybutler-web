@@ -204,10 +204,14 @@ def _published_item(episode_dir):
     item = receipt.get("item") if isinstance(receipt, dict) else None
     if isinstance(item, dict) and receipt.get("verified_at") and receipt.get("audio_url"):
         return item, receipt
-    historical = read_json(os.path.join(episode_dir, "06-publish", "podcast.json"))
+    manifest = read_json(os.path.join(episode_dir, "06-publish", "podcast.json"))
+    if (isinstance(manifest, dict) and receipt.get("status") == "published"
+            and receipt.get("verified_at") and receipt.get("audio_url")
+            and receipt.get("guid") and receipt.get("guid") == manifest.get("guid")):
+        return manifest, receipt
     metadata = read_json(os.path.join(episode_dir, "episode.json"), {})
-    if isinstance(historical, dict) and metadata.get("status") == "historical_published":
-        return historical, {}
+    if isinstance(manifest, dict) and metadata.get("status") == "historical_published":
+        return manifest, {}
     return None, {}
 
 
