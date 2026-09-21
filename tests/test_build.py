@@ -194,6 +194,24 @@ class EpisodeLoadingTests(unittest.TestCase):
 
         self.assertIsNone(site_assets.approved_thumbnail(episode, meta))
 
+    def test_uses_verified_master_when_delivery_was_reencoded(self):
+        episode = self.project / "episodes" / "2026-09-20--st-eustachius"
+        final = episode / "05-thumbnail" / "final"
+        final.mkdir(parents=True)
+        (final / "thumbnail_yt.png").write_bytes(b"reencoded delivery")
+        master = final / "thumbnail-master-2k.png"
+        master.write_bytes(b"approved master")
+        meta = {"thumbnail": {
+            "delivery_file": "05-thumbnail/final/thumbnail_yt.png",
+            "delivery_sha256": "0" * 64,
+            "master_file": "05-thumbnail/final/thumbnail-master-2k.png",
+            "master_sha256": hashlib.sha256(master.read_bytes()).hexdigest(),
+            "reviewed_at": "2026-09-20T07:56:44Z",
+            "reviewer": "Aaron",
+        }}
+
+        self.assertEqual(site_assets.approved_thumbnail(episode, meta), master)
+
     def test_withdrawn_pages_and_art_removed_without_touching_other_files(self):
         removed = ('episode/2026-09-18/index.html', 'assets/art-2026-09-18.webp',
                    'assets/episode-2026-09-18-small.webp')

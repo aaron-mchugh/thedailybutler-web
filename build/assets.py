@@ -39,6 +39,10 @@ def approved_thumbnail(episode_dir, meta):
         selected = checked(delivery, "delivery_file", "delivery_sha256")
         if selected:
             return selected
+    if delivery.get("reviewed_at") and delivery.get("reviewer") and delivery.get("master_sha256"):
+        selected = checked(delivery, "master_file", "master_sha256")
+        if selected:
+            return selected
 
     # Retain the original convention for imported/legacy approved finals.
     for extension in ("png", "jpg", "jpeg", "webp"):
