@@ -475,5 +475,62 @@
         "reviewed_at": "2026-09-17T22:42:00.255392+00:00"
       }
     }
+  },
+  {
+    "asset": "art-2026-09-19.webp",
+    "source": "production/episodes/2026-09-19--st-januarius-martyr/02-images/approved/4b99c550a6--st-januarius-louis-finson.jpg",
+    "sha256": "4b99c550a6b4f5db96c6a5d66da21a98d5dc21b90b924e915f1c91adf8c2beb1",
+    "provenance": {
+      "id": "4b99c550a6b4f5db96c6a5d66da21a98d5dc21b90b924e915f1c91adf8c2beb1",
+      "file": "02-images/approved/4b99c550a6--st-januarius-louis-finson.jpg",
+      "sha256": "4b99c550a6b4f5db96c6a5d66da21a98d5dc21b90b924e915f1c91adf8c2beb1",
+      "status": "approved",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Saint_Januarius.jpg",
+      "notes": "Louis Finson, Saint Januarius (c.1610). Caravaggesque half-length: bishop in mitre and golden cope with crozier, the glass vials of blood and a skull on the table \u2014 direct reference to the Naples liquefaction miracle. Public domain.",
+      "added_at": "2026-09-18T07:01:46.295416+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved by Aaron (trial episode)",
+        "reviewed_at": "2026-09-18T07:19:38.574848+00:00"
+      }
+    }
+  },
+  {
+    "asset": "art-2026-09-20.webp",
+    "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/02-images/approved/b26e4ebf3f--upload-20260920-142748-1.jpg",
+    "sha256": "b26e4ebf3f63f6df46b788e749e6918df67693da0d1e46216a4818d53c4daa59",
+    "provenance": {
+      "id": "b26e4ebf3f63f6df46b788e749e6918df67693da0d1e46216a4818d53c4daa59",
+      "file": "02-images/approved/b26e4ebf3f--upload-20260920-142748-1.jpg",
+      "sha256": "b26e4ebf3f63f6df46b788e749e6918df67693da0d1e46216a4818d53c4daa59",
+      "status": "approved",
+      "source_url": null,
+      "notes": "Aaron-supplied image 1 (chat 2026-09-20), source 364x755",
+      "added_at": "2026-09-20T06:29:05.256295+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Supplied by Aaron in chat; 364x755",
+        "reviewed_at": "2026-09-20T06:29:05.256792+00:00"
+      }
+    }
+  },
+  {
+    "asset": "art-2026-09-21.webp",
+    "source": "production/episodes/2026-09-21--st-matthew-apostle/02-images/approved/2884406bd7--2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833.jpg",
+    "sha256": "2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833",
+    "provenance": {
+      "id": "2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833",
+      "file": "02-images/approved/2884406bd7--2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833.jpg",
+      "sha256": "2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833",
+      "status": "approved",
+      "source_url": "https://commons.wikimedia.org/wiki/File%3AThe_Evangelist_Matthew_Inspired_by_an_Angel.jpg",
+      "notes": "discovered candidate: File:The Evangelist Matthew Inspired by an Angel.jpg",
+      "added_at": "2026-09-19T07:09:54.900964+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved by Aaron in chat on 2026-09-21.",
+        "reviewed_at": "2026-09-21T05:46:13.115213+00:00"
+      }
+    }
   }
 ]
