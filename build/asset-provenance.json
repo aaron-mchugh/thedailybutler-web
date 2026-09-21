@@ -365,6 +365,37 @@
     }
   },
   {
+    "asset": "episode-2026-09-12.webp",
+    "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/05-thumbnail/final/thumbnail.png",
+    "sha256": "89a2ca42a9106370c6e2d6ab8f17263718b8ec69acbc8cb44d8142075526b2a8",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-12-small.webp",
+    "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/05-thumbnail/final/thumbnail.png",
+    "sha256": "89a2ca42a9106370c6e2d6ab8f17263718b8ec69acbc8cb44d8142075526b2a8",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-12.webp",
+    "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/02-images/approved/b92bdc793b--st-guy-of-anderlecht-74306482.jpg",
+    "sha256": "b92bdc793b9bdfec79cf6d86a8ad7d6fab7fb054b8fd7003871792614c60f36f",
+    "provenance": {
+      "id": "b92bdc793b9bdfec79cf6d86a8ad7d6fab7fb054b8fd7003871792614c60f36f",
+      "file": "02-images/approved/b92bdc793b--st-guy-of-anderlecht-74306482.jpg",
+      "sha256": "b92bdc793b9bdfec79cf6d86a8ad7d6fab7fb054b8fd7003871792614c60f36f",
+      "status": "approved",
+      "source_url": null,
+      "notes": "Imported because it was retained with, or referenced by, the published legacy render.",
+      "added_at": "2026-09-16T06:11:49.606666+00:00",
+      "review": {
+        "reviewer": "legacy-published-evidence",
+        "notes": "Historical approval evidence only; not a fresh approval for reuse in another episode.",
+        "reviewed_at": "2026-09-16T06:11:49.606866+00:00"
+      }
+    }
+  },
+  {
     "asset": "episode-2026-09-13.webp",
     "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
     "sha256": "aaea90438906a079d13424f7a5cf9b9642af4d4b837959df7a905cf9faa0930f",
@@ -392,6 +423,68 @@
         "reviewer": "legacy-published-evidence",
         "notes": "Historical approval evidence only; not a fresh approval for reuse in another episode.",
         "reviewed_at": "2026-09-16T06:11:49.693683+00:00"
+      }
+    }
+  },
+  {
+    "asset": "episode-2026-09-14.webp",
+    "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/05-thumbnail/final/thumbnail.jpg",
+    "sha256": "9d67d5ad5340475f2964f042c8578d5874098d3ae931038542afc919d50e6fc4",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-14-small.webp",
+    "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/05-thumbnail/final/thumbnail.jpg",
+    "sha256": "9d67d5ad5340475f2964f042c8578d5874098d3ae931038542afc919d50e6fc4",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-14.webp",
+    "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/02-images/approved/b4405665cd--aaron-03-exaltation-icon.jpg",
+    "sha256": "b4405665cd0bb0624a5ee0421c86911224b7f671ea9b5d2faa5a55f36021f39a",
+    "provenance": {
+      "id": "b4405665cd0bb0624a5ee0421c86911224b7f671ea9b5d2faa5a55f36021f39a",
+      "file": "02-images/approved/b4405665cd--aaron-03-exaltation-icon.jpg",
+      "sha256": "b4405665cd0bb0624a5ee0421c86911224b7f671ea9b5d2faa5a55f36021f39a",
+      "status": "approved",
+      "source_url": null,
+      "notes": "Imported because it was retained with, or referenced by, the published legacy render.",
+      "added_at": "2026-09-16T06:11:49.798053+00:00",
+      "review": {
+        "reviewer": "legacy-published-evidence",
+        "notes": "Historical approval evidence only; not a fresh approval for reuse in another episode.",
+        "reviewed_at": "2026-09-16T06:11:49.798238+00:00"
+      }
+    }
+  },
+  {
+    "asset": "episode-2026-09-15.webp",
+    "source": "production/episodes/2026-09-15--st-catherine-of-genoa/05-thumbnail/final/thumbnail.png",
+    "sha256": "9520e4715eff9ddaa326270e8941f46f8a204093f4fcda246c951150012b800d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-15-small.webp",
+    "source": "production/episodes/2026-09-15--st-catherine-of-genoa/05-thumbnail/final/thumbnail.png",
+    "sha256": "9520e4715eff9ddaa326270e8941f46f8a204093f4fcda246c951150012b800d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-15.webp",
+    "source": "production/episodes/2026-09-15--st-catherine-of-genoa/02-images/approved/ddbf973585--aaron-02-christ-cross-vision-fit16x9.jpg",
+    "sha256": "ddbf97358519b3545c00862b0bf67a23943090c346b9473501fc24c91083a96a",
+    "provenance": {
+      "id": "ddbf97358519b3545c00862b0bf67a23943090c346b9473501fc24c91083a96a",
+      "file": "02-images/approved/ddbf973585--aaron-02-christ-cross-vision-fit16x9.jpg",
+      "sha256": "ddbf97358519b3545c00862b0bf67a23943090c346b9473501fc24c91083a96a",
+      "status": "approved",
+      "source_url": null,
+      "notes": "Imported because it was retained with, or referenced by, the published legacy render.",
+      "added_at": "2026-09-16T06:11:49.885700+00:00",
+      "review": {
+        "reviewer": "legacy-published-evidence",
+        "notes": "Historical approval evidence only; not a fresh approval for reuse in another episode.",
+        "reviewed_at": "2026-09-16T06:11:49.885988+00:00"
       }
     }
   },
@@ -458,6 +551,18 @@
     }
   },
   {
+    "asset": "episode-2026-09-18.webp",
+    "source": "production/episodes/2026-09-18--st-thomas-of-villanova/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "3731e7fdc09ab5262896195ece39369f8c949d7ee6862da830c1e4ebff16ab29",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-18-small.webp",
+    "source": "production/episodes/2026-09-18--st-thomas-of-villanova/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "3731e7fdc09ab5262896195ece39369f8c949d7ee6862da830c1e4ebff16ab29",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "art-2026-09-18.webp",
     "source": "production/episodes/2026-09-18--st-thomas-of-villanova/02-images/approved/69c7b8ffcf--01-camilo-prado.jpg",
     "sha256": "69c7b8ffcfed253e19c74d52b58db941d3bf491547c60fed91829fc2ac637fe4",
@@ -475,6 +580,18 @@
         "reviewed_at": "2026-09-17T22:42:00.255392+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-19.webp",
+    "source": "production/episodes/2026-09-19--st-januarius-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "2abe3390896efd5687c2b55d4edc44f84e9cbe29292d7f2f3f52d52c0aed2a6f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-19-small.webp",
+    "source": "production/episodes/2026-09-19--st-januarius-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "2abe3390896efd5687c2b55d4edc44f84e9cbe29292d7f2f3f52d52c0aed2a6f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-19.webp",
@@ -496,6 +613,18 @@
     }
   },
   {
+    "asset": "episode-2026-09-20.webp",
+    "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/05-thumbnail/final/thumbnail-master-2k.png",
+    "sha256": "bf5b9bb7c892f4254e83adfb40b3f08d5368e9baad725e9cd0ef3ec190c2f9bf",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-20-small.webp",
+    "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/05-thumbnail/final/thumbnail-master-2k.png",
+    "sha256": "bf5b9bb7c892f4254e83adfb40b3f08d5368e9baad725e9cd0ef3ec190c2f9bf",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "art-2026-09-20.webp",
     "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/02-images/approved/b26e4ebf3f--upload-20260920-142748-1.jpg",
     "sha256": "b26e4ebf3f63f6df46b788e749e6918df67693da0d1e46216a4818d53c4daa59",
@@ -513,6 +642,18 @@
         "reviewed_at": "2026-09-20T06:29:05.256792+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-21.webp",
+    "source": "production/episodes/2026-09-21--st-matthew-apostle/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "1f1509006bb321c617d33bbb8e7bb4759c678f7fbe9fc5109135aa9aa8328ece",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-21-small.webp",
+    "source": "production/episodes/2026-09-21--st-matthew-apostle/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "1f1509006bb321c617d33bbb8e7bb4759c678f7fbe9fc5109135aa9aa8328ece",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-21.webp",
