@@ -6,6 +6,48 @@ from pathlib import Path
 from PIL import Image, ImageOps
 
 
+def approved_thumbnail(episode_dir, meta):
+    """Resolve an explicitly reviewed thumbnail without trusting an unchecked path."""
+    episode_dir = Path(episode_dir).resolve()
+
+    def checked(record, file_key, sha_key, *, status_key=None, expected_status=None):
+        if not isinstance(record, dict) or not record.get(file_key):
+            return None
+        if status_key and record.get(status_key) != expected_status:
+            return None
+        candidate = (episode_dir / record[file_key]).resolve()
+        if not candidate.is_relative_to(episode_dir) or not candidate.is_file():
+            return None
+        expected_sha = record.get(sha_key)
+        if expected_sha and hashlib.sha256(candidate.read_bytes()).hexdigest() != expected_sha:
+            return None
+        return candidate
+
+    legacy = (meta.get("draft_render") or {}).get("thumbnail_candidate") or {}
+    selected = checked(legacy, "file", "sha256", status_key="review_status",
+                       expected_status="approved_and_published")
+    if selected:
+        return selected
+
+    review = meta.get("thumbnail_review") or {}
+    selected = checked(review, "file", "sha256", status_key="status", expected_status="approved")
+    if selected:
+        return selected
+
+    delivery = meta.get("thumbnail") or {}
+    if delivery.get("reviewed_at") and delivery.get("reviewer") and delivery.get("delivery_sha256"):
+        selected = checked(delivery, "delivery_file", "delivery_sha256")
+        if selected:
+            return selected
+
+    # Retain the original convention for imported/legacy approved finals.
+    for extension in ("png", "jpg", "jpeg", "webp"):
+        final = episode_dir / f"05-thumbnail/final/thumbnail.{extension}"
+        if final.is_file():
+            return final
+    return None
+
+
 def prepare_assets(root, project, episodes):
     root, project = Path(root), Path(project)
     output = root / "assets"
@@ -39,16 +81,7 @@ def prepare_assets(root, project, episodes):
     for episode in episodes:
         episode_dir = Path(episode["source_dir"])
         meta = json.loads((episode_dir / "episode.json").read_text())
-        candidate = (meta.get("draft_render") or {}).get("thumbnail_candidate") or {}
-        thumb = None
-        if candidate.get("review_status") == "approved_and_published" and candidate.get("file"):
-            candidate_path = (episode_dir / candidate["file"]).resolve()
-            if candidate_path.is_relative_to(episode_dir.resolve()) and candidate_path.is_file():
-                thumb = candidate_path
-        for extension in ("png", "jpg", "jpeg", "webp"):
-            final = episode_dir / f"05-thumbnail/final/thumbnail.{extension}"
-            if thumb is None and final.is_file():
-                thumb = final
+        thumb = approved_thumbnail(episode_dir, meta)
         if thumb:
             episode["thumbnail"] = image(thumb, f"episode-{episode['date']}", 960)
             image(thumb, f"episode-{episode['date']}-small", 480)

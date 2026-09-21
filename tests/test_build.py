@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import json
 import tempfile
 import unittest
@@ -9,6 +10,11 @@ BUILD_PATH = Path(__file__).parents[1] / "build" / "build.py"
 SPEC = importlib.util.spec_from_file_location("daily_butler_site_build", BUILD_PATH)
 site_build = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(site_build)
+
+ASSETS_PATH = Path(__file__).parents[1] / "build" / "assets.py"
+ASSETS_SPEC = importlib.util.spec_from_file_location("daily_butler_site_assets", ASSETS_PATH)
+site_assets = importlib.util.module_from_spec(ASSETS_SPEC)
+ASSETS_SPEC.loader.exec_module(site_assets)
 
 
 def write_json(path, payload):
@@ -158,6 +164,35 @@ class EpisodeLoadingTests(unittest.TestCase):
     def test_missing_production_source_fails_closed(self):
         with self.assertRaisesRegex(RuntimeError, 'missing'):
             site_build.load_episodes()
+
+    def test_uses_reviewed_delivery_thumbnail_with_matching_digest(self):
+        episode = self.project / "episodes" / "2026-09-21--st-matthew"
+        thumbnail = episode / "05-thumbnail" / "final" / "thumbnail_yt.png"
+        thumbnail.parent.mkdir(parents=True)
+        thumbnail.write_bytes(b"approved thumbnail")
+        digest = hashlib.sha256(thumbnail.read_bytes()).hexdigest()
+        meta = {"thumbnail": {
+            "delivery_file": "05-thumbnail/final/thumbnail_yt.png",
+            "delivery_sha256": digest,
+            "reviewed_at": "2026-09-21T09:21:12Z",
+            "reviewer": "Aaron",
+        }}
+
+        self.assertEqual(site_assets.approved_thumbnail(episode, meta), thumbnail)
+
+    def test_rejects_delivery_thumbnail_with_mismatched_digest(self):
+        episode = self.project / "episodes" / "2026-09-21--st-matthew"
+        thumbnail = episode / "05-thumbnail" / "final" / "thumbnail_yt.png"
+        thumbnail.parent.mkdir(parents=True)
+        thumbnail.write_bytes(b"different thumbnail")
+        meta = {"thumbnail": {
+            "delivery_file": "05-thumbnail/final/thumbnail_yt.png",
+            "delivery_sha256": "0" * 64,
+            "reviewed_at": "2026-09-21T09:21:12Z",
+            "reviewer": "Aaron",
+        }}
+
+        self.assertIsNone(site_assets.approved_thumbnail(episode, meta))
 
     def test_withdrawn_pages_and_art_removed_without_touching_other_files(self):
         removed = ('episode/2026-09-18/index.html', 'assets/art-2026-09-18.webp',
