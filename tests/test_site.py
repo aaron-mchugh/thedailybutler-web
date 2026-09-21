@@ -20,6 +20,16 @@ class Links(HTMLParser):
 
 
 class PublishedSiteTests(unittest.TestCase):
+    def test_every_page_includes_vercel_analytics_once(self):
+        pages = [ROOT / 'index.html', ROOT / '404.html']
+        for folder in ('about', 'subscribe', 'archive', 'reader', 'episode'):
+            pages.extend((ROOT / folder).rglob('*.html'))
+        for page in pages:
+            markup = page.read_text()
+            with self.subTest(page=str(page.relative_to(ROOT))):
+                self.assertEqual(markup.count('/_vercel/insights/script.js'), 1)
+                self.assertEqual(markup.count('window.va=window.va||function()'), 1)
+
     def test_public_contact_and_about_copy(self):
         page = (ROOT / 'about/index.html').read_text()
         self.assertIn('mailto:info@thedailybutler.com', page)
@@ -43,7 +53,8 @@ class PublishedSiteTests(unittest.TestCase):
             parser = Links()
             parser.feed(file.read_text())
             for url in parser.urls:
-                if not url.startswith('/') or url.startswith('//'):
+                if (not url.startswith('/') or url.startswith('//') or
+                        url.startswith('/_vercel/')):
                     continue
                 path = ROOT / unquote(urlsplit(url).path).lstrip('/')
                 if path.is_dir():
