@@ -673,5 +673,36 @@
         "reviewed_at": "2026-09-21T05:46:13.115213+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-22.webp",
+    "source": "production/episodes/2026-09-22--the-theban-legion/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "6446dd2c21d3e65177b8f141c490017dcb05208b580f9c11b22abc7f9f09c64e",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-22-small.webp",
+    "source": "production/episodes/2026-09-22--the-theban-legion/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "6446dd2c21d3e65177b8f141c490017dcb05208b580f9c11b22abc7f9f09c64e",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-22.webp",
+    "source": "production/episodes/2026-09-22--the-theban-legion/02-images/approved/79d89e2ca9--79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a.jpg",
+    "sha256": "79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a",
+    "provenance": {
+      "id": "79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a",
+      "file": "02-images/approved/79d89e2ca9--79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a.jpg",
+      "sha256": "79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a",
+      "status": "approved",
+      "source_url": "https://epicpew.com/story-legion-theban-martyrs-courageous-faith/",
+      "notes": "discovered candidate: The Story of the Legion of Theban Martyrs and their Courageous Faith ...",
+      "added_at": "2026-09-19T09:55:27.154580+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved by Aaron on 2026-09-22; identity-specific Theban Martyrs artwork.",
+        "reviewed_at": "2026-09-21T23:46:49.342542+00:00"
+      }
+    }
   }
 ]
