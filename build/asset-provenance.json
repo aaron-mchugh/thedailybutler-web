@@ -704,5 +704,36 @@
         "reviewed_at": "2026-09-21T23:46:49.342542+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-23.webp",
+    "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "7948418a2c01200dbda3271c3a936e56718204faa5ca08556b15bd9f3e4df74d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-23-small.webp",
+    "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "7948418a2c01200dbda3271c3a936e56718204faa5ca08556b15bd9f3e4df74d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-23.webp",
+    "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/02-images/approved/248c0f5149--1-photo-1.jpg",
+    "sha256": "248c0f5149c23a3b208f8e4be498043104bf132cebd06eac4eed9019dae89e76",
+    "provenance": {
+      "id": "248c0f5149c23a3b208f8e4be498043104bf132cebd06eac4eed9019dae89e76",
+      "file": "02-images/approved/248c0f5149--1-photo-1.jpg",
+      "sha256": "248c0f5149c23a3b208f8e4be498043104bf132cebd06eac4eed9019dae89e76",
+      "status": "approved",
+      "source_url": null,
+      "notes": "User-supplied Saint Thecla image, Photo 1; selected by Aaron on 2026-09-23.",
+      "added_at": "2026-09-23T03:48:44.929214+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved by Aaron via explicit instruction: use these.",
+        "reviewed_at": "2026-09-23T03:48:45.094874+00:00"
+      }
+    }
   }
 ]
