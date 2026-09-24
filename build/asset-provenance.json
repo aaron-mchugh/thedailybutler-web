@@ -766,5 +766,46 @@
         "reviewed_at": "2026-09-23T11:42:21.544107+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-25.webp",
+    "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "8c70d8e9d70faaa2008e1cad7e3885d2829c3e6090694ce0b28668c41ea1b1f6",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-25-small.webp",
+    "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "8c70d8e9d70faaa2008e1cad7e3885d2829c3e6090694ce0b28668c41ea1b1f6",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-25.webp",
+    "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/02-images/st-firmin-bishop-martyr/approved/659c79b60a--659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11.jpg",
+    "sha256": "659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11",
+    "provenance": {
+      "id": "659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11",
+      "file": "02-images/st-firmin-bishop-martyr/approved/659c79b60a--659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11.jpg",
+      "sha256": "659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11",
+      "status": "approved",
+      "subject": {
+        "id": "st-firmin-bishop-martyr",
+        "name": "ST FIRMIN, Bishop, Martyr",
+        "aliases": [
+          "Saint Firmin of Amiens",
+          "Saint Fermin of Amiens",
+          "San Ferm\u00edn de Amiens",
+          "Firminus of Amiens"
+        ]
+      },
+      "source_url": "https://en.wikipedia.org/wiki/Fermin",
+      "notes": "discovered candidate: Fermin - Wikipedia",
+      "added_at": "2026-09-24T11:02:07.865433+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved by Aaron using screening label F02.",
+        "reviewed_at": "2026-09-24T11:12:55.482689+00:00"
+      }
+    }
   }
 ]
