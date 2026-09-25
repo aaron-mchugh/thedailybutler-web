@@ -807,5 +807,37 @@
         "reviewed_at": "2026-09-24T11:12:55.482689+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-26.webp",
+    "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0e5250317bd8b0b446c9ee364bb49dcb7d7433b63ca3210b458be129748eb890",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-26-small.webp",
+    "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0e5250317bd8b0b446c9ee364bb49dcb7d7433b63ca3210b458be129748eb890",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-26.webp",
+    "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/02-images/approved/580a1c347c--1-photo-1.jpg",
+    "sha256": "580a1c347c1813a7c9b49d0460a9050cbbd11fec4bb30133d954a8ad2f3c5e89",
+    "provenance": {
+      "id": "580a1c347c1813a7c9b49d0460a9050cbbd11fec4bb30133d954a8ad2f3c5e89",
+      "file": "02-images/approved/580a1c347c--1-photo-1.jpg",
+      "sha256": "580a1c347c1813a7c9b49d0460a9050cbbd11fec4bb30133d954a8ad2f3c5e89",
+      "status": "approved",
+      "subject": null,
+      "source_url": null,
+      "notes": "User-supplied joint icon of Saints Cyprian and Justina; identity and attributes visually checked. Source URL/license not supplied; attribution retained as user upload.",
+      "added_at": "2026-09-25T13:28:59.487294+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved from Aaron's supplied set for exclusive use in the 26 September episode.",
+        "reviewed_at": "2026-09-25T13:28:59.678809+00:00"
+      }
+    }
   }
 ]
