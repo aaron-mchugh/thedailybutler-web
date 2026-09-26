@@ -839,5 +839,37 @@
         "reviewed_at": "2026-09-25T13:28:59.678809+00:00"
       }
     }
+  },
+  {
+    "asset": "episode-2026-09-27.webp",
+    "source": "production/episodes/2026-09-27--sts-cosmas-and-damian-martyrs/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "8bde3f54a0cb3c4192ee9a87ffcd657a45ef2f4ddc23acb8f4dcdafb56914396",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-27-small.webp",
+    "source": "production/episodes/2026-09-27--sts-cosmas-and-damian-martyrs/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "8bde3f54a0cb3c4192ee9a87ffcd657a45ef2f4ddc23acb8f4dcdafb56914396",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-27.webp",
+    "source": "production/episodes/2026-09-27--sts-cosmas-and-damian-martyrs/02-images/approved/cfe5299656--img-1548.png",
+    "sha256": "cfe52996562ee48088e25b1958d7312a8f20b0fc2203b1b4d05767422fadb943",
+    "provenance": {
+      "id": "cfe52996562ee48088e25b1958d7312a8f20b0fc2203b1b4d05767422fadb943",
+      "file": "02-images/approved/cfe5299656--img-1548.png",
+      "sha256": "cfe52996562ee48088e25b1958d7312a8f20b0fc2203b1b4d05767422fadb943",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://drive.google.com/drive/folders/1JROVbITO7nzAuDM1YER2bkF2gvh7GY2_",
+      "notes": "Supplied by Aaron via Google Drive; both physician martyrs depicted; visually checked for identity, framing, and visible watermarking. Original artist, licence, and source-page provenance not supplied.",
+      "added_at": "2026-09-26T20:17:29.101520+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Aaron supplied and authorized these Saints Cosmas and Damian images for direct production; identity and visible-watermark review completed; source provenance is the supplied Drive folder.",
+        "reviewed_at": "2026-09-26T20:17:49.042197+00:00"
+      }
+    }
   }
 ]
