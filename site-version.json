@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "content_sha256": "fec4d94150e3fe80cadb68e212c8c19fc62473247c42b9543091ba42d1b0a3bc",
+  "content_sha256": "3855607c4f11e820d58dd0f9bbdfcb2b48e90a4634aeb5a9ac4a1c1ba40b2a95",
   "episode_dates": [
     "2026-08-31",
     "2026-09-01",
@@ -32,5 +32,5 @@
     "2026-09-27",
     "2026-09-28"
   ],
-  "app_content_version": "faad961cb71209aad44675c0a65d2ea3963cb538a32ee24bd4170ee13980021b"
+  "app_content_version": "a0783a6e81f066f6400de3ed52694a4bf9a6d6b91e81181091973af9a145c35b"
 }
