@@ -17,6 +17,8 @@ dashboard.
 build/build.py        the generator (run locally; see below)
 build/presentation.py editorial page templates
 build/assets.py       local WebP derivatives of existing channel artwork
+build/content.py      versioned public content shared by website and native apps
+build/content.schema.json  source contract and validation schema
 build/asset-provenance.json  image provenance and attribution ledger
 build/css/site.css    source CSS (copied to /css/ by the build)
 build/js/site.js      audio, video, archive search, navigation, reader controls → /js/
@@ -31,6 +33,8 @@ assets/              optimized channel art, thumbnails, self-hosted fonts + lice
 reader/index.html    complete twelve-month reading calendar
 episode/<date>/index.html   per-episode (video + audio + notes + read link)
 reader/<MM-DD>/index.html   online reader (year-independent; 366 pages)
+content/v1/           generated manifest, catalogue, complete reader, site data, schema
+docs/CONTENT_API.md   app integration and content release contract (not deployed)
 sitemap.xml robots.txt 404.html
 ```
 
@@ -62,20 +66,26 @@ cd /home/aaron/AI/the-daily-butler
 .venv/bin/daily-butler sync-website --check
 ```
 
-The transitional `scripts/publish_approved_episode.py` invokes the same handoff after
-saving its verified podcast receipt. That publisher is September-17-specific, not a
-general daily publisher. Future publishers must call `butler.website.sync_website` after
-their verified receipts are saved. For other/manual publishing routes, the command above
-is the final release step. Nothing watches arbitrary edits or uploads to YouTube directly.
+The general production publisher calls `butler.website.sync_after_publication` after
+saving final media receipts. Immediate verified releases attempt the sync automatically;
+future scheduled releases record a deferred website receipt instead of exposing content
+early. The release operator/runner must run the command above **after the scheduled
+time**. No new release-time scheduler is installed by this change.
+
+The transitional `scripts/publish_approved_episode.py` also invokes the handoff but is
+September-17-specific. Other/manual routes must use the command above as their final
+release step. Nothing watches arbitrary edits or uploads to YouTube directly.
 
 The sync builds in a temporary Git checkout, runs the full Python suite, commits only
 allowlisted generated files, pushes website `main`, and waits up to five minutes for the
-exact `site-version.json` marker and page/asset hashes to appear on the live Vercel domain.
+exact `site-version.json` marker and page/asset/public-content hashes to appear on the
+live Vercel domain.
 No media is uploaded and no approval/hold is changed. Unverified/draft or held episodes
 are excluded; stale generated episode pages/art are removed when withdrawn. The source
 media is never deleted. The 366-day reader remains complete.
 
-Prerequisites: both local checkouts and the full corpus, Python/Pillow, Git push access,
+Prerequisites: both local checkouts and the full corpus, Python dependencies from
+`build/requirements.txt` (Pillow and JSON Schema validation), Git push access,
 and the existing Vercel Git integration. The website checkout must be clean, on `main`,
 and equal to remote `main`; the production checkout can contain working media edits.
 No extra Vercel or Cloudflare credentials are needed for the website sync. Override paths
@@ -85,7 +95,22 @@ Receipts live in the production checkout at `var/website-sync/latest.json` and, 
 episode is supplied, `06-publish/website-receipt.json`. If sync fails, media publication
 remains intact. Resolve the stated Git/test/access/deployment problem and rerun
 `sync-website`; do not republish media. A rerun with unchanged content makes no new commit
-but still verifies the live site. There is no scheduled/background sync service.
+but still verifies the live site. The existing production weekly health timer performs
+a repair audit at 03:00 Sunday, Australia/Perth; it is a backstop, not a daily release
+trigger. See the production README for its status commands.
+
+## Shared website/app content
+
+The same eligible episode records and full corpus produce both HTML and the public
+`/content/v1/` JSON files. The app consumes these files, not private production folders
+or scraped web pages. See [the content contract](docs/CONTENT_API.md) for stable IDs,
+offline refresh, withdrawals, compatibility, media corrections and release verification.
+
+Every build validates the public schema, rejects malformed source JSON and requires an
+explicit hold before removing a previously published episode. Verified future podcast
+uploads are excluded until their publication time. An elapsed private YouTube schedule
+needs a successful public playback-metadata readback; temporary verification errors
+abort the build rather than silently publishing an uncertain state.
 
 ### Website design/code changes
 
@@ -110,6 +135,10 @@ retained in `build/brand/`, so no legacy checkout is needed to build this site.
 
 Original provenance is retained in `build/asset-provenance.json`. Responsive
 480px/960px thumbnails and self-hosted WOFF2 fonts keep the pages lightweight.
+The content catalogue also supplies 320px/960px square WebP derivatives of hash-verified
+published podcast artwork, or the canonical show cover when historical evidence is
+absent. Unchanged derivatives are reused only when their source, encoder and output
+hashes all match the provenance ledger.
 
 Episode artwork is uploaded to `feed.thedailybutler.com/art/<date>.jpg`
 (public) by the optional `--upload-art` export. The redesigned website uses local
@@ -161,8 +190,10 @@ python3 -m http.server 4173 --bind 127.0.0.1
 node tests/browser.cjs
 ```
 
-The Python checks cover publication/hold filtering, all internal link targets,
-and preservation of every original reader paragraph and reflection. Browser
+The Python checks cover publication/hold/time filtering, source integrity, withdrawal
+authorization, public schemas/hashes, HTML/content parity, isolated deployment and
+all internal link targets, including preservation of every original paragraph and
+reflection. The app repository separately tests offline and atomic content updates. Browser
 checks cover ten page types at 1440, 768, 390, and 320px; keyboard/mobile navigation;
 search and empty states; leap-day navigation; text-size persistence; real audio
 playback, seeking and speed; click-to-load video; and no-JavaScript fallbacks.

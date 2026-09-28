@@ -49,6 +49,7 @@ def allowed_output(path):
             or bool(re.fullmatch(r'(?:about|archive|subscribe|reader)/index\.html', path))
             or bool(re.fullmatch(r'(?:reader/\d{2}-\d{2}|episode/\d{4}-\d{2}-\d{2})/index\.html', path))
             or bool(re.fullmatch(r'assets/[a-zA-Z0-9_-]+\.webp', path))
+            or bool(re.fullmatch(r'content/v1/(?:manifest|catalog|reader|site|schema)\.json', path))
             or path in {'css/site.css', 'js/site.js'})
 
 
@@ -64,6 +65,8 @@ def verify_live(repo, marker, episode, timeout):
     dates = [episode] if episode else marker['episode_dates'][-1:]
     paths += [f'/episode/{date}/' for date in dates]
     paths += ['/assets/channel-logo-purple.webp']
+    if marker.get('app_content_version'):
+        paths += ['/content/v1/' + name + '.json' for name in ('manifest', 'catalog', 'reader', 'site', 'schema')]
     expected = {}
     for path in paths:
         local = repo / (path.strip('/') + '/index.html' if path.endswith('/') else path.lstrip('/'))
@@ -129,6 +132,8 @@ def sync(root, production, *, check=False, episode=None, timeout=300):
             raise SyncError('Build changed a file outside the generated-output allowlist')
         result.update(content_sha256=marker['content_sha256'], changed_files=paths,
                       episode_count=len(marker['episode_dates']), commit=head)
+        if marker.get('app_content_version'):
+            result['app_content_version'] = marker['app_content_version']
         if check:
             return dict(result, status='checked', pushed=False)
         # Recheck before committing/pushing in case an operator changed the checkout.

@@ -3,42 +3,72 @@
     "asset": "channel-banner.webp",
     "source": "production/assets/brand/banner.png",
     "sha256": "89bca69feeae6cea83babf9032f21ca7c7b3a4047354e74146cb9e588e1694f5",
+    "encoder": "pillow-11.3.0:webp:1920:quality86:method6",
+    "output_sha256": "e7610905f210236ed956602e1ffb7d9cfe123ed6467bf44fd8b4618e70d17f6b",
     "provenance": "Aaron-selected Butler Library banner, qa-v4, 17 September 2026."
   },
   {
     "asset": "podcast-cover.webp",
     "source": "production/assets/brand/podcast-cover-1400.jpg",
     "sha256": "cc443d19547a9979448749dbebd4f817e93f0c43f3d7b2a761c3c083ffa3d72b",
+    "encoder": "pillow-11.3.0:webp:640:quality86:method6",
+    "output_sha256": "3cbfdad17df449ae6dae9c21affda6c70511911765c808d40e98ad5e3ac3f74e",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "channel-logo-purple.webp",
     "source": "production/assets/brand/logo.png",
     "sha256": "bfd310bfada1c09f84b33f422b19af059d5361d127ec6afd024c7537f1c4848c",
+    "encoder": "pillow-11.3.0:webp:240:quality86:method6",
+    "output_sha256": "83d146637aa4fe3ed8c8a2a516fe67935a61bb0a203f896272668d2ce26d3d04",
     "provenance": "Canonical channel logo with its original purple background, used in the footer."
   },
   {
     "asset": "channel-logo.webp",
     "source": "website/build/brand/channel-logo.webp",
     "sha256": "36e4543fc6653790a71b3c381a0cea6fd34fd75a0d1dde99e18c16af41e958e3",
+    "encoder": "pillow-11.3.0:webp:360:quality86:method6",
+    "output_sha256": "0bb2fbf33e4c1ebe2580a44be91b2b256eeacbefa2d3d9ea493babe345c594e7",
     "provenance": "Canonical transparent logo; see build/brand/README.md for original provenance."
+  },
+  {
+    "asset": "podcast-2026-08-31-small.webp",
+    "source": "production/episodes/2026-08-31--st-raymund-nonnatus/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "eb8756af2b7c6231f0df04222af1e0940fd55d0be4e671d7440a2161ebe22228",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "fc5cf7e216bce504ef6f795637535acbe057cdb3c4b18e4df1af48bef81c928a",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-08-31.webp",
+    "source": "production/episodes/2026-08-31--st-raymund-nonnatus/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "eb8756af2b7c6231f0df04222af1e0940fd55d0be4e671d7440a2161ebe22228",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "a01ece1264c138bf3a00c5496be771904ae1c5aceb12bd51e5d1f9ead0f5e9f8",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-01.webp",
     "source": "production/episodes/2026-09-01--st-giles-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "a4d2670cfae74432e49d7276e0d9c6beddd55f730b802ed3e5b55a438549c9a8",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "a657a082643fc65b8632d1aa30e0e2047fd8c9136d373cc3dcf6e44c9208a295",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-01-small.webp",
     "source": "production/episodes/2026-09-01--st-giles-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "a4d2670cfae74432e49d7276e0d9c6beddd55f730b802ed3e5b55a438549c9a8",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "c75346db02b7d5485a3a237fbe5eef38061d3af75f83d956a910f9457b01ebc8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-01.webp",
     "source": "production/episodes/2026-09-01--st-giles-abbot/02-images/approved/87f5f9ad1a--st-giles-244fa126.jpg",
     "sha256": "87f5f9ad1a68b86b2cb4587ac5c3167c80522d1b14ee520e9dc19135b8e91d77",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "a0b4f1875105c6e1a1c8479a5ef9bd3e503bb3d5c8639bef48c0feef4e3f60a9",
     "provenance": {
       "id": "87f5f9ad1a68b86b2cb4587ac5c3167c80522d1b14ee520e9dc19135b8e91d77",
       "file": "02-images/approved/87f5f9ad1a--st-giles-244fa126.jpg",
@@ -55,21 +85,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-01-small.webp",
+    "source": "production/episodes/2026-09-01--st-giles-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "bda0f7bdb4b062ed3035d3300dc88b91fe71fb9d6fd82fd89f1c24452826951d",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "e2e1adfcb5b27eb66f8c81f60f63a838a191700bbd167489cefc5fc5d788437a",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-01.webp",
+    "source": "production/episodes/2026-09-01--st-giles-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "bda0f7bdb4b062ed3035d3300dc88b91fe71fb9d6fd82fd89f1c24452826951d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "86cd1f1a3699e02e5c1bbbac92c1acb8fd91aecc281833bf46b13779f9c43dc9",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-02.webp",
     "source": "production/episodes/2026-09-02--st-stephen-king/05-thumbnail/final/thumbnail.png",
     "sha256": "1a528e9b9667090a7cf5be3a55fc9917dbfed7eb3782cd9e28edeb2b3f4c9b43",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "f03cb220b732e26a5f2a334fcbdc1d9db48b7b6236df15d0fbd006e3c2ef5907",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-02-small.webp",
     "source": "production/episodes/2026-09-02--st-stephen-king/05-thumbnail/final/thumbnail.png",
     "sha256": "1a528e9b9667090a7cf5be3a55fc9917dbfed7eb3782cd9e28edeb2b3f4c9b43",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "a8d56073bfa9252421c84e464a9ff20e1af48ecf7f0357278f89168d4c89c8cd",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-02.webp",
     "source": "production/episodes/2026-09-02--st-stephen-king/02-images/approved/a487348412--st-stephen-king-a3ed535b-up107.jpg",
     "sha256": "a48734841267741bb10666a6cae52ea4d1ed341795fef617e96151e5be71c820",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "ebf0a2a2d38699ed1d92984794763ddf51b7ea358642adad5bb65012e58bc6bd",
     "provenance": {
       "id": "a48734841267741bb10666a6cae52ea4d1ed341795fef617e96151e5be71c820",
       "file": "02-images/approved/a487348412--st-stephen-king-a3ed535b-up107.jpg",
@@ -86,21 +138,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-02-small.webp",
+    "source": "production/episodes/2026-09-02--st-stephen-king/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "927ae2495718172109b6d06e22c468fb4c06b0a3bdbf8062a33334edc965b11d",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "2c8963e716622821ed95eea5bbfa17b78030b69a39eee95786f44075d41f22d3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-02.webp",
+    "source": "production/episodes/2026-09-02--st-stephen-king/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "927ae2495718172109b6d06e22c468fb4c06b0a3bdbf8062a33334edc965b11d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e158d9a27314de103fd217ed848d52bcd8f16b65936c6f0c9e16046cf1ba5af0",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-03.webp",
     "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/final/thumbnail.png",
     "sha256": "83080814ab22a44e75f37f96d8cbd9323d7ab87577a4e8636814367a8348e632",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "711dd2b644ed3b61538c21199196053ae035446ad60ef1e14c83846399fefc14",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-03-small.webp",
     "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/final/thumbnail.png",
     "sha256": "83080814ab22a44e75f37f96d8cbd9323d7ab87577a4e8636814367a8348e632",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "5c8474922449fbfa60b9825b102e85468052b1b4af80ba70e6ff0e394503ae35",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-03.webp",
     "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/02-images/approved/c51dc0564c--st-seraphia-icon-cross.jpg",
     "sha256": "c51dc0564c8718e6bdbcd7ab76f1f86a1c5ff82c17d0461169713db6b2922330",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "dadf71cbcf56c23e5a836258e59d9e65e774b30682c20ae862e35a48434e9d40",
     "provenance": {
       "id": "c51dc0564c8718e6bdbcd7ab76f1f86a1c5ff82c17d0461169713db6b2922330",
       "file": "02-images/approved/c51dc0564c--st-seraphia-icon-cross.jpg",
@@ -117,21 +191,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-03-small.webp",
+    "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "5b2668da4ac7171e12f7010d97f3d0e51f65a937d6cf3cf7bfa76b9fea311c2b",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "b0d5b8688274aad7f9b34a05658c989ecb2ff10ca4ed88148d2e98cea85762ad",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-03.webp",
+    "source": "production/episodes/2026-09-03--st-seraphia-virgin-and-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "5b2668da4ac7171e12f7010d97f3d0e51f65a937d6cf3cf7bfa76b9fea311c2b",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "57209a4328fa8bdd02812d231943c792150481700966f729cb83ca39fc1be533",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-04.webp",
     "source": "production/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/final/thumbnail.png",
     "sha256": "9657aa798c6b8979443002edef9e9da10f7b5870d69e92719bef9d565f4c3f79",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "a98074ff71a5044c260308008ca27da43e6169a8225e74994a55bad7fea008f3",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-04-small.webp",
     "source": "production/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/final/thumbnail.png",
     "sha256": "9657aa798c6b8979443002edef9e9da10f7b5870d69e92719bef9d565f4c3f79",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "1567cb448879c7e6a0792014e702fa12166921097d84a9cba4db4a153d183889",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-04.webp",
     "source": "production/episodes/2026-09-04--st-rosalia-virgin/02-images/approved/b125599f43--rosalia-baroque-sculpture-up186.jpg",
     "sha256": "b125599f4378400951c47fbd7daa710fcb3e261244985af903c4c66234a8bd2a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "1d7a657e9fa7551909648cc3cca32e84817fa23a3709a01c2613d18e98ab73d9",
     "provenance": {
       "id": "b125599f4378400951c47fbd7daa710fcb3e261244985af903c4c66234a8bd2a",
       "file": "02-images/approved/b125599f43--rosalia-baroque-sculpture-up186.jpg",
@@ -148,21 +244,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-04-small.webp",
+    "source": "production/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "31b7a03c927dad9e80682980a171a26ac7694f3caa7062e2abdd52a715aa6e60",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "2e839b29f2ea62ae785411b95114e6e207b3e6a08d21b66b4047e33c393d60ac",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-04.webp",
+    "source": "production/episodes/2026-09-04--st-rosalia-virgin/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "31b7a03c927dad9e80682980a171a26ac7694f3caa7062e2abdd52a715aa6e60",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "ec980c647f72c4d3a455db7b0f3e930a2c1d156d40325a7d443f1fc792fda3b3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-05.webp",
     "source": "production/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/final/thumbnail.png",
     "sha256": "834ecbbdd27e51daf1456b9bd56bc09f8b8a6bce5f335d42c06ea6bc58bc9882",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c4185310c355b2ff9e6fa9ad29d4669c005de75c598a34a0d4cf8ced4c1b800f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-05-small.webp",
     "source": "production/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/final/thumbnail.png",
     "sha256": "834ecbbdd27e51daf1456b9bd56bc09f8b8a6bce5f335d42c06ea6bc58bc9882",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "1f3bb1dc4eefb6e5db2932ba5a058158cfce0cbee57eba699d473bd57220c07f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-05.webp",
     "source": "production/episodes/2026-09-05--st-laurence-justinian/02-images/approved/e9ae34c6fd--370f04e2-dc25-4454-9af6-83f438036a6c.jpg",
     "sha256": "e9ae34c6fd26105a700e26bbe35a51b69fad8bfcfa72195c89cf2bc2a8c0162f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6a89524052c9afbba601196c718586d2c4c335c17cf61b36a659cfe822642b82",
     "provenance": {
       "id": "e9ae34c6fd26105a700e26bbe35a51b69fad8bfcfa72195c89cf2bc2a8c0162f",
       "file": "02-images/approved/e9ae34c6fd--370f04e2-dc25-4454-9af6-83f438036a6c.jpg",
@@ -179,21 +297,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-05-small.webp",
+    "source": "production/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e9ff5cd81e9608acf49374a551c93583d71f75532c1888e19a15158076c4a8ba",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "0d21d304483efb17d3616ed6b23d6e991dc1bf86bca4a118c416cb1c7c71dc99",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-05.webp",
+    "source": "production/episodes/2026-09-05--st-laurence-justinian/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e9ff5cd81e9608acf49374a551c93583d71f75532c1888e19a15158076c4a8ba",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "74c702436cce922cf767c57d21b6938d5c5e58424e9fef3d542d6b26aabb5331",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-06.webp",
     "source": "production/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "c3cb44e715a64aa0abe395625e74a16cdff897a4e4a8cfbae4cba2304cff09dc",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "aa42d35aa80452d4628a4ca215a2518a0599585168949b705cefa075ae68380b",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-06-small.webp",
     "source": "production/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/final/thumbnail.png",
     "sha256": "c3cb44e715a64aa0abe395625e74a16cdff897a4e4a8cfbae4cba2304cff09dc",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "e608abd0f391c169e3705f359cc7e78d9951782b5cdcb90be786165fc316c02b",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-06.webp",
     "source": "production/episodes/2026-09-06--st-eleutherius-abbot/02-images/approved/71b7306175--st-eleutherius-a4328d8d.jpg",
     "sha256": "71b7306175d188c15d67da7830d80d9334769e77c4521826a41450215eecc8c7",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "164a0ec05b8fd72353d35e5befa7c47e15753002351a52058da0b2c657f3c9c8",
     "provenance": {
       "id": "71b7306175d188c15d67da7830d80d9334769e77c4521826a41450215eecc8c7",
       "file": "02-images/approved/71b7306175--st-eleutherius-a4328d8d.jpg",
@@ -210,21 +350,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-06-small.webp",
+    "source": "production/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "7f11ac66428c103c5ec93b6bcf517bb3c0afac08c5782922acbea3e6e9eb98f5",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "f1b65192d295a04d560476a85aed156cb9ce5182bb4d31087cb5e6f6a5df0bd4",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-06.webp",
+    "source": "production/episodes/2026-09-06--st-eleutherius-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "7f11ac66428c103c5ec93b6bcf517bb3c0afac08c5782922acbea3e6e9eb98f5",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c78ec21e53d7d6f31fae92c9530201964acf6b77ed127636e167e72844c37aee",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-07.webp",
     "source": "production/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/final/thumbnail.png",
     "sha256": "36c7e0e3ddb530cf55fe7845500a4a4c9ef7488b1635e086ea76e10e9cdc5c3f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "8924950409701444411d282a46d9f2e3c2985f820f83bfccd8f6fa1f458d9e27",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-07-small.webp",
     "source": "production/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/final/thumbnail.png",
     "sha256": "36c7e0e3ddb530cf55fe7845500a4a4c9ef7488b1635e086ea76e10e9cdc5c3f",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "65264794bed01b5cf9d654b4bbcd085bd9121ff19cc9cd0ecb47ea07fc90f202",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-07.webp",
     "source": "production/episodes/2026-09-07--st-cloud-confessor/02-images/approved/ba5175a6a3--st-cloud-confessor-ef1dc9a8-up250.jpg",
     "sha256": "ba5175a6a3a76c0e238a4833cb41655870cc59f9b34bbfe44640b5bcaae7ae95",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d3decfbda296d9e5b5732a771e44892a47eb0d215560c8b4a7e78aba015b9fcf",
     "provenance": {
       "id": "ba5175a6a3a76c0e238a4833cb41655870cc59f9b34bbfe44640b5bcaae7ae95",
       "file": "02-images/approved/ba5175a6a3--st-cloud-confessor-ef1dc9a8-up250.jpg",
@@ -241,21 +403,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-07-small.webp",
+    "source": "production/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "a76fbe413797ec6f4430bbd3368d68ae988b65de03cf3bd3d4735f4eba4c4f9f",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "feb965fbdfb0cf20ffb89141294fbfd0d4b2dc9d5c86f645b8d4241ea5e4439c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-07.webp",
+    "source": "production/episodes/2026-09-07--st-cloud-confessor/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "a76fbe413797ec6f4430bbd3368d68ae988b65de03cf3bd3d4735f4eba4c4f9f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e3656537871c8797047cb09e04316add1a50ff6c9be42674657c3ab2e0e92bc7",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-08.webp",
     "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/final/thumbnail.jpg",
     "sha256": "1aab4b942b74804cd54681041b3cc76a4e77983e437f6375572389ba9753167a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "812e410ae5a36ff2666b97748da85f762c098726d0bd7ec937ab75e471f4a3ca",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-08-small.webp",
     "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/final/thumbnail.jpg",
     "sha256": "1aab4b942b74804cd54681041b3cc76a4e77983e437f6375572389ba9753167a",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "87ceb47dfcee28984bea88860cf76caa47cc7793d72612bb3a3d604883878edd",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-08.webp",
     "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/02-images/approved/d9a68904f2--nativity-1358.png",
     "sha256": "d9a68904f2b50c39d4905ef872a4821113b673f78a52a7836236a9d61801026d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "2c68fc91d8b2a6968666218a2771b127ca54908e8d826e299ec224fcf6d79e28",
     "provenance": {
       "id": "d9a68904f2b50c39d4905ef872a4821113b673f78a52a7836236a9d61801026d",
       "file": "02-images/approved/d9a68904f2--nativity-1358.png",
@@ -272,21 +456,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-08-small.webp",
+    "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3dc86acbefc0ff9d7fe7970771ca30ef8c1b525d25812468e1153a633dd08ae6",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "1ae1d9fd5f494f4e32510f559bf737662737a4d023c98f800491665f31e39a36",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-08.webp",
+    "source": "production/episodes/2026-09-08--the-nativity-of-the-blessed-virgin-and-the-festival-on-the-sunday-within-the-octave-of-her-nativity-of-the-holy-name-of-mary/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3dc86acbefc0ff9d7fe7970771ca30ef8c1b525d25812468e1153a633dd08ae6",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "3cdbebdf439be26846fc17e6988fe46a67810ed2305bc0a759415dd23024852e",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-09.webp",
     "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/final/thumbnail.png",
     "sha256": "6fdd3a6e5acc9ab7c4e86dfbafc3b7753b36459334b701be4f1ddbc8ad803dd5",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "97d8f6f2f67a7209e743cb60bdea9151d2622dfb27594f322981fd07a05de1ab",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-09-small.webp",
     "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/final/thumbnail.png",
     "sha256": "6fdd3a6e5acc9ab7c4e86dfbafc3b7753b36459334b701be4f1ddbc8ad803dd5",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "465e29062fb5fc07e2444db3d07324def254ddcdcd2969ecde83b54f0003e4f8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-09.webp",
     "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/02-images/approved/3b4dfad830--art-st-peter-claver-0.jpg",
     "sha256": "3b4dfad830aa4c4080bfd998c4babc780c5670a8b9a0322f26cf8c82fa9b2038",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "53888068c2c5ab4a2f1c8f9c1abbfda41179d499cd5f47a2579debe1aa2985f0",
     "provenance": {
       "id": "3b4dfad830aa4c4080bfd998c4babc780c5670a8b9a0322f26cf8c82fa9b2038",
       "file": "02-images/approved/3b4dfad830--art-st-peter-claver-0.jpg",
@@ -303,21 +509,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-09-small.webp",
+    "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e8b0c5b49acc43f699bc169eee232f905faa581fe47981166a193a1a077bb72a",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "61ecbdaaf2e90356966da2b715eabd596787d7a7639f71cb7abacae8cd45012f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-09.webp",
+    "source": "production/episodes/2026-09-09--st-omer-bishop-and-saint-peter-claver/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e8b0c5b49acc43f699bc169eee232f905faa581fe47981166a193a1a077bb72a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "f66aa592c446e8eebd753178fbba8f0e981f4773dd1e174baec924458c5924da",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-10.webp",
     "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/final/thumbnail.png",
     "sha256": "e3f33c9b8c8a9cbf283d4e0ea9a84c192e0fe254d3665d28ba1d26f42abe0ced",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "788d00495970664cc495c8310e9ae20ade0da44dd5374b51328672025fdfa5a8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-10-small.webp",
     "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/final/thumbnail.png",
     "sha256": "e3f33c9b8c8a9cbf283d4e0ea9a84c192e0fe254d3665d28ba1d26f42abe0ced",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4fd992d89656ca939480bb2082df8d9c5aa4537239405352711416555844d4b3",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-10.webp",
     "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/02-images/approved/d5f3a16166--st-nicholas-of-tolentino-7dd5b28c05751d6a3652be4a519e1fd2.jpg",
     "sha256": "d5f3a1616633ef72e5360c4389e4946439694ea4f70a63c0c438dd5b001e6c50",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "0ca7ae9d6e798470cc0052447f47a08d74f23203ae4a35248c9969f9dd35b218",
     "provenance": {
       "id": "d5f3a1616633ef72e5360c4389e4946439694ea4f70a63c0c438dd5b001e6c50",
       "file": "02-images/approved/d5f3a16166--st-nicholas-of-tolentino-7dd5b28c05751d6a3652be4a519e1fd2.jpg",
@@ -334,21 +562,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-10-small.webp",
+    "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3751abd9b42ad3d12066f573e494b22cb0fc50bfbbb12ea882bf0c1b07d366f8",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "bf3807f049519c24435d47a844693052aa1ec8e6b0f89fefcc7e0166ed048ce3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-10.webp",
+    "source": "production/episodes/2026-09-10--st-nicholas-of-tolentino/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3751abd9b42ad3d12066f573e494b22cb0fc50bfbbb12ea882bf0c1b07d366f8",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "47c7ecf939aefd84daa7ba88342864eb05f61dd237afafba959566d5d33a45ca",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-11.webp",
     "source": "production/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/final/thumbnail.png",
     "sha256": "ca68abb7ed456f45178553fad1833b2a8b86b8436ddfb1962e2eac7d19172128",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "71c04ad52c6cea06195fb2d6a0dc5e28d02802985031eac7a2ca17678838fa9c",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-11-small.webp",
     "source": "production/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/final/thumbnail.png",
     "sha256": "ca68abb7ed456f45178553fad1833b2a8b86b8436ddfb1962e2eac7d19172128",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "06f9004c8bf0454c0e432e6fc21255cb565165fa773f344dc57ab8c9feb74dcc",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-11.webp",
     "source": "production/episodes/2026-09-11--st-paphnutius-bishop/02-images/approved/1ed14287a1--art-st-paphnutius-bishop-2.jpg",
     "sha256": "1ed14287a12618c0314bff44866d36950313420ed425b85cc7996e24cf56a27a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "5615337cd0ee228aaf49350b86a8f94761e2f06f6522a5023b9620614f6c858f",
     "provenance": {
       "id": "1ed14287a12618c0314bff44866d36950313420ed425b85cc7996e24cf56a27a",
       "file": "02-images/approved/1ed14287a1--art-st-paphnutius-bishop-2.jpg",
@@ -365,21 +615,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-11-small.webp",
+    "source": "production/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "83f9cf35929325be074c3d4e619022193684bccb6a1a08caf7c1c7266e2327fe",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "f7a8c1d71eee11b42338856d472b68a4207a16df88f56327d886710c28e5c78d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-11.webp",
+    "source": "production/episodes/2026-09-11--st-paphnutius-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "83f9cf35929325be074c3d4e619022193684bccb6a1a08caf7c1c7266e2327fe",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "00b73a127d924db6acb6c376b4872b2930de5346f61bf3fd15242963206f4ad6",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-12.webp",
     "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/05-thumbnail/final/thumbnail.png",
     "sha256": "89a2ca42a9106370c6e2d6ab8f17263718b8ec69acbc8cb44d8142075526b2a8",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c0a240d21c6ad1cf3869adb73e919c8d761a4d5d2103995a206a4e1674d77485",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-12-small.webp",
     "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/05-thumbnail/final/thumbnail.png",
     "sha256": "89a2ca42a9106370c6e2d6ab8f17263718b8ec69acbc8cb44d8142075526b2a8",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "36ce98c0f6c5a456a29457d090f39149a6d825ef54e7b43a63828f13c4a9c4f9",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-12.webp",
     "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/02-images/approved/b92bdc793b--st-guy-of-anderlecht-74306482.jpg",
     "sha256": "b92bdc793b9bdfec79cf6d86a8ad7d6fab7fb054b8fd7003871792614c60f36f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "ace981a8dfcd120c7459f8459609a8483b72ce3be390da12c3db457e5ae524b8",
     "provenance": {
       "id": "b92bdc793b9bdfec79cf6d86a8ad7d6fab7fb054b8fd7003871792614c60f36f",
       "file": "02-images/approved/b92bdc793b--st-guy-of-anderlecht-74306482.jpg",
@@ -396,21 +668,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-12-small.webp",
+    "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "8b82b1df58c47c0abf627aeb0d983de573b0673b40fe39a3a54d57268399dab9",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "a09a9a7008cd83e0a6da2cd7823ec39de281e0e12f0bafd5d71e2a0773a8c808",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-12.webp",
+    "source": "production/episodes/2026-09-12--st-guy-of-anderlecht/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "8b82b1df58c47c0abf627aeb0d983de573b0673b40fe39a3a54d57268399dab9",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e6550cfda8035198ba508b28498077b30a4d089f7161d18a16210b40682e1583",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-13.webp",
     "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
     "sha256": "aaea90438906a079d13424f7a5cf9b9642af4d4b837959df7a905cf9faa0930f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "89fe3dbd6ae095e320ef4b0569b56574bceb1df9365976c7a6e53ab5578a5f05",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-13-small.webp",
     "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/final/thumbnail.png",
     "sha256": "aaea90438906a079d13424f7a5cf9b9642af4d4b837959df7a905cf9faa0930f",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "5f6f489f28130ac0aa7be104bfcf19b39ae6709e2ade9efc240635a566e18aa1",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-13.webp",
     "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/02-images/approved/4a3d56c841--aaron-eulogius-01.jpg",
     "sha256": "4a3d56c84124f78cae537219f5c57d4947bb9f7bda163d39fa89d771fca7a8c7",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "9558c6a46eb94d3c849cc664617e9fe4e005bb25186d145621e80f6ad64c6633",
     "provenance": {
       "id": "4a3d56c84124f78cae537219f5c57d4947bb9f7bda163d39fa89d771fca7a8c7",
       "file": "02-images/approved/4a3d56c841--aaron-eulogius-01.jpg",
@@ -427,21 +721,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-13-small.webp",
+    "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d6b0928647af520a8f3a04057f0b621a0c898f3737b7de9239c378a2528d3aaf",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "c9da7510d0126bcee39b010508a7700ad7e82c93632ed746cdf9e54bc62026b4",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-13.webp",
+    "source": "production/episodes/2026-09-13--st-eulogius-patriarch-of-alexandria/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d6b0928647af520a8f3a04057f0b621a0c898f3737b7de9239c378a2528d3aaf",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d354208d042f4f25c7244e09afc426c4365f1d3e7e24b9a12c6f1b703d149016",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-14.webp",
     "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/05-thumbnail/final/thumbnail.jpg",
     "sha256": "9d67d5ad5340475f2964f042c8578d5874098d3ae931038542afc919d50e6fc4",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "b388ca64b1f0000d2f8751a564840ae6496aeb6b137ac38a0b220d1ca0bf6d10",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-14-small.webp",
     "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/05-thumbnail/final/thumbnail.jpg",
     "sha256": "9d67d5ad5340475f2964f042c8578d5874098d3ae931038542afc919d50e6fc4",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "116f4fabc43ce76ec7a729b40e936da5337335f611d17a68074834422470f204",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-14.webp",
     "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/02-images/approved/b4405665cd--aaron-03-exaltation-icon.jpg",
     "sha256": "b4405665cd0bb0624a5ee0421c86911224b7f671ea9b5d2faa5a55f36021f39a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7d369bdfdbb8505c767e3e64ff1a768fbbd062b6b04b1eab4c76e01086090641",
     "provenance": {
       "id": "b4405665cd0bb0624a5ee0421c86911224b7f671ea9b5d2faa5a55f36021f39a",
       "file": "02-images/approved/b4405665cd--aaron-03-exaltation-icon.jpg",
@@ -458,21 +774,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-14-small.webp",
+    "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "a5ba4c2ed80bf841c29dbe152ad3eedc5a3c84388b314bf93c6a6fcedfb70a4a",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "b92a8f0cd7b98aa954965c48acbaeeb8af7fe50b5012c7b4f8914721a29016f1",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-14.webp",
+    "source": "production/episodes/2026-09-14--the-exaltation-of-the-holy-cross-of-our-lord-jesus-christ/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "a5ba4c2ed80bf841c29dbe152ad3eedc5a3c84388b314bf93c6a6fcedfb70a4a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "69f22c0aae0fb8ad7ed2c5e2c258ac967d1a9b1ffbe3f877440a7756cff1e201",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-15.webp",
     "source": "production/episodes/2026-09-15--st-catherine-of-genoa/05-thumbnail/final/thumbnail.png",
     "sha256": "9520e4715eff9ddaa326270e8941f46f8a204093f4fcda246c951150012b800d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d26588a3abdfcc3ee1a75a9f1a5c8d20e04f1690a4808f9ec12898662259ec81",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-15-small.webp",
     "source": "production/episodes/2026-09-15--st-catherine-of-genoa/05-thumbnail/final/thumbnail.png",
     "sha256": "9520e4715eff9ddaa326270e8941f46f8a204093f4fcda246c951150012b800d",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4d97651c9b2392bd9f6d335c2883a909f5a95e1e83cb96f3370e320a63b93ee5",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-15.webp",
     "source": "production/episodes/2026-09-15--st-catherine-of-genoa/02-images/approved/ddbf973585--aaron-02-christ-cross-vision-fit16x9.jpg",
     "sha256": "ddbf97358519b3545c00862b0bf67a23943090c346b9473501fc24c91083a96a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "99e782bec722a1a89369d61bb9ee223ed17bed17e88bba928b32b2b11a8bce46",
     "provenance": {
       "id": "ddbf97358519b3545c00862b0bf67a23943090c346b9473501fc24c91083a96a",
       "file": "02-images/approved/ddbf973585--aaron-02-christ-cross-vision-fit16x9.jpg",
@@ -489,21 +827,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-15-small.webp",
+    "source": "production/episodes/2026-09-15--st-catherine-of-genoa/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d804c797ed85e7d71327fbbe583a830b98291288fc9b903209a5878117fa3163",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "dcb329b7c29bbb8b34e7a8859b21d6085148f7e5c3ad4fb75a30b0d3e3d9f253",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-15.webp",
+    "source": "production/episodes/2026-09-15--st-catherine-of-genoa/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d804c797ed85e7d71327fbbe583a830b98291288fc9b903209a5878117fa3163",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "04f110cf6445ae91ab28277873271091f7ed201eea1828b4647b5956ea30d345",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-16.webp",
     "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/final/thumbnail.jpg",
     "sha256": "7074c0d1cb9eaa3e166f4ee9f13a8aee36a3415b85a5898a9b36407138e44413",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c6c1fd851886e2886551d67ccfe65d0298a285ff65d65a2739c78aea266bbfaf",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-16-small.webp",
     "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/final/thumbnail.jpg",
     "sha256": "7074c0d1cb9eaa3e166f4ee9f13a8aee36a3415b85a5898a9b36407138e44413",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "8261518895d0c4baeaac496c72fb5a922205159e0a2bd6b4c1f83c9c23523fe8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-16.webp",
     "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/02-images/approved/19314eec72--aaron-drive-01.png",
     "sha256": "19314eec724a440641595ba4470efe5978c6bd9a97c97d25d5a04ef0eb3ca31d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "99bde3608d834589bcb7abe1e645a13d3a18e6362ddc394a889234febcbc103d",
     "provenance": {
       "id": "19314eec724a440641595ba4470efe5978c6bd9a97c97d25d5a04ef0eb3ca31d",
       "file": "02-images/approved/19314eec72--aaron-drive-01.png",
@@ -520,21 +880,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-16-small.webp",
+    "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "9a1d1038c61c4c75d77b5aab3f8aab2bf4cafeeeb58a3862f8a4da6b272a0d6b",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "e1e4545f832298dc2a6ae6c22a653c2090e28b081b2bc62e365acb01e6fb7432",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-16.webp",
+    "source": "production/episodes/2026-09-16--st-cyprian-bishop-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "9a1d1038c61c4c75d77b5aab3f8aab2bf4cafeeeb58a3862f8a4da6b272a0d6b",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "1933dad4a69f29125af23a916e1709062230737b13a2d782ae74f2b92ae7abc8",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-17.webp",
     "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/candidates/higgsfield-v6/thumbnail-1280x720.png",
     "sha256": "3f68173f170eefe5efd8a7a31c47804321a80a9f414151040778b529f5f36c16",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "51eb5cb2f27452bf1b199a7c075901005ccff0687ecbb5582794cecc62235504",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-17-small.webp",
     "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/candidates/higgsfield-v6/thumbnail-1280x720.png",
     "sha256": "3f68173f170eefe5efd8a7a31c47804321a80a9f414151040778b529f5f36c16",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "7491b8d2337b57752d3ac103dd40b1224c1bdb1beba8a180073501dd4904305e",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-17.webp",
     "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/02-images/approved/649f4898ae--lambert-photo2-source.jpg",
     "sha256": "649f4898ae268f8b13680a8b4a025f6601dbf1a5e81e3312b119c6479f647a57",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "0ea03f61bb61f6a2421f0981bbb4322305eb1c9fb920cf8df2ff83cfbbdd5ca8",
     "provenance": {
       "id": "649f4898ae268f8b13680a8b4a025f6601dbf1a5e81e3312b119c6479f647a57",
       "file": "02-images/approved/649f4898ae--lambert-photo2-source.jpg",
@@ -551,21 +933,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-17-small.webp",
+    "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e20e385f7138028db3215846cf549137f2618f8ea5db4c0869e76f50f677b1f5",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "1c03f8b230898189c06c14a5112cb3a39629279547664d90081efc6f801ef64c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-17.webp",
+    "source": "production/episodes/2026-09-17--st-lambert-bishop-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e20e385f7138028db3215846cf549137f2618f8ea5db4c0869e76f50f677b1f5",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "343e258111f5dea94d175fcac10fb8334221c409ce021c11e6756bdfcf1677aa",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-18.webp",
     "source": "production/episodes/2026-09-18--st-thomas-of-villanova/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "3731e7fdc09ab5262896195ece39369f8c949d7ee6862da830c1e4ebff16ab29",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "5cd4ec88946d8dcffb95b5de1b57962b59da3ad4f331f62d31d3608a1d7b6d63",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-18-small.webp",
     "source": "production/episodes/2026-09-18--st-thomas-of-villanova/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "3731e7fdc09ab5262896195ece39369f8c949d7ee6862da830c1e4ebff16ab29",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4f1d3eef418a4fc79986962deabda0d3631eee2423f109b98532f24f0323a405",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-18.webp",
     "source": "production/episodes/2026-09-18--st-thomas-of-villanova/02-images/approved/69c7b8ffcf--01-camilo-prado.jpg",
     "sha256": "69c7b8ffcfed253e19c74d52b58db941d3bf491547c60fed91829fc2ac637fe4",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e9fb231e2228f77841d182bbe7bf48c914b913d77f94546661b8c3266a4cff1f",
     "provenance": {
       "id": "69c7b8ffcfed253e19c74d52b58db941d3bf491547c60fed91829fc2ac637fe4",
       "file": "02-images/approved/69c7b8ffcf--01-camilo-prado.jpg",
@@ -582,21 +986,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-18-small.webp",
+    "source": "production/episodes/2026-09-18--st-thomas-of-villanova/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "5916139dfca1426d035334c63703f88ac64079a3636daf60b2931fe7db186027",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "e379795546b19e4f0cd3a9350049cfca4a93d22afa2e0b5c69414edd38f50655",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-18.webp",
+    "source": "production/episodes/2026-09-18--st-thomas-of-villanova/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "5916139dfca1426d035334c63703f88ac64079a3636daf60b2931fe7db186027",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "bfd09a4c9c05f240a10376e184861009be53bb00405ea29cd87d595e18f7a1d2",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-19.webp",
     "source": "production/episodes/2026-09-19--st-januarius-martyr/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "2abe3390896efd5687c2b55d4edc44f84e9cbe29292d7f2f3f52d52c0aed2a6f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "76166ba77374634a8228cf18a69766db674f20187f16f794f172603b52b3d019",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-19-small.webp",
     "source": "production/episodes/2026-09-19--st-januarius-martyr/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "2abe3390896efd5687c2b55d4edc44f84e9cbe29292d7f2f3f52d52c0aed2a6f",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "25a569311e005bba22b5a6ab8d31fc12e368020abaf88fe910b4d56b467831e4",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-19.webp",
     "source": "production/episodes/2026-09-19--st-januarius-martyr/02-images/approved/4b99c550a6--st-januarius-louis-finson.jpg",
     "sha256": "4b99c550a6b4f5db96c6a5d66da21a98d5dc21b90b924e915f1c91adf8c2beb1",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "fee1d56d8679271e1aedd2e05953afb5274d11ed06cb8a7fc8f9cc32cca2b813",
     "provenance": {
       "id": "4b99c550a6b4f5db96c6a5d66da21a98d5dc21b90b924e915f1c91adf8c2beb1",
       "file": "02-images/approved/4b99c550a6--st-januarius-louis-finson.jpg",
@@ -613,21 +1039,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-19-small.webp",
+    "source": "production/episodes/2026-09-19--st-januarius-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "8071182a1184d0baf64d30291441f47cf3aeff7bba807458ae4dd82d9b300b96",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "ce469f303de1a6d055f169059e1a2f1be1b58d67017d97389d7fa316a138f4cc",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-19.webp",
+    "source": "production/episodes/2026-09-19--st-januarius-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "8071182a1184d0baf64d30291441f47cf3aeff7bba807458ae4dd82d9b300b96",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "9302208429dcc183f159e2f078e4e4ca1472c47a50c8a8cde77aa0791b2de2df",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-20.webp",
     "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/05-thumbnail/final/thumbnail-master-2k.png",
     "sha256": "bf5b9bb7c892f4254e83adfb40b3f08d5368e9baad725e9cd0ef3ec190c2f9bf",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "df12de1a5761e0502481fc6c6223be8b88bfa298349baf5d3e23635f5fc5ddf5",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-20-small.webp",
     "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/05-thumbnail/final/thumbnail-master-2k.png",
     "sha256": "bf5b9bb7c892f4254e83adfb40b3f08d5368e9baad725e9cd0ef3ec190c2f9bf",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "c2daf1b677bce948f9e1e2d5c41c691e05e100a2cf03bfde840e62dc068b054b",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-20.webp",
     "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/02-images/approved/b26e4ebf3f--upload-20260920-142748-1.jpg",
     "sha256": "b26e4ebf3f63f6df46b788e749e6918df67693da0d1e46216a4818d53c4daa59",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "4be860703dc14b5b704b16cb992fe1e0a41f3f9d6ab79e7519b06e9916b296a9",
     "provenance": {
       "id": "b26e4ebf3f63f6df46b788e749e6918df67693da0d1e46216a4818d53c4daa59",
       "file": "02-images/approved/b26e4ebf3f--upload-20260920-142748-1.jpg",
@@ -644,21 +1092,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-20-small.webp",
+    "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "cec3f84e839bef06fb7a19cc80bb79d5f02d036896e208fb40f9aba6aa95e663",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "ef820112adadf9c623fbb4bf09eb9f830f3e846a8fccb4c74745528c8b0e0c17",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-20.webp",
+    "source": "production/episodes/2026-09-20--sts-eustachius-and-companions-martyrs/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "cec3f84e839bef06fb7a19cc80bb79d5f02d036896e208fb40f9aba6aa95e663",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "5a9f7718a5f23dc26bd2c9fe6d9475975496c65e298d129f970e1d604fb41e7d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-21.webp",
     "source": "production/episodes/2026-09-21--st-matthew-apostle/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "1f1509006bb321c617d33bbb8e7bb4759c678f7fbe9fc5109135aa9aa8328ece",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "4816ae4e86c0665056df462e1cfbe2720fbca5a8ad5c33bfb873f222c8003282",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-21-small.webp",
     "source": "production/episodes/2026-09-21--st-matthew-apostle/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "1f1509006bb321c617d33bbb8e7bb4759c678f7fbe9fc5109135aa9aa8328ece",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "5a326cfdf30f59ddc689da66172214a405a9eca7cdb6a357e5ee340a29a1b8b0",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-21.webp",
     "source": "production/episodes/2026-09-21--st-matthew-apostle/02-images/approved/2884406bd7--2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833.jpg",
     "sha256": "2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d3b9e29bcc76292b74307d07a8dd372eedc155cb1aa9f9b3308044fe754b77c7",
     "provenance": {
       "id": "2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833",
       "file": "02-images/approved/2884406bd7--2884406bd73d79c9a15a6ebcd7835851d48a933694e76bc8729de5f3810d9833.jpg",
@@ -675,21 +1145,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-21-small.webp",
+    "source": "production/episodes/2026-09-21--st-matthew-apostle/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "599238d444cf034ec1712477ddebbf4a455f0dbfe0e9f7cbad7d9d361d300015",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "f0322c199f0aaeae72fbd1b7dbe2941014bb00f558d606798cbfe60e50a329e1",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-21.webp",
+    "source": "production/episodes/2026-09-21--st-matthew-apostle/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "599238d444cf034ec1712477ddebbf4a455f0dbfe0e9f7cbad7d9d361d300015",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d8e61f06d4808458eb219304f8f096b43f46c763f511ab347bbbbdf6dc25a402",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-22.webp",
     "source": "production/episodes/2026-09-22--the-theban-legion/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "6446dd2c21d3e65177b8f141c490017dcb05208b580f9c11b22abc7f9f09c64e",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e51d599db2ef1e21d7f3ef392557f895e5d1f266e0751f567d7bfcf7580ea2a7",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-22-small.webp",
     "source": "production/episodes/2026-09-22--the-theban-legion/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "6446dd2c21d3e65177b8f141c490017dcb05208b580f9c11b22abc7f9f09c64e",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4d53fe3603236f36366d91bd04ac0e4df5a4a8653fad9d67c8917e1e32be2d67",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-22.webp",
     "source": "production/episodes/2026-09-22--the-theban-legion/02-images/approved/79d89e2ca9--79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a.jpg",
     "sha256": "79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "4d8fc532a257eef6f0f2df77918570241f43747185e2a63fda95ea1a3707832c",
     "provenance": {
       "id": "79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a",
       "file": "02-images/approved/79d89e2ca9--79d89e2ca98d4d7ee13b3a2c8653b1e545ff445ce7cd62729e5270e37c09565a.jpg",
@@ -706,21 +1198,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-22-small.webp",
+    "source": "production/episodes/2026-09-22--the-theban-legion/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "c55ac37b26273cbe24eafca02388a0ccef9c3c4af21ee61f401cdd6c58bc8c0a",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "09d66f70c819f8a0b396634a924e6309f9e4d0911972d44926d622ca2c487304",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-22.webp",
+    "source": "production/episodes/2026-09-22--the-theban-legion/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "c55ac37b26273cbe24eafca02388a0ccef9c3c4af21ee61f401cdd6c58bc8c0a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "12d2105bfc4fa00acc922ccfacf4242f0fc87cecbdb4f3b9e46b01842671dd18",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-23.webp",
     "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "7948418a2c01200dbda3271c3a936e56718204faa5ca08556b15bd9f3e4df74d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "8de9e07aa746aa21e442237ea4662aa8f543209775f35e11236170d77fa1ae4f",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-23-small.webp",
     "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "7948418a2c01200dbda3271c3a936e56718204faa5ca08556b15bd9f3e4df74d",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4b7becfa48f83d00b427d5ea94f916454f4399a3714bc818c61ac4d50308eeb7",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-23.webp",
     "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/02-images/approved/248c0f5149--1-photo-1.jpg",
     "sha256": "248c0f5149c23a3b208f8e4be498043104bf132cebd06eac4eed9019dae89e76",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "3140d0f760bdae5e39c772d411fd01f056a59a7bc7d23f954e3e8c8f2f77c730",
     "provenance": {
       "id": "248c0f5149c23a3b208f8e4be498043104bf132cebd06eac4eed9019dae89e76",
       "file": "02-images/approved/248c0f5149--1-photo-1.jpg",
@@ -737,21 +1251,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-23-small.webp",
+    "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "1c5fe19942e548682b8178d43a398cda4be149e4bdfe677eb87e9b0387840338",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "abaf507b458ef1984a4bf9806c1c80f69314e0be9aaef07b122f9d47be590aeb",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-23.webp",
+    "source": "production/episodes/2026-09-23--st-thecla-virgin-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "1c5fe19942e548682b8178d43a398cda4be149e4bdfe677eb87e9b0387840338",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6f635c451e2f0c827a7a41704b7d0759868f5274741b649a2813e8854e747928",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-24.webp",
     "source": "production/episodes/2026-09-24--the-blessed-virgin-mary-of-mercy/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "cf7934e63c702417f6c412283de077d72ea0e5668aaf274999a5808b38fee36c",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c2c770c9ced26fa1cc36fa65d97b6b4b46cbef210833f340cf7ada395d47cea9",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-24-small.webp",
     "source": "production/episodes/2026-09-24--the-blessed-virgin-mary-of-mercy/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "cf7934e63c702417f6c412283de077d72ea0e5668aaf274999a5808b38fee36c",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "7b635cbb53c831a5f8dd2ecf5c51ce639aa7151a95b6996059c064118061847b",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-24.webp",
     "source": "production/episodes/2026-09-24--the-blessed-virgin-mary-of-mercy/02-images/approved/9dc4d182cc--1-photo-1.jpg",
     "sha256": "9dc4d182ccf739b1d1a681082da09e8434dc52993c2c9b49cbd24463b466eb8c",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "2bd9aeb73b579759a641c22b12d66200261b5dadfaedecbc67541acfad81ce85",
     "provenance": {
       "id": "9dc4d182ccf739b1d1a681082da09e8434dc52993c2c9b49cbd24463b466eb8c",
       "file": "02-images/approved/9dc4d182cc--1-photo-1.jpg",
@@ -768,21 +1304,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-24-small.webp",
+    "source": "production/episodes/2026-09-24--the-blessed-virgin-mary-of-mercy/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "6fd064c8d793549424b814d1de8e01afac47a96a582e97efe1ca6936996759eb",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "5c9ff71974b2bba97d3eae875fd62b79b3dce85aa399a86764c1676f41618c8f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-24.webp",
+    "source": "production/episodes/2026-09-24--the-blessed-virgin-mary-of-mercy/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "6fd064c8d793549424b814d1de8e01afac47a96a582e97efe1ca6936996759eb",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "71829056a9e7950fa5ca45d3b25ec2cae66537c391a14bcf75c81b3de4bc43f3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-25.webp",
     "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "8c70d8e9d70faaa2008e1cad7e3885d2829c3e6090694ce0b28668c41ea1b1f6",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "b6f062eabc88bcd9090e2ee2f3c3e6bfa7573f9fff3c98332c3838b2416617b6",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-25-small.webp",
     "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "8c70d8e9d70faaa2008e1cad7e3885d2829c3e6090694ce0b28668c41ea1b1f6",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "a7b1fa779d667d88496a685ede758701743780de2ed5e052302c8398d80f21e8",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-25.webp",
     "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/02-images/st-firmin-bishop-martyr/approved/659c79b60a--659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11.jpg",
     "sha256": "659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "875df02c470f29cebe70d095310b3368007cbb1b0535ea6bac15090d0ebb1c45",
     "provenance": {
       "id": "659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11",
       "file": "02-images/st-firmin-bishop-martyr/approved/659c79b60a--659c79b60addf3c9b3420fe7e76a4bf4fb11ca584fd7ed57a3661f7a1e368d11.jpg",
@@ -809,21 +1367,43 @@
     }
   },
   {
+    "asset": "podcast-2026-09-25-small.webp",
+    "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "a2d06354bf9754926a5904ddede84ccaf9a819e70d661e146359ff998fef322a",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "52b2b7c53dc3939b0303df40eecb7bd75e1c3e3d4d818986789b1e57ac8f29fa",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-25.webp",
+    "source": "production/episodes/2026-09-25--st-firmin-bishop-martyr-st-finbarr-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "a2d06354bf9754926a5904ddede84ccaf9a819e70d661e146359ff998fef322a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e74c8519577d19101e0037e556ea85181f869b886e2e9b07367403c68325403e",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-09-26.webp",
     "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "0e5250317bd8b0b446c9ee364bb49dcb7d7433b63ca3210b458be129748eb890",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d08124c77defe8c59f09c4d4b3b5288b7b99d444c34a0f81380df45d28a1996b",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-09-26-small.webp",
     "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "0e5250317bd8b0b446c9ee364bb49dcb7d7433b63ca3210b458be129748eb890",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "f822f771bf43460427c015f8ec0d37e40b476d80bd898e6aec2922183afddc30",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "art-2026-09-26.webp",
     "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/02-images/approved/580a1c347c--1-photo-1.jpg",
     "sha256": "580a1c347c1813a7c9b49d0460a9050cbbd11fec4bb30133d954a8ad2f3c5e89",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "332aedc948a3c33b427e8dd9c143e0fa5392f8f4ac7f70d6ac672f77e7bb0218",
     "provenance": {
       "id": "580a1c347c1813a7c9b49d0460a9050cbbd11fec4bb30133d954a8ad2f3c5e89",
       "file": "02-images/approved/580a1c347c--1-photo-1.jpg",
@@ -903,5 +1483,21 @@
         "reviewed_at": "2026-09-27T11:53:13.866351+00:00"
       }
     }
+  },
+  {
+    "asset": "podcast-2026-09-26-small.webp",
+    "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "c84b29b1b67464f79d4146f23efaa0caf043e3eea9a64329593492d7a1a64559",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "c661d0b6c3429ef0b7b87c3f8fdc5bd8b278fcdcaf19429d966c73f2e8fb50df",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-26.webp",
+    "source": "production/episodes/2026-09-26--sts-cyprian-and-justina-martyrs/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "c84b29b1b67464f79d4146f23efaa0caf043e3eea9a64329593492d7a1a64559",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "98ac4dc61f7425eb0c020aa8fb19dcb39ab0055edc96944b11b7d902b3eef777",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]

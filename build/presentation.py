@@ -4,21 +4,15 @@ import html
 import json
 import math
 import re
+from content import title_case, episode_name
 
 
 def esc(value):
     return html.escape(str(value), quote=True)
 
 
-def title_case(value):
-    # The corpus uses capitals for names. Preserve the full identity and all feast names.
-    value = re.sub(r"\bST\.?\s+", "Saint ", value, flags=re.I)
-    words = value.split()
-    return " ".join((w.lower() if i and w.lower() in {"of", "the", "and", "in", "on", "within"} else w.title()) if w.isupper() else w for i, w in enumerate(words))
-
-
 def name(ep):
-    return title_case(" & ".join(ep["saints"]) or ep["title"])
+    return episode_name(ep)
 
 
 def date_label(value):

@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from PIL import Image, ImageOps
+from PIL import Image, ImageOps, __version__ as pillow_version
 
 
 def approved_thumbnail(episode_dir, meta):
@@ -57,19 +57,28 @@ def prepare_assets(root, project, episodes):
     output = root / "assets"
     output.mkdir(exist_ok=True)
     provenance = []
+    ledger = root / "build/asset-provenance.json"
+    previous = {record["asset"]: record for record in json.loads(ledger.read_text())} if ledger.exists() else {}
 
     def image(source, name, width, notes=None):
         source = Path(source)
         destination = output / f"{name}.webp"
-        with Image.open(source) as original:
-            picture = ImageOps.exif_transpose(original).convert("RGBA" if original.mode == "RGBA" else "RGB")
-            picture.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
-            picture.save(destination, "WEBP", quality=86, method=6)
+        source_sha = hashlib.sha256(source.read_bytes()).hexdigest()
+        encoder = f"pillow-{pillow_version}:webp:{width}:quality86:method6"
+        cached = previous.get(destination.name, {})
+        if not (cached.get("sha256") == source_sha and cached.get("encoder") == encoder
+                and destination.is_file()
+                and cached.get("output_sha256") == hashlib.sha256(destination.read_bytes()).hexdigest()):
+            with Image.open(source) as original:
+                picture = ImageOps.exif_transpose(original).convert("RGBA" if original.mode == "RGBA" else "RGB")
+                picture.thumbnail((width, width * 2), Image.Resampling.LANCZOS)
+                picture.save(destination, "WEBP", quality=86, method=6)
         source_label = ("production/" + source.relative_to(project).as_posix()
                         if source.is_relative_to(project)
                         else "website/" + source.relative_to(root).as_posix())
         provenance.append({"asset": destination.name, "source": source_label,
-                           "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+                           "sha256": source_sha, "encoder": encoder,
+                           "output_sha256": hashlib.sha256(destination.read_bytes()).hexdigest(),
                            "provenance": notes or "Existing channel artwork; resized and encoded for the website."})
         return f"/assets/{destination.name}"
 
@@ -98,5 +107,21 @@ def prepare_assets(root, project, episodes):
             episode["image_credit"] = record.get("notes", "")
             episode["art_url"] = image(episode["art_local"], f"art-{episode['date']}", 960, record)
         episode.setdefault("thumbnail", episode.get("art_url") or "/assets/podcast-cover.webp")
+        # Only hash-bound published square artwork is eligible for native clients.
+        # Historical items without such evidence use the canonical show cover.
+        episode["square_artwork"] = ["/assets/podcast-cover.webp"]
+        if episode.get("podcast_art_file") and episode.get("podcast_art_sha256"):
+            square = (episode_dir / episode["podcast_art_file"]).resolve()
+            if not square.is_relative_to(episode_dir.resolve()) or not square.is_file():
+                raise ValueError(f"Published podcast artwork is missing for {episode['date']}")
+            if hashlib.sha256(square.read_bytes()).hexdigest() != episode["podcast_art_sha256"]:
+                raise ValueError(f"Published podcast artwork digest differs for {episode['date']}")
+            with Image.open(square) as picture:
+                if picture.width != picture.height:
+                    raise ValueError(f"Podcast artwork must be square for {episode['date']}")
+            episode["square_artwork"] = [
+                image(square, f"podcast-{episode['date']}-small", 320),
+                image(square, f"podcast-{episode['date']}", 960),
+            ]
     # Keep provenance with build sources, including original attribution/review records.
     (root / "build/asset-provenance.json").write_text(json.dumps(provenance, indent=2) + "\n")

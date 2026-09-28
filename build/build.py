@@ -20,7 +20,7 @@ Run:
   python3 build/build.py                  # local build, no R2 upload
   python3 build/build.py --upload-art     # also push new hero art to R2 (public)
 """
-import os, re, sys, json, datetime, html, hashlib, subprocess, urllib.parse, urllib.request
+import os, re, sys, json, datetime, html, hashlib, subprocess, urllib.parse, urllib.request, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))   # repo root (output dir)
 DAILY_BUTLER = os.path.abspath(os.path.expanduser(
@@ -125,8 +125,10 @@ def read_json(path, default=None):
     try:
         with open(path, encoding="utf-8") as fh:
             return json.load(fh)
-    except (OSError, json.JSONDecodeError):
+    except FileNotFoundError:
         return default
+    except (OSError, json.JSONDecodeError) as exc:
+        raise RuntimeError(f"Cannot read source JSON: {path}") from exc
 
 
 def _existing_episode_file(episode_dir, value):
@@ -201,8 +203,12 @@ def hero_art(episode_dir, date_str):
 def _published_item(episode_dir):
     """Load the canonical public podcast item for native or imported episodes."""
     receipt = read_json(os.path.join(episode_dir, "06-publish", "podcast-receipt.json"), {})
-    item = receipt.get("item") if isinstance(receipt, dict) else None
-    if isinstance(item, dict) and receipt.get("verified_at") and receipt.get("audio_url"):
+    if not isinstance(receipt, dict):
+        raise RuntimeError(f"Podcast receipt must be an object: {episode_dir}")
+    item = receipt.get("item")
+    if (isinstance(item, dict) and receipt.get("verified_at") and receipt.get("audio_url")
+            and receipt.get("status", "published") == "published"
+            and (not receipt.get("guid") or receipt["guid"] == item.get("guid"))):
         return item, receipt
     manifest = read_json(os.path.join(episode_dir, "06-publish", "podcast.json"))
     if (isinstance(manifest, dict) and receipt.get("status") == "published"
@@ -215,7 +221,43 @@ def _published_item(episode_dir):
     return None, {}
 
 
-def load_episodes():
+def publication_time(value, date):
+    """Normalize instants, retaining the historical Perth slot only when absent."""
+    value = value or f"{date}T04:00:00+08:00"
+    try:
+        instant = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))
+        if instant.tzinfo is None:
+            raise ValueError("timezone missing")
+        return instant.astimezone(datetime.timezone.utc)
+    except (ValueError, AttributeError) as exc:
+        raise RuntimeError(f"Invalid publication timestamp for {date}: {value!r}") from exc
+
+
+def verify_public_video(video_id):
+    """Read-only availability check for an elapsed YouTube schedule; no credentials.
+
+    A scheduling receipt still says private after the slot. Do not infer playback
+    availability just from a clock. Transient network failures abort the build.
+    """
+    query = urllib.parse.urlencode({"url": f"https://www.youtube.com/watch?v={video_id}", "format": "json"})
+    request = urllib.request.Request("https://www.youtube.com/oembed?" + query,
+                                    headers={"User-Agent": "DailyButlerWebsiteSync/1"})
+    try:
+        with urllib.request.urlopen(request, timeout=15) as response:
+            data = json.load(response)
+            return data.get("type") == "video" and f"/embed/{video_id}" in data.get("html", "")
+    except urllib.error.HTTPError as exc:
+        if exc.code in (401, 403, 404):
+            return False
+        raise RuntimeError(f"YouTube availability check failed for {video_id}") from exc
+    except (OSError, ValueError) as exc:
+        raise RuntimeError(f"YouTube availability check failed for {video_id}") from exc
+
+
+def load_episodes(*, now=None, verify_video=None):
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    if now.tzinfo is None:
+        raise ValueError("Build time must include a timezone")
     eps = []
     ep_root = os.path.join(DAILY_BUTLER, "episodes")
     if not os.path.isdir(ep_root):
@@ -227,25 +269,45 @@ def load_episodes():
         if not os.path.isdir(episode_dir):
             continue
         metadata = read_json(os.path.join(episode_dir, "episode.json"), {})
+        if not isinstance(metadata, dict):
+            raise RuntimeError(f"Episode metadata must be an object: {episode_dir}")
+        if metadata.get("hold") is True:
+            continue
         item, receipt = _published_item(episode_dir)
         if not item or metadata.get("hold") is not False or item.get("hold") is True:
             continue
         date = item.get("date") or metadata.get("date") or d[:10]
         try:
             dt = datetime.date.fromisoformat(date)
-        except (TypeError, ValueError):
+        except (TypeError, ValueError) as exc:
+            raise RuntimeError(f"Invalid published episode date: {episode_dir}") from exc
+        if date != d[:10] or (metadata.get("date") and metadata["date"] != date):
+            raise RuntimeError(f"Publication date does not match episode folder: {episode_dir}")
+        published_at = publication_time(item.get("pub_date") or receipt.get("verified_at"), date)
+        if published_at > now:
             continue
         ha = hero_art(episode_dir, date)
         channels = metadata.get("channels") or {}
         podcast_channel = channels.get("podcast") or {}
         youtube_channel = channels.get("youtube") or {}
         video_id = item.get("video_id") or youtube_channel.get("video_id")
+        publish_at = youtube_channel.get("publish_at")
+        if publish_at and publication_time(publish_at, date) > now:
+            video_id = None
+        elif youtube_channel.get("privacy") in ("private", "unlisted"):
+            if not (publish_at and verify_video and video_id and verify_video(video_id)):
+                video_id = None
+        elif not (youtube_channel.get("privacy") == "public"
+                  or youtube_channel.get("status") == "published"
+                  or metadata.get("status") == "historical_published"):
+            video_id = None
         mp3_url = receipt.get("audio_url") or podcast_channel.get("audio_url")
         saints = item.get("saints") or []
         if not saints and metadata.get("saint"):
             saints = [metadata["saint"]]
         eps.append({
             "source_dir": episode_dir,
+            "guid": item.get("guid") or receipt.get("guid") or f"tdb-{date}",
             "date": date,
             "mmdd": f"{dt.month:02d}-{dt.day:02d}",
             "month_num": dt.month,
@@ -256,8 +318,13 @@ def load_episodes():
             "art_url": (f"https://{R2_HOST}/{ha[1]}" if ha else None),
             "art_local": (ha[0] if ha else None),
             "description": item.get("description", ""),
-            "pub_date": item.get("pub_date") or receipt.get("verified_at", ""),
+            "pub_date": published_at.isoformat(),
             "duration_s": item.get("duration_s", 0),
+            "audio_bytes": receipt.get("delivery_bytes") or item.get("bytes"),
+            "audio_sha256": receipt.get("delivery_sha256"),
+            "podcast_art_file": item.get("artwork") or (metadata.get("podcast_art") or {}).get("file"),
+            "podcast_art_sha256": receipt.get("artwork_sha256") or item.get("artwork_sha256")
+                                   or (metadata.get("podcast_art") or {}).get("sha256"),
         })
     eps.sort(key=lambda x: x["date"])
     return eps
@@ -374,13 +441,32 @@ def prune_episode_outputs(root, live_dates):
         if re.fullmatch(r'\d{4}-\d{2}-\d{2}', page.parent.name) and page.parent.name not in live_dates:
             page.unlink()
     for asset in (root / 'assets').glob('*.webp'):
-        match = re.fullmatch(r'(?:episode|art)-(\d{4}-\d{2}-\d{2})(?:-small)?\.webp', asset.name)
+        match = re.fullmatch(r'(?:episode|art|podcast)-(\d{4}-\d{2}-\d{2})(?:-small)?\.webp', asset.name)
         if match and match[1] not in live_dates:
             asset.unlink()
 
 
+def validate_withdrawals(root, episodes):
+    """Missing or damaged source data is not authority to withdraw live content."""
+    previous = read_json(os.path.join(root, "site-version.json"), {}).get("episode_dates", [])
+    removed = set(previous) - {ep["date"] for ep in episodes}
+    for date in removed:
+        candidates = [os.path.join(DAILY_BUTLER, "episodes", name)
+                      for name in os.listdir(os.path.join(DAILY_BUTLER, "episodes"))
+                      if name == date or name.startswith(date + "--")]
+        if len(candidates) != 1:
+            raise RuntimeError(f"Published episode {date} disappeared without an explicit hold")
+        meta = read_json(os.path.join(candidates[0], "episode.json"), {})
+        if meta.get("hold") is True:
+            continue
+        item, _ = _published_item(candidates[0])
+        if not (item and item.get("hold") is True):
+            raise RuntimeError(f"Published episode {date} disappeared without an explicit hold")
+
+
 def main():
     from assets import prepare_assets
+    from content import write_content
     from presentation import Site
     print("Parsing corpus…")
     days = parse_corpus()
@@ -389,10 +475,12 @@ def main():
     print(f"  {len(days)} day-sections")
 
     print("Loading episodes…")
-    eps = load_episodes()
+    eps = load_episodes(verify_video=verify_public_video)
     print(f"  {len(eps)} episodes: {[x['date'] for x in eps]}")
+    validate_withdrawals(ROOT, eps)
 
     prepare_assets(ROOT, DAILY_BUTLER, eps)
+    content_manifest = write_content(ROOT, eps, days, SITE, YOUTUBE, SUBSCRIBE)
     site = Site(eps, days, SITE, YOUTUBE, SUBSCRIBE)
 
     os.makedirs(os.path.join(ROOT, "css"), exist_ok=True)
@@ -435,14 +523,14 @@ def main():
 
     # A deterministic public marker allows sync to verify the exact generated release.
     public_files = [Path(ROOT) / name for name in ('index.html', '404.html', 'sitemap.xml', 'robots.txt')]
-    for folder in ('about', 'archive', 'subscribe', 'episode', 'reader', 'assets', 'css', 'js'):
+    for folder in ('about', 'archive', 'subscribe', 'episode', 'reader', 'assets', 'css', 'js', 'content'):
         public_files.extend(p for p in (Path(ROOT) / folder).rglob('*') if p.is_file())
     digest = hashlib.sha256()
     for path in sorted(public_files):
         digest.update(path.relative_to(ROOT).as_posix().encode() + b'\0')
         digest.update(hashlib.sha256(path.read_bytes()).digest())
     write('site-version.json', json.dumps({'schema_version': 1, 'content_sha256': digest.hexdigest(),
-          'episode_dates': sorted(live_dates)}, indent=2) + '\n')
+          'episode_dates': sorted(live_dates), 'app_content_version': content_manifest['content_version']}, indent=2) + '\n')
 
     print(f"Generated: 1 home, 1 archive, 1 about, 1 subscribe, {len(eps)} episodes, {len(days)} reader pages")
 

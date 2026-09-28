@@ -3,6 +3,7 @@ import hashlib
 import json
 import tempfile
 import unittest
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -42,7 +43,7 @@ class EpisodeLoadingTests(unittest.TestCase):
             "date": "2026-09-17",
             "status": "published",
             "hold": False,
-            "channels": {"youtube": {"video_id": "youtube-id"}},
+            "channels": {"youtube": {"video_id": "youtube-id", "privacy": "public"}},
         })
         write_json(episode / "06-publish" / "podcast-receipt.json", {
             "verified_at": "2026-09-17T00:00:00Z",
@@ -72,7 +73,7 @@ class EpisodeLoadingTests(unittest.TestCase):
             "date": "2026-09-21",
             "status": "published",
             "hold": False,
-            "channels": {"youtube": {"video_id": "youtube-id"}},
+            "channels": {"youtube": {"video_id": "youtube-id", "privacy": "public"}},
         })
         write_json(episode / "06-publish" / "podcast.json", {
             "date": "2026-09-21",
@@ -163,6 +164,79 @@ class EpisodeLoadingTests(unittest.TestCase):
 
     def test_missing_production_source_fails_closed(self):
         with self.assertRaisesRegex(RuntimeError, 'missing'):
+            site_build.load_episodes()
+
+    def published_fixture(self, *, pub_date="2026-09-21T00:00:00Z", video=None):
+        episode = self.project / "episodes/2026-09-21--saint"
+        write_json(episode / "episode.json", {
+            "date": "2026-09-21", "hold": False, "status": "scheduled",
+            "channels": {"youtube": video or {}},
+        })
+        write_json(episode / "06-publish/podcast.json", {
+            "date": "2026-09-21", "guid": "tdb-2026-09-21", "pub_date": pub_date,
+        })
+        write_json(episode / "06-publish/podcast-receipt.json", {
+            "status": "published", "verified_at": "2026-09-20T00:00:00Z",
+            "guid": "tdb-2026-09-21", "audio_url": "https://example.test/audio.mp3",
+        })
+        return episode
+
+    def test_future_audio_is_not_exported_even_with_verified_upload(self):
+        self.published_fixture(pub_date="2099-09-21T04:00:00+08:00")
+        self.assertEqual(site_build.load_episodes(now=datetime(2026, 9, 26, tzinfo=timezone.utc)), [])
+
+    def test_scheduled_video_needs_elapsed_slot_and_public_readback(self):
+        self.published_fixture(video={"video_id": "abcdefghijk", "privacy": "private",
+                                      "publish_at": "2026-09-22T00:00:00Z"})
+        checks = []
+        def verify(video_id):
+            checks.append(video_id)
+            return True
+        before = site_build.load_episodes(now=datetime(2026, 9, 21, 12, tzinfo=timezone.utc), verify_video=verify)
+        self.assertIsNone(before[0]["video_id"])
+        self.assertEqual(checks, [])
+        after = datetime(2026, 9, 23, tzinfo=timezone.utc)
+        self.assertIsNone(site_build.load_episodes(now=after)[0]["video_id"])
+        self.assertIsNone(site_build.load_episodes(now=after, verify_video=lambda _: False)[0]["video_id"])
+        self.assertEqual(site_build.load_episodes(now=after, verify_video=verify)[0]["video_id"], "abcdefghijk")
+
+    def test_corrupt_publication_data_aborts_instead_of_withdrawing(self):
+        episode = self.published_fixture()
+        (episode / "06-publish/podcast.json").write_text("{corrupt")
+        with self.assertRaisesRegex(RuntimeError, "source JSON"):
+            site_build.load_episodes()
+
+    def test_missing_episode_is_not_an_authorized_withdrawal(self):
+        episode = self.published_fixture()
+        output = self.project / "website"
+        write_json(output / "site-version.json", {"episode_dates": ["2026-09-21"]})
+        (episode / "06-publish/podcast-receipt.json").unlink()
+        with self.assertRaisesRegex(RuntimeError, "explicit hold"):
+            site_build.validate_withdrawals(output, site_build.load_episodes())
+        write_json(episode / "episode.json", {"date": "2026-09-21", "hold": True})
+        site_build.validate_withdrawals(output, [])
+        (episode / "06-publish/podcast-receipt.json").write_text("{corrupt")
+        site_build.validate_withdrawals(output, site_build.load_episodes())
+
+    def test_naive_timestamp_is_rejected(self):
+        self.published_fixture(pub_date="2026-09-21T04:00:00")
+        with self.assertRaisesRegex(RuntimeError, "timestamp"):
+            site_build.load_episodes()
+
+    def test_embedded_receipt_cannot_override_failed_status_or_guid_mismatch(self):
+        episode = self.published_fixture()
+        for status, guid in (("failed", "tdb-2026-09-21"), ("published", "wrong-episode")):
+            write_json(episode / "06-publish/podcast-receipt.json", {
+                "status": status, "guid": guid, "verified_at": "2026-09-21T00:00:00Z",
+                "audio_url": "https://example.test/audio.mp3",
+                "item": {"date": "2026-09-21", "guid": "tdb-2026-09-21"},
+            })
+            self.assertEqual(site_build.load_episodes(), [])
+
+    def test_malformed_receipt_type_aborts_build(self):
+        episode = self.published_fixture()
+        write_json(episode / "06-publish/podcast-receipt.json", [])
+        with self.assertRaisesRegex(RuntimeError, "receipt must be an object"):
             site_build.load_episodes()
 
     def test_uses_reviewed_delivery_thumbnail_with_matching_digest(self):

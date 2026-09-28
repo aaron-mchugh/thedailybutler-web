@@ -117,6 +117,33 @@ class SyncTests(unittest.TestCase):
 
 
 class LiveVerificationTests(unittest.TestCase):
+    def test_public_content_bytes_must_match_even_when_release_marker_matches(self):
+        import io
+        from urllib.parse import urlsplit
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            marker = {'content_sha256': 'abc', 'episode_dates': [], 'app_content_version': 'def'}
+            responses = {
+                '/site-version.json': json.dumps(marker).encode(),
+                '/': b'home', '/archive/': b'archive',
+                '/assets/channel-logo-purple.webp': b'logo',
+            }
+            for name in ('manifest', 'catalog', 'reader', 'site', 'schema'):
+                responses[f'/content/v1/{name}.json'] = (name + ' release bytes').encode()
+            for path, data in responses.items():
+                local = root / (path.lstrip('/') + 'index.html' if path.endswith('/') else path.lstrip('/'))
+                local.parent.mkdir(parents=True, exist_ok=True)
+                local.write_bytes(data)
+            def response(request, **kwargs):
+                return io.BytesIO(responses[urlsplit(request.full_url).path])
+            with patch.object(sync.urllib.request, 'urlopen', side_effect=response):
+                verified = sync.verify_live(root, marker, None, 0)
+                self.assertIn('/content/v1/catalog.json', verified)
+                self.assertIn('/content/v1/schema.json', verified)
+                responses['/content/v1/catalog.json'] = b'stale catalogue'
+                with self.assertRaisesRegex(sync.SyncError, 'verification timed out'):
+                    sync.verify_live(root, marker, None, 0)
+
     def test_stale_marker_is_not_success(self):
         import io
         with tempfile.TemporaryDirectory() as directory:
