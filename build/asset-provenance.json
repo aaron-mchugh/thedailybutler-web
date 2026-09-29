@@ -1543,5 +1543,67 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "647f627d7149e4d84a6ed431a634e9ddebda701b09a0ebbd98be4139068b4208",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-29.webp",
+    "source": "production/episodes/2026-09-29--st-michael-archangel/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "bfcc1d0654d3541b1ef464c9b87adab0438dd6f0dfd56344b3a98164a555ebb9",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "2467e9f68c0a0c71b5bedaec9196e7877e79e8c340d1f9d1324e116ef062a835",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-29-small.webp",
+    "source": "production/episodes/2026-09-29--st-michael-archangel/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "bfcc1d0654d3541b1ef464c9b87adab0438dd6f0dfd56344b3a98164a555ebb9",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "a12593fc57713dc7b72d160f73986c49dfa638f08c7a6b52af90b84d6f9f1e11",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-29.webp",
+    "source": "production/episodes/2026-09-29--st-michael-archangel/02-images/approved/4f9eaee1c1--a-reni.jpg",
+    "sha256": "4f9eaee1c1abe0df9ae70e36bfcfd113c0e556a8022c4c98d7a72d2a392b71ad",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "82a7bce7bb08a9eea9262b326a9ed90f36884ee7b3976e2b52ff6a4768ed4ccc",
+    "provenance": {
+      "id": "4f9eaee1c1abe0df9ae70e36bfcfd113c0e556a8022c4c98d7a72d2a392b71ad",
+      "file": "02-images/approved/4f9eaee1c1--a-reni.jpg",
+      "sha256": "4f9eaee1c1abe0df9ae70e36bfcfd113c0e556a8022c4c98d7a72d2a392b71ad",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:GuidoReni_MichaelDefeatsSatan.jpg",
+      "notes": "Guido Reni \u2014 Michael defeats Satan; Public domain / PD-Art; source-resolved original; Opening: Who is like to God? / victory over Lucifer; return for Reflection. Pending Aaron review.",
+      "added_at": "2026-09-28T11:38:04.076500+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Aaron approved A\u2013D in chat; requested closer detail views and more extensive camera movement to capture the beauty of the artwork.",
+        "reviewed_at": "2026-09-28T11:47:22.539170+00:00"
+      },
+      "artist_title": "Guido Reni \u2014 Michael defeats Satan",
+      "license": "Public domain / PD-Art",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/GuidoReni_MichaelDefeatsSatan.jpg",
+      "width": 1657,
+      "height": 2441,
+      "recommendation_label": "A",
+      "script_use": "Opening: Who is like to God? / victory over Lucifer; return for Reflection.",
+      "visual_review": "Full source image inspected: identity consistent with source; no visible watermark in inspected image; historic artwork texture retained; no AI upscaling. Preserve entire portrait scene in landscape layout."
+    }
+  },
+  {
+    "asset": "podcast-2026-09-29-small.webp",
+    "source": "production/episodes/2026-09-29--st-michael-archangel/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "7e3a3405019cbbbc5bd1c333c9582e399a3e6e3990a439b53c44498704dcd311",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "db9d0a39dfc2fefc6904b12c4ab62f852a60ad6867ed1ad22f4f287e39b093bb",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-29.webp",
+    "source": "production/episodes/2026-09-29--st-michael-archangel/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "7e3a3405019cbbbc5bd1c333c9582e399a3e6e3990a439b53c44498704dcd311",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "f65a1548c9e0e3bf528d04472aeaf05518b8829fc399ed2bd7620490d6c498f2",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
