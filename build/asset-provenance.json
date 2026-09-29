@@ -1605,5 +1605,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "f65a1548c9e0e3bf528d04472aeaf05518b8829fc399ed2bd7620490d6c498f2",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-30.webp",
+    "source": "production/episodes/2026-09-30--st-jerome-doctor/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "cf3442b7609db0545a25ea79544621c13c3f1c2c6ac351d41c592def5a7d1e46",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "43580e43d738897d789bbad7066571fc105b0bb699169579f874a148f40b93d9",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-09-30-small.webp",
+    "source": "production/episodes/2026-09-30--st-jerome-doctor/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "cf3442b7609db0545a25ea79544621c13c3f1c2c6ac351d41c592def5a7d1e46",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "8dd3a3f8f3fc873289729885a6f74dd3bd138cb167c933c2923a098fd1940e07",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-09-30.webp",
+    "source": "production/episodes/2026-09-30--st-jerome-doctor/02-images/approved/52560835ec--52560835ec6b17c97c5f61cde063a38048d7a20b8967bebca82ea0a5d6f0befd.jpg",
+    "sha256": "52560835ec6b17c97c5f61cde063a38048d7a20b8967bebca82ea0a5d6f0befd",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "1106474b0e6e2113a2e43190d6ace2242e6825a062a6be53a4a4eb9fd6d9764a",
+    "provenance": {
+      "id": "52560835ec6b17c97c5f61cde063a38048d7a20b8967bebca82ea0a5d6f0befd",
+      "file": "02-images/approved/52560835ec--52560835ec6b17c97c5f61cde063a38048d7a20b8967bebca82ea0a5d6f0befd.jpg",
+      "sha256": "52560835ec6b17c97c5f61cde063a38048d7a20b8967bebca82ea0a5d6f0befd",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://mycatholic.life/saints/saints-of-the-liturgical-year/september-30-st-jerome-doctor/",
+      "notes": "discovered candidate: St. Jerome, Doctor of the Church - My Catholic Life!",
+      "added_at": "2026-09-27T11:52:29.017819+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved entire Saint Jerome full-episode image palette in Codex on 2026-09-27; thumbnail remains separate.",
+        "reviewed_at": "2026-09-27T12:16:03.136722+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-09-30-small.webp",
+    "source": "production/episodes/2026-09-30--st-jerome-doctor/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "465fa2e3c87fd2060988d1068a85adfe993e1c48752cfd2c8f842fa4bfca7e3b",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "fc537fcaceb6f13fa209183f0d964c6f0ff5bb4b88056a32d836d1566cfe9309",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-09-30.webp",
+    "source": "production/episodes/2026-09-30--st-jerome-doctor/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "465fa2e3c87fd2060988d1068a85adfe993e1c48752cfd2c8f842fa4bfca7e3b",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6e4ad4e2cd435ca37a9a78ffe6aa0a68305fd8d2b51e3030ac1f571bacd7ab56",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
