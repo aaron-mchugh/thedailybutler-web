@@ -1659,5 +1659,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "6e4ad4e2cd435ca37a9a78ffe6aa0a68305fd8d2b51e3030ac1f571bacd7ab56",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-01.webp",
+    "source": "production/episodes/2026-10-01--st-remigius-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "338e24cf3196cb54b965416c8fed05449b3154695287fb1a0182b2bce46a10f1",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "a378cf75f275894bc602f503e2648994786325a71a5480addb020cea2855207f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-01-small.webp",
+    "source": "production/episodes/2026-10-01--st-remigius-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "338e24cf3196cb54b965416c8fed05449b3154695287fb1a0182b2bce46a10f1",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "76e82cac761a45ff8c64a697a1c0217b2343d27b0c51fe4d533b81a1b847190c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-01.webp",
+    "source": "production/episodes/2026-10-01--st-remigius-bishop/02-images/approved/277d9d266c--277d9d266c9ad1f2c227d313d26b0629861aaacea7a89fe7ddbbfc3b33c027e8.jpg",
+    "sha256": "277d9d266c9ad1f2c227d313d26b0629861aaacea7a89fe7ddbbfc3b33c027e8",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "45322108056c0f48be68c61f39e86e847409f0e2126e67a88a2aac885c5936f4",
+    "provenance": {
+      "id": "277d9d266c9ad1f2c227d313d26b0629861aaacea7a89fe7ddbbfc3b33c027e8",
+      "file": "02-images/approved/277d9d266c--277d9d266c9ad1f2c227d313d26b0629861aaacea7a89fe7ddbbfc3b33c027e8.jpg",
+      "sha256": "277d9d266c9ad1f2c227d313d26b0629861aaacea7a89fe7ddbbfc3b33c027e8",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://en.wikipedia.org/wiki/Saint_Remigius",
+      "notes": "discovered candidate: Chlodwigs_taufe.jpg",
+      "added_at": "2026-09-27T11:53:43.655760+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved entire Saint Remigius full-episode image palette in Codex on 2026-09-27; thumbnail remains separate.",
+        "reviewed_at": "2026-09-27T12:17:59.211195+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-01-small.webp",
+    "source": "production/episodes/2026-10-01--st-remigius-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e0dadba83cab90b23a96946e6e4d035a1c347afce33000a02f2ff7a39d279ae6",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "5232ad48be2b64c17e5006073ed675c08e9ae85e1b9242ae84ceec21ce3753f3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-01.webp",
+    "source": "production/episodes/2026-10-01--st-remigius-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "e0dadba83cab90b23a96946e6e4d035a1c347afce33000a02f2ff7a39d279ae6",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "8973da7ab0ce7efe2bf93524b487e5e4cddbb6949b2d76933450f84aedbcdf23",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
