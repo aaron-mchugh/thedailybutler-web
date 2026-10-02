@@ -1713,5 +1713,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "8973da7ab0ce7efe2bf93524b487e5e4cddbb6949b2d76933450f84aedbcdf23",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-02.webp",
+    "source": "production/episodes/2026-10-02--the-holy-guardian-angels/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "1024a3ee943a7c79033accbfaf1cd1c34933507f0376a2e07679945805228423",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "9fb14bebdbb9a019846d140c65545dd64b722ef4dc62e3ae1b4e9d58dd8326a0",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-02-small.webp",
+    "source": "production/episodes/2026-10-02--the-holy-guardian-angels/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "1024a3ee943a7c79033accbfaf1cd1c34933507f0376a2e07679945805228423",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "e10b6ecc7cac0dfbebb59245416ca63362b3abd00d216626b64eaa030623ced1",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-02.webp",
+    "source": "production/episodes/2026-10-02--the-holy-guardian-angels/02-images/approved/038462b849--038462b8496bc8556317d46fd17e9a49b1c1d616e6cc6717555258ca59269544.jpg",
+    "sha256": "038462b8496bc8556317d46fd17e9a49b1c1d616e6cc6717555258ca59269544",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7c421c3f6c503f04c61705a30070e6e602b842172ce415db0dbdf509391d9f31",
+    "provenance": {
+      "id": "038462b8496bc8556317d46fd17e9a49b1c1d616e6cc6717555258ca59269544",
+      "file": "02-images/approved/038462b849--038462b8496bc8556317d46fd17e9a49b1c1d616e6cc6717555258ca59269544.jpg",
+      "sha256": "038462b8496bc8556317d46fd17e9a49b1c1d616e6cc6717555258ca59269544",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://catholic-daily-reflections.com/2025/10/01/your-protector-and-guide-4/",
+      "notes": "discovered candidate: 55a6e9557618ec6a5b9201e08b176ae4.jpg",
+      "added_at": "2026-09-27T11:54:55.446318+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved revised full-episode Guardian Angels image palette in Codex on 2026-09-27; thumbnail remains separate.",
+        "reviewed_at": "2026-09-27T12:30:01.306640+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-02-small.webp",
+    "source": "production/episodes/2026-10-02--the-holy-guardian-angels/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "bf48d842efa4b2bbc8f82338fc6717d76c2cd0c83640fb91eb804637f33e3eed",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "34c426af581efc021617a7f4ef3b3fb52251c35fc6e2c24614440069a6e432fc",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-02.webp",
+    "source": "production/episodes/2026-10-02--the-holy-guardian-angels/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "bf48d842efa4b2bbc8f82338fc6717d76c2cd0c83640fb91eb804637f33e3eed",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7a5680871d73221663cb9306564b6d75ad468d319df6e71578d40c39cd85db11",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
