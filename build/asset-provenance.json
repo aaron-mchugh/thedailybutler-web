@@ -1767,5 +1767,75 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "7a5680871d73221663cb9306564b6d75ad468d319df6e71578d40c39cd85db11",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-03.webp",
+    "source": "production/episodes/2026-10-03--st-gerard-abbot/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "622778f08e6b85cbd9d1c5d1b1a7e137f9fcce6cf799cffe98fbd99bb2b9cba0",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7aa6ef93838a957980969f5d036db4fe99098cd715de634c4c023f3b3f6b6774",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-03-small.webp",
+    "source": "production/episodes/2026-10-03--st-gerard-abbot/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "622778f08e6b85cbd9d1c5d1b1a7e137f9fcce6cf799cffe98fbd99bb2b9cba0",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "c5a48eee918d9ab64d01fbab41d6b1eadce3f3e0cb64a865d0e7cbc85ecb204a",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-03.webp",
+    "source": "production/episodes/2026-10-03--st-gerard-abbot/02-images/approved/f4b323341b--f4b323341bcdd81b7611c80a77b34268a00cb5f803375d5d61c2b2c9ae74ff12.jpg",
+    "sha256": "f4b323341bcdd81b7611c80a77b34268a00cb5f803375d5d61c2b2c9ae74ff12",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "f88464b974a2907804191dea503c177ee16173f9d416c64bfd462ca6f9f35395",
+    "provenance": {
+      "id": "f4b323341bcdd81b7611c80a77b34268a00cb5f803375d5d61c2b2c9ae74ff12",
+      "file": "02-images/approved/f4b323341b--f4b323341bcdd81b7611c80a77b34268a00cb5f803375d5d61c2b2c9ae74ff12.jpg",
+      "sha256": "f4b323341bcdd81b7611c80a77b34268a00cb5f803375d5d61c2b2c9ae74ff12",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://www.metmuseum.org/art/collection/search/420070",
+      "notes": "Source-resolved original for approved preview c360cca86b2b; exact thumbnail digest match; 922x1200.",
+      "added_at": "2026-09-27T13:11:50.097927+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Source-resolved exact original approved under Aaron's 2026-09-27 full-palette approval and authorization to proceed to draft video without another image gate.",
+        "reviewed_at": "2026-09-27T13:11:50.109248+00:00"
+      },
+      "provenance": {
+        "title": "Jacques Callot - S. G\u00e9rard, abb\u00e9 (St. Gerard, Abbot), October 3rd ...",
+        "artist": "",
+        "license": "",
+        "license_url": "",
+        "license_unverified": true,
+        "source_url": "https://www.metmuseum.org/art/collection/search/420070",
+        "file_page_url": "https://www.metmuseum.org/art/collection/search/420070",
+        "original_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/420070/1956487/main-image",
+        "download_url_final": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/420070/1956487/main-image",
+        "dimensions": {
+          "width": 922,
+          "height": 1200
+        },
+        "approved_preview_sha256": "c360cca86b2b8ccc965d87537e6e34de17608d431bfa99a6a87d89aca22eb7cf"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-03-small.webp",
+    "source": "production/episodes/2026-10-03--st-gerard-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3320f643850db8b00a27f0c02c2dc46fb7ccefc9a5a6128850abc99279ef989e",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "3ad941269d18a805d7ed0be4e546bf67cbfa08c772885ac60f65ba0fa43d9aeb",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-03.webp",
+    "source": "production/episodes/2026-10-03--st-gerard-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3320f643850db8b00a27f0c02c2dc46fb7ccefc9a5a6128850abc99279ef989e",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "4ee98c2d73203d386132a7a2228384e948315a09925fd9459ae00a7ae587fea3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
