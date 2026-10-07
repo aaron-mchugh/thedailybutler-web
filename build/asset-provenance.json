@@ -1891,5 +1891,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "ca72d3327f3cd338cea97094de2ba60c8225cee94725b1ebffabd1c71bd1e8e5",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-08.webp",
+    "source": "production/episodes/2026-10-08--st-bridget-of-sweden/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "e1ce371897adc813c294dee5bd16b96b6adf29074b428e6c87c10e6c9a9e1967",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "756995d9449b8e5047b5b4ea5412e74a3823c8c79205b940826fdf2e02c7f544",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-08-small.webp",
+    "source": "production/episodes/2026-10-08--st-bridget-of-sweden/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "e1ce371897adc813c294dee5bd16b96b6adf29074b428e6c87c10e6c9a9e1967",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "28de9c0e82c099261a109c438ba53866c7f90211ee91b02e1a6f58ba7b0c0388",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-08.webp",
+    "source": "production/episodes/2026-10-08--st-bridget-of-sweden/02-images/approved/95ccf17649--264.jpg",
+    "sha256": "95ccf176491fc2cb9f4939daea0af4ebd68c5ed074f852c8ea9031dd6b510cf4",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "fd9d53f360fb9255b195cd807123733448c08b8d882fda7bb1a5152af47071bd",
+    "provenance": {
+      "id": "95ccf176491fc2cb9f4939daea0af4ebd68c5ed074f852c8ea9031dd6b510cf4",
+      "file": "02-images/approved/95ccf17649--264.jpg",
+      "sha256": "95ccf176491fc2cb9f4939daea0af4ebd68c5ed074f852c8ea9031dd6b510cf4",
+      "status": "approved",
+      "subject": null,
+      "source_url": null,
+      "notes": "Aaron-supplied artwork, pre-approved in approved folder",
+      "added_at": "2026-10-06T08:44:17.339543+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Aaron pre-approved artwork placed in 02-images/approved (6 Oct 2026)",
+        "reviewed_at": "2026-10-06T08:48:01.584966+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-08-small.webp",
+    "source": "production/episodes/2026-10-08--st-bridget-of-sweden/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "55e8465d295162baf54045bd9a74eedd376576ccae3bfbd857d8d1a1872d2d1e",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "fe1c68688b5dd515775133c055f8db185771f3d01bc198f0ae826a3d0453bf4f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-08.webp",
+    "source": "production/episodes/2026-10-08--st-bridget-of-sweden/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "55e8465d295162baf54045bd9a74eedd376576ccae3bfbd857d8d1a1872d2d1e",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "25a6ea56b91d0cc84f2a419cf03ceae1e3904dc41f47d314b3a6f6fcf1b5742c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
