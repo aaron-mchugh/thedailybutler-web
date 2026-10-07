@@ -1837,5 +1837,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "4ee98c2d73203d386132a7a2228384e948315a09925fd9459ae00a7ae587fea3",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-07.webp",
+    "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d510faad6680e1f4f3849b62bed6cfd9fcf17ada1cc85f3d337852085e9049a8",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6185a38f662297fa8ad88c2c8dd8cb5166e995e335ba30cc48910db02105660d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-07-small.webp",
+    "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d510faad6680e1f4f3849b62bed6cfd9fcf17ada1cc85f3d337852085e9049a8",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "ffcfaa473668c48f0085eb6a765ca1f18171edc54837ea06052a1b07ba9df6e0",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-07.webp",
+    "source": "production/episodes/2026-10-07--st-mark-pope/02-images/approved/85c5407e7b--pope-mark.jpg",
+    "sha256": "85c5407e7be337d8fbf22d7f83eea0b3d15273657d633d887ea5efd64fde060c",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e547d56217c68a016b5a78e95833f40f0296228f73c76cfb6d5b259efd26bb5b",
+    "provenance": {
+      "id": "85c5407e7be337d8fbf22d7f83eea0b3d15273657d633d887ea5efd64fde060c",
+      "file": "02-images/approved/85c5407e7b--pope-mark.jpg",
+      "sha256": "85c5407e7be337d8fbf22d7f83eea0b3d15273657d633d887ea5efd64fde060c",
+      "status": "approved",
+      "subject": null,
+      "source_url": null,
+      "notes": "Aaron-supplied artwork, pre-approved in approved folder",
+      "added_at": "2026-10-06T08:44:14.039169+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Aaron pre-approved artwork placed in 02-images/approved (6 Oct 2026)",
+        "reviewed_at": "2026-10-06T08:47:58.108804+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-07-small.webp",
+    "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "433b493715cb71f6e94cd95f1da099bf683bc6325daba8f26af03cacb179fa49",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "ac0b142f645276e4d9ddd82c3e1f716240b74dd0d736133651ccb84577726807",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-07.webp",
+    "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "433b493715cb71f6e94cd95f1da099bf683bc6325daba8f26af03cacb179fa49",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "ca72d3327f3cd338cea97094de2ba60c8225cee94725b1ebffabd1c71bd1e8e5",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
