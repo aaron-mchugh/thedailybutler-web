@@ -1945,5 +1945,84 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "25a6ea56b91d0cc84f2a419cf03ceae1e3904dc41f47d314b3a6f6fcf1b5742c",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-09.webp",
+    "source": "production/episodes/2026-10-09--st-dionysius-and-his-companions-martyrs-st-louis-bertrand/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "c00f5fb307684b034fea99652eb26a3b3e58dd841311ee913fcbe0fa89264390",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "8e998368b9d30e71fd9c612e45cff66655364e720e7464f76a0fa962b29f866e",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-09-small.webp",
+    "source": "production/episodes/2026-10-09--st-dionysius-and-his-companions-martyrs-st-louis-bertrand/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "c00f5fb307684b034fea99652eb26a3b3e58dd841311ee913fcbe0fa89264390",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "f91e505e87a255275b89d0da997a32f731ba154f85d58cc0b54448afb803e68d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-09.webp",
+    "source": "production/episodes/2026-10-09--st-dionysius-and-his-companions-martyrs-st-louis-bertrand/02-images/st-denis-and-companions/approved/043cbcaddc--15493484.jpg",
+    "sha256": "043cbcaddc8638b049f7ab8d7f3e48b5ac1b72c2c4e0cbb18efe0d22ccb76307",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c6f742129219d6650540eaffc7e434664e8635db4b134be22e6065a9a9bb085b",
+    "provenance": {
+      "id": "043cbcaddc8638b049f7ab8d7f3e48b5ac1b72c2c4e0cbb18efe0d22ccb76307",
+      "file": "02-images/st-denis-and-companions/approved/043cbcaddc--15493484.jpg",
+      "sha256": "043cbcaddc8638b049f7ab8d7f3e48b5ac1b72c2c4e0cbb18efe0d22ccb76307",
+      "status": "approved",
+      "subject": {
+        "id": "st-denis-and-companions",
+        "name": "St Denis (Dionysius) of Paris and his companions Rusticus and Eleutherius",
+        "aliases": [
+          "Saint Denis",
+          "Saint Denys",
+          "Dionysius Parisiensis",
+          "Saint Denis Rustique Eleuthere",
+          "San Dionigi di Parigi"
+        ]
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:Henri_Bellechose_-_Martyrdom_of_St_Denis_-_WGA01604.jpg",
+      "notes": "D1 \u2014 Martyrdom altarpiece \u2014 Bellechose. Strong narrative scene; the Crucifixion and prison communion belong to the altarpiece theology, not additional events stated in this reading. Original 1050\u00d7809: avoid deep crops. Artist: Henri Bellechose    /    Jean Malouel. Licence per Commons record: Public domain. . Review download: https://upload.wikimedia.org/wikipedia/commons/2/27/Henri_Bellechose_-_Martyrdom_of_St_Denis_-_WGA01604.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled. Original: https://upload.wikimedia.org/wikipedia/commons/2/27/Henri_Bellechose_-_Martyrdom_of_St_Denis_-_WGA01604.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original.",
+      "added_at": "2026-10-07T15:06:52.506939+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Aaron explicitly approved all 20 reviewed images (D1-D11, L1-L9) and requested the video. Supplemental-scene restrictions remain in story_notes.",
+        "reviewed_at": "2026-10-07T15:45:07.400354+00:00"
+      },
+      "review_label": "D1",
+      "title": "Martyrdom altarpiece \u2014 Bellechose",
+      "artist": "Henri Bellechose    /    Jean Malouel",
+      "license": "Public domain",
+      "license_url": "",
+      "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Henri_Bellechose_-_Martyrdom_of_St_Denis_-_WGA01604.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "original_dimensions": [
+        1050,
+        809
+      ],
+      "review_dimensions": [
+        1050,
+        809
+      ],
+      "story_notes": "Strong narrative scene; the Crucifixion and prison communion belong to the altarpiece theology, not additional events stated in this reading. Original 1050\u00d7809: avoid deep crops."
+    }
+  },
+  {
+    "asset": "podcast-2026-10-09-small.webp",
+    "source": "production/episodes/2026-10-09--st-dionysius-and-his-companions-martyrs-st-louis-bertrand/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d4cbfa455b8c423a120a9c5d173cceed46a89d9a314517f8584f38418ffd7616",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "9ceea18e03f3f49492f9f7226ca3eb5905edf5c98fe983b8d94555e12e97965a",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-09.webp",
+    "source": "production/episodes/2026-10-09--st-dionysius-and-his-companions-martyrs-st-louis-bertrand/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d4cbfa455b8c423a120a9c5d173cceed46a89d9a314517f8584f38418ffd7616",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7a62f79d0b17d58f8b7d976dc41c661b07b7328b1c62b4d05b6730642d148315",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
