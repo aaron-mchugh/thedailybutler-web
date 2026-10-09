@@ -18,9 +18,9 @@
   {
     "asset": "channel-logo-purple.webp",
     "source": "production/assets/brand/logo.png",
-    "sha256": "bfd310bfada1c09f84b33f422b19af059d5361d127ec6afd024c7537f1c4848c",
+    "sha256": "7f21b5f2f5a4afeb596cc0f5813087df3a914d35769ea26620a883c44248194c",
     "encoder": "pillow-11.3.0:webp:240:quality86:method6",
-    "output_sha256": "83d146637aa4fe3ed8c8a2a516fe67935a61bb0a203f896272668d2ce26d3d04",
+    "output_sha256": "564e655597b94d1132af45a42ddaf944639e6c238f3483bb5e0a677ab7e89e6e",
     "provenance": "Canonical channel logo with its original purple background, used in the footer."
   },
   {
