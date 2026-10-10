@@ -2024,5 +2024,65 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "7a62f79d0b17d58f8b7d976dc41c661b07b7328b1c62b4d05b6730642d148315",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-10.webp",
+    "source": "production/episodes/2026-10-10--st-francis-borgia/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d3910d494acb218114a4f4b6674783adc5baa3e96c680782db88944abb3ba395",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c267885a2f5aa353177bcf258413154c4c78257ffc2951d9edfeffb4b9f17705",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-10-small.webp",
+    "source": "production/episodes/2026-10-10--st-francis-borgia/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d3910d494acb218114a4f4b6674783adc5baa3e96c680782db88944abb3ba395",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4c913f5d1ced5a6c28f4416079f958e49584e02452c248d86f99f50a33f7ce5d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-10.webp",
+    "source": "production/episodes/2026-10-10--st-francis-borgia/02-images/approved/775703b989--f1.jpg",
+    "sha256": "775703b989f8025af7a227e1b62dde413b23d50f472c1759eafdb4e59530ffe2",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "8c47faef7ba1a8b6e50c103b98ddf15c912551897e48a5f9d267c6bdf830f4c9",
+    "provenance": {
+      "id": "775703b989f8025af7a227e1b62dde413b23d50f472c1759eafdb4e59530ffe2",
+      "file": "02-images/approved/775703b989--f1.jpg",
+      "sha256": "775703b989f8025af7a227e1b62dde413b23d50f472c1759eafdb4e59530ffe2",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Moreno_Carbonero_-_Conversi%C3%B3n_del_duque_de_Gand%C3%ADa.jpg",
+      "notes": "F1; Queen Isabella funeral \u2014 main story scene; Public domain",
+      "added_at": "2026-10-09T23:37:14.560810+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Aaron confirmed supplied portrait identity and accepted recommended shot selection; requested video. F8/F9 optional low-resolution alternatives.",
+        "reviewed_at": "2026-10-09T23:47:20.559892+00:00"
+      },
+      "review_label": "F1",
+      "title": "File:Jos\u00e9 Moreno Carbonero - Conversi\u00f3n del duque de Gand\u00eda.jpg",
+      "artist": "Jos\u00e9 Moreno Carbonero",
+      "license": "Public domain",
+      "license_url": "",
+      "story_notes": "Queen Isabella funeral \u2014 main story scene"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-10-small.webp",
+    "source": "production/episodes/2026-10-10--st-francis-borgia/05-thumbnail/podcast-final/episode-art.jpg",
+    "sha256": "cc443d19547a9979448749dbebd4f817e93f0c43f3d7b2a761c3c083ffa3d72b",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "fe1c68688b5dd515775133c055f8db185771f3d01bc198f0ae826a3d0453bf4f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-10.webp",
+    "source": "production/episodes/2026-10-10--st-francis-borgia/05-thumbnail/podcast-final/episode-art.jpg",
+    "sha256": "cc443d19547a9979448749dbebd4f817e93f0c43f3d7b2a761c3c083ffa3d72b",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "25a6ea56b91d0cc84f2a419cf03ceae1e3904dc41f47d314b3a6f6fcf1b5742c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
