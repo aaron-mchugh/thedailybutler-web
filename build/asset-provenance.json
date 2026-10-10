@@ -2028,17 +2028,17 @@
   {
     "asset": "episode-2026-10-10.webp",
     "source": "production/episodes/2026-10-10--st-francis-borgia/05-thumbnail/final/thumbnail_yt.png",
-    "sha256": "d3910d494acb218114a4f4b6674783adc5baa3e96c680782db88944abb3ba395",
+    "sha256": "431d8bc1566530350eed7140aedb3fe71f1bc4372ec11c671706a5e798a53f95",
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
-    "output_sha256": "c267885a2f5aa353177bcf258413154c4c78257ffc2951d9edfeffb4b9f17705",
+    "output_sha256": "f5f396672ddc0233015578f4eb968b38cbb796bd11d28775d70e72ea47f500d9",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-10-10-small.webp",
     "source": "production/episodes/2026-10-10--st-francis-borgia/05-thumbnail/final/thumbnail_yt.png",
-    "sha256": "d3910d494acb218114a4f4b6674783adc5baa3e96c680782db88944abb3ba395",
+    "sha256": "431d8bc1566530350eed7140aedb3fe71f1bc4372ec11c671706a5e798a53f95",
     "encoder": "pillow-11.3.0:webp:480:quality86:method6",
-    "output_sha256": "4c913f5d1ced5a6c28f4416079f958e49584e02452c248d86f99f50a33f7ce5d",
+    "output_sha256": "02d3c2fd2f67703be896c016d53bff74c17c50d4786ec6970e8639369325f39e",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
