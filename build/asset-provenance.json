@@ -1947,6 +1947,60 @@
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
+    "asset": "episode-2026-10-06.webp",
+    "source": "production/episodes/2026-10-06--st-bruno/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "7048adcc5f95bb8e023d5adb2eefd112061d5e00334a18f5ac2473ce985481d3",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "00e5c2ff2dab486ead83fe8525abc6a645f03c2d5c2bee1ffe0c0bd08c04d869",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-06-small.webp",
+    "source": "production/episodes/2026-10-06--st-bruno/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "7048adcc5f95bb8e023d5adb2eefd112061d5e00334a18f5ac2473ce985481d3",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "9e251bac83293c3a0aa9593e28c022a947a1ada401b39ebeb823d776f793fc84",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-06.webp",
+    "source": "production/episodes/2026-10-06--st-bruno/02-images/approved/0f0c8d3fec--0f0c8d3fec0a6ebccc85266234c304f050a8332994bd796747447708bb4143b9.jpg",
+    "sha256": "0f0c8d3fec0a6ebccc85266234c304f050a8332994bd796747447708bb4143b9",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "975ca5856372398f424b87c38e2885287348b8e072b802e86b6c23625e0dd2a8",
+    "provenance": {
+      "id": "0f0c8d3fec0a6ebccc85266234c304f050a8332994bd796747447708bb4143b9",
+      "file": "02-images/approved/0f0c8d3fec--0f0c8d3fec0a6ebccc85266234c304f050a8332994bd796747447708bb4143b9.jpg",
+      "sha256": "0f0c8d3fec0a6ebccc85266234c304f050a8332994bd796747447708bb4143b9",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://art.thewalters.org/object/37.423/",
+      "notes": "discovered candidate: Girolamo Marchesi, Saint Bruno, ca. 1525 (Renaissance). Acquired ...",
+      "added_at": "2026-09-27T11:58:30.464421+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved full-episode Saint Bruno image palette in Codex on 2026-09-27; thumbnail remains separate.",
+        "reviewed_at": "2026-09-27T12:56:56.060924+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-06-small.webp",
+    "source": "production/episodes/2026-10-06--st-bruno/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "15daf8e4d3caec21717408c347ae58cc334749f20299339322f4a0a0acb9f7d6",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "d35eb324586bb035315621c75a98953b0a7f2c977f56783b845eb537a1725db9",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-06.webp",
+    "source": "production/episodes/2026-10-06--st-bruno/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "15daf8e4d3caec21717408c347ae58cc334749f20299339322f4a0a0acb9f7d6",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6e4c7a580e5ddb6caf17ff31b9bc530f7c5591731022b66ff237a62eaaaa1f7b",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-10-07.webp",
     "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "d510faad6680e1f4f3849b62bed6cfd9fcf17ada1cc85f3d337852085e9049a8",
