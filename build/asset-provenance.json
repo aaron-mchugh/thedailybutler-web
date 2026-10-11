@@ -2084,5 +2084,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "25a6ea56b91d0cc84f2a419cf03ceae1e3904dc41f47d314b3a6f6fcf1b5742c",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-11.webp",
+    "source": "production/episodes/2026-10-11--st-tarachus-and-his-companions/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0a7346ac2e0ac7db06ec8edf4790895836eafe8297d1e0f8c6a8e4eca6e9deb9",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d022f3ad9eafb6c685ec58d1a370d23ad7f7fd36e9d7c8f2aa48804ffa6c83b5",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-11-small.webp",
+    "source": "production/episodes/2026-10-11--st-tarachus-and-his-companions/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0a7346ac2e0ac7db06ec8edf4790895836eafe8297d1e0f8c6a8e4eca6e9deb9",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "9a5d203714775376ed2a41e0ebf0677a4084aa9713bd51ae6903225dcefce3df",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-11.webp",
+    "source": "production/episodes/2026-10-11--st-tarachus-and-his-companions/02-images/approved/81688073ce--p2.jpeg",
+    "sha256": "81688073cefc469abb84444b91f8ce88f9c345f45c2b74c3b4011def8bc01ef5",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "2b6503316e80369eaee292f344f9c9fc6233ebcfc4ec109ce7048242c047af75",
+    "provenance": {
+      "id": "81688073cefc469abb84444b91f8ce88f9c345f45c2b74c3b4011def8bc01ef5",
+      "file": "02-images/approved/81688073ce--p2.jpeg",
+      "sha256": "81688073cefc469abb84444b91f8ce88f9c345f45c2b74c3b4011def8bc01ef5",
+      "status": "approved",
+      "subject": null,
+      "source_url": null,
+      "notes": "User-supplied from ~/Downloads 2026-10-10",
+      "added_at": "2026-10-11T03:50:06.986732+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved as provenance original of ef8fe577d76d",
+        "reviewed_at": "2026-10-11T04:59:32.087375+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-11-small.webp",
+    "source": "production/episodes/2026-10-11--st-tarachus-and-his-companions/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "840e7037d7d71832d09a6d5118f9c635d906d8e1a769ff9f7d73469544ec0687",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "01c8edb8f909761e88af65cad8177bf5558abcb37ecae5f7ba6b9b540f3b2d62",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-11.webp",
+    "source": "production/episodes/2026-10-11--st-tarachus-and-his-companions/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "840e7037d7d71832d09a6d5118f9c635d906d8e1a769ff9f7d73469544ec0687",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "98c9b5c260540bbba2c8e314dcb7af5017a8da7ff5d94b86bf89a467abbe62cd",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
