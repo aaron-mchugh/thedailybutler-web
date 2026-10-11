@@ -2138,5 +2138,59 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "98c9b5c260540bbba2c8e314dcb7af5017a8da7ff5d94b86bf89a467abbe62cd",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-12.webp",
+    "source": "production/episodes/2026-10-12--st-wilfrid-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d73010c4cb8f6d74464f1c008cee45fb21b504050504e1ad8e18b032740c6ac7",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "f038d7e3c2ba3efb19bc11d86ede0c71156335c7e4af22c9e08b274d7a885e85",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-12-small.webp",
+    "source": "production/episodes/2026-10-12--st-wilfrid-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d73010c4cb8f6d74464f1c008cee45fb21b504050504e1ad8e18b032740c6ac7",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "80a1a746e47f204a28c2cd198bb7054ccdb21a01e393d5346ae9985afadc3b21",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-12.webp",
+    "source": "production/episodes/2026-10-12--st-wilfrid-bishop/02-images/approved/d8ff66355d--56827172.jpg",
+    "sha256": "d8ff66355d1532942b6508d610c2456676b7ec7d36ea44adc6f23b8e0e257a87",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "ff55ab8676a105f66959e2f44510a547042118bb58275eaa33f760d53de56499",
+    "provenance": {
+      "id": "d8ff66355d1532942b6508d610c2456676b7ec7d36ea44adc6f23b8e0e257a87",
+      "file": "02-images/approved/d8ff66355d--56827172.jpg",
+      "sha256": "d8ff66355d1532942b6508d610c2456676b7ec7d36ea44adc6f23b8e0e257a87",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Wilfrid_001.jpg",
+      "notes": "12-2: Wilfrid \u2014 Sebastien Le Clerc engraving. 904 x 904 source; restrained magnification. Review copy only; original 904x904. Rights per Commons: Public domain. Author: S\u00e9bastien Le Clerc. Original URL: https://upload.wikimedia.org/wikipedia/commons/6/6d/Wilfrid_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original. No visible stock watermark on reviewed copy.",
+      "added_at": "2026-10-10T05:52:03.982739+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved by Aaron from 13-candidate shortlist, 2026-10-11",
+        "reviewed_at": "2026-10-11T15:25:24.404887+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-12-small.webp",
+    "source": "production/episodes/2026-10-12--st-wilfrid-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "ce38613f1ab21019e722c68f562f2d7002befb52da4906c50897a1cfd916ee0a",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "52b7a0d7b49118ca8116b1baed4a109803e49463d04e3a17a0e905deb4f46429",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-12.webp",
+    "source": "production/episodes/2026-10-12--st-wilfrid-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "ce38613f1ab21019e722c68f562f2d7002befb52da4906c50897a1cfd916ee0a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7ce0e126483dfe5f714bf5d0c8a6d3bcfd54a4afb8f490d732bd67fdcb82611c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
