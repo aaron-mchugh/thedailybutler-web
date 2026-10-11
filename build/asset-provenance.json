@@ -1893,6 +1893,60 @@
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
+    "asset": "episode-2026-10-05.webp",
+    "source": "production/episodes/2026-10-05--st-placid-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "6ee517972792fc4ac0771a5ad43c7fa2907fcb94cb8911cdde50ac0b695c99d7",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "eff641caf7bb8e2c601c237c23bc9c24e375ee2adcca8ed2ed4aa26cbe9d8231",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-05-small.webp",
+    "source": "production/episodes/2026-10-05--st-placid-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "6ee517972792fc4ac0771a5ad43c7fa2907fcb94cb8911cdde50ac0b695c99d7",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "9d8ccc62f0f66816665e15b383c207975178599a4159ddb572d64ae4ec8ff7bf",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-05.webp",
+    "source": "production/episodes/2026-10-05--st-placid-martyr/02-images/approved/5f40f73117--5f40f73117019f183f62d5fd3520f92e8710023ce133d8ac716a901cd285dacb.jpg",
+    "sha256": "5f40f73117019f183f62d5fd3520f92e8710023ce133d8ac716a901cd285dacb",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "ddc0c9a31fef11ace0b64b25782f40efbcc499fa44244705d6de0ec2cc0e5bd6",
+    "provenance": {
+      "id": "5f40f73117019f183f62d5fd3520f92e8710023ce133d8ac716a901cd285dacb",
+      "file": "02-images/approved/5f40f73117--5f40f73117019f183f62d5fd3520f92e8710023ce133d8ac716a901cd285dacb.jpg",
+      "sha256": "5f40f73117019f183f62d5fd3520f92e8710023ce133d8ac716a901cd285dacb",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://sanctoral.com/en/saints/saint_placid.html",
+      "notes": "discovered candidate: Saint Placid, Martyr",
+      "added_at": "2026-09-27T11:57:27.585347+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved full-episode Saint Placid image palette in Codex on 2026-09-27; thumbnail remains separate.",
+        "reviewed_at": "2026-09-27T12:53:32.986107+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-05-small.webp",
+    "source": "production/episodes/2026-10-05--st-placid-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "5979f65acc97ace9af7c69cf30d7e912a2f5835193328be4d6447868765dbf99",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "72355cc684b5f5cb3a125d4d098aabc0142b43ad1ead33bd87f0e3ab62ac0210",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-05.webp",
+    "source": "production/episodes/2026-10-05--st-placid-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "5979f65acc97ace9af7c69cf30d7e912a2f5835193328be4d6447868765dbf99",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "54c8c194aa213a7453d30a38bd9d3bae03daf4d7b2e93a2ca0991fa1a50f4ade",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-10-07.webp",
     "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "d510faad6680e1f4f3849b62bed6cfd9fcf17ada1cc85f3d337852085e9049a8",
