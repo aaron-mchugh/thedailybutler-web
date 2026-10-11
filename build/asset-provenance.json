@@ -1839,6 +1839,60 @@
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
+    "asset": "episode-2026-10-04.webp",
+    "source": "production/episodes/2026-10-04--st-francis-of-assisi/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "78029ccc5f84b0f657f87ddb7583ee193a3c24a232c717bcb3699d4bf41dacba",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "846750364b7ed4020bf371c9457ff6e1519ca32e604dfd236957df65e073a928",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-04-small.webp",
+    "source": "production/episodes/2026-10-04--st-francis-of-assisi/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "78029ccc5f84b0f657f87ddb7583ee193a3c24a232c717bcb3699d4bf41dacba",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "4998f667aab49bbdfe5dae6fadc6c01d79d3a3c00aea1957babeb65168f3d486",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-04.webp",
+    "source": "production/episodes/2026-10-04--st-francis-of-assisi/02-images/approved/b8b1da849d--b8b1da849d8ea7c2d4ed71619550ed1a50087c2897452e861c245b777899574d.jpg",
+    "sha256": "b8b1da849d8ea7c2d4ed71619550ed1a50087c2897452e861c245b777899574d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "4bc0403ea17fc6a6fb9c07fd7c02b648260a756afadcfa10c1b941e3ee7af24f",
+    "provenance": {
+      "id": "b8b1da849d8ea7c2d4ed71619550ed1a50087c2897452e861c245b777899574d",
+      "file": "02-images/approved/b8b1da849d--b8b1da849d8ea7c2d4ed71619550ed1a50087c2897452e861c245b777899574d.jpg",
+      "sha256": "b8b1da849d8ea7c2d4ed71619550ed1a50087c2897452e861c245b777899574d",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://www.catholicworldreport.com/2025/10/04/st-francis-of-assisi-7-interesting-facts-about-the-famous-italian-saint/",
+      "notes": "discovered candidate: st.-francis-jacob-stein.jpg",
+      "added_at": "2026-09-27T11:56:48.650504+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "Approved full-episode Saint Francis of Assisi image palette in Codex on 2026-09-27; thumbnail remains separate.",
+        "reviewed_at": "2026-09-27T12:47:19.485029+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-04-small.webp",
+    "source": "production/episodes/2026-10-04--st-francis-of-assisi/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3f79fc816d50c3452febbad0a4aad0761f9f1c5ae85d78515fa83932a7f63062",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "2b83bd0cea62e125cb9a5c53d0a20cba7a8093a33dc4955c063ccfb7a907c3bd",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-04.webp",
+    "source": "production/episodes/2026-10-04--st-francis-of-assisi/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "3f79fc816d50c3452febbad0a4aad0761f9f1c5ae85d78515fa83932a7f63062",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "be658866b8faa1fffe302a54fcece8471481abdd03d9066b9d05a65b0ceb28cc",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
     "asset": "episode-2026-10-07.webp",
     "source": "production/episodes/2026-10-07--st-mark-pope/05-thumbnail/final/thumbnail_yt.png",
     "sha256": "d510faad6680e1f4f3849b62bed6cfd9fcf17ada1cc85f3d337852085e9049a8",
