@@ -2304,17 +2304,17 @@
   {
     "asset": "episode-2026-10-12.webp",
     "source": "production/episodes/2026-10-12--st-wilfrid-bishop/05-thumbnail/final/thumbnail_yt.png",
-    "sha256": "d73010c4cb8f6d74464f1c008cee45fb21b504050504e1ad8e18b032740c6ac7",
+    "sha256": "91d12d9f3a60d9440b4e32e566777413b23a05433a479ae5238240670e336f5b",
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
-    "output_sha256": "f038d7e3c2ba3efb19bc11d86ede0c71156335c7e4af22c9e08b274d7a885e85",
+    "output_sha256": "fbfe1e7084fb19c1f835caa738cca01c5afba7786411efe1540d9d02bf14b7f9",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
     "asset": "episode-2026-10-12-small.webp",
     "source": "production/episodes/2026-10-12--st-wilfrid-bishop/05-thumbnail/final/thumbnail_yt.png",
-    "sha256": "d73010c4cb8f6d74464f1c008cee45fb21b504050504e1ad8e18b032740c6ac7",
+    "sha256": "91d12d9f3a60d9440b4e32e566777413b23a05433a479ae5238240670e336f5b",
     "encoder": "pillow-11.3.0:webp:480:quality86:method6",
-    "output_sha256": "80a1a746e47f204a28c2cd198bb7054ccdb21a01e393d5346ae9985afadc3b21",
+    "output_sha256": "5016bb5764a51d6f29abc70a0047420f6d52b6857863c4b18acb5f239665f90c",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   },
   {
