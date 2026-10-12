@@ -2354,5 +2354,63 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "7ce0e126483dfe5f714bf5d0c8a6d3bcfd54a4afb8f490d732bd67fdcb82611c",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-13.webp",
+    "source": "production/episodes/2026-10-13--st-edward-the-confessor/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "726e471c6dfab0b6f8f4e84b3472a5d579b58e685e3bed71db7feaee5d57fd0a",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "957669c1ef54cd79a3937c732ba694837c070843d457902c150c5bc0b5b027ab",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-13-small.webp",
+    "source": "production/episodes/2026-10-13--st-edward-the-confessor/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "726e471c6dfab0b6f8f4e84b3472a5d579b58e685e3bed71db7feaee5d57fd0a",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "81da5b41b5933532f410fc1d83209338a24f95f8d2e99236d6dae6b83d280412",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-13.webp",
+    "source": "production/episodes/2026-10-13--st-edward-the-confessor/02-images/approved/4db698de95--25351521.jpg",
+    "sha256": "4db698de95639b29027027f7403db85bb5201250b904ec2ae247ef2f57cd481d",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "b5482538b76a681368b9156f8f6a42a0f6b14648d47c5bd752d241222a4364a3",
+    "provenance": {
+      "id": "4db698de95639b29027027f7403db85bb5201250b904ec2ae247ef2f57cd481d",
+      "file": "02-images/approved/4db698de95--25351521.jpg",
+      "sha256": "4db698de95639b29027027f7403db85bb5201250b904ec2ae247ef2f57cd481d",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene1_EDWARD_REX.jpg",
+      "notes": "13-1: Edward enthroned \u2014 Bayeux Tapestry.  Review copy only; original 2075x2274. Rights per Commons: Public domain. Author: Myrabella. Original URL: https://upload.wikimedia.org/wikipedia/commons/3/35/Bayeux_Tapestry_scene1_EDWARD_REX.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original. No visible stock watermark on reviewed copy.",
+      "added_at": "2026-10-10T05:52:04.004934+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T08:13:45.604545+00:00",
+        "label": "1",
+        "sheet": "21572037f1",
+        "evidence": "chat 2026-10-12 16:13 AWST: '13 Oct: approve 1,2,5,6,8,11,13,15'"
+      },
+      "superseded_by": "82f3fe31df632bdc2b32b2faaf3d2974becd4ff07aa4c0a300c94a1b7a431629"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-13-small.webp",
+    "source": "production/episodes/2026-10-13--st-edward-the-confessor/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "1bab718e9bbb2d5dc71cd821dc6eeabb8e5f177fd04a8b2f905c3f1f2408cf7b",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "cf13a68e08b383daf1aac9c85af6c13bbe39fd595b9e801eede09d9f14305bd3",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-13.webp",
+    "source": "production/episodes/2026-10-13--st-edward-the-confessor/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "1bab718e9bbb2d5dc71cd821dc6eeabb8e5f177fd04a8b2f905c3f1f2408cf7b",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e9e2063473afca97bccec429aa9af881743f90d2c500011100f6e43c48ec1ce5",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
