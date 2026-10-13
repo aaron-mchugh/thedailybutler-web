@@ -2412,5 +2412,63 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "e9e2063473afca97bccec429aa9af881743f90d2c500011100f6e43c48ec1ce5",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-14.webp",
+    "source": "production/episodes/2026-10-14--st-callistus-pope-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d5876fafa29ad310b023903dd1fcec50da3090151fd5f74180e30a5a82df727e",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "060aea4ef8c5781953c0e256c383952ee472f479bc41054da1d6004621e115d8",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-14-small.webp",
+    "source": "production/episodes/2026-10-14--st-callistus-pope-martyr/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "d5876fafa29ad310b023903dd1fcec50da3090151fd5f74180e30a5a82df727e",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "ae70dda2f0a62185016131f1857081db56ce63b26c8659fdd5c7322b2d58843a",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-14.webp",
+    "source": "production/episodes/2026-10-14--st-callistus-pope-martyr/02-images/approved/59c6e589dc--83912721.jpg",
+    "sha256": "59c6e589dc05e631545e300b3e89d2e74ef9044c4ec18ca9b37dc74d20af41e1",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "31e50aa7922d0466a57d930314b3f8eee871add0c90da9ac5fda9bfcb96616e1",
+    "provenance": {
+      "id": "59c6e589dc05e631545e300b3e89d2e74ef9044c4ec18ca9b37dc74d20af41e1",
+      "file": "02-images/approved/59c6e589dc--83912721.jpg",
+      "sha256": "59c6e589dc05e631545e300b3e89d2e74ef9044c4ec18ca9b37dc74d20af41e1",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Callistus_I._Callisto_I,_santo_e_papa.jpg",
+      "notes": "14-1: Callistus I \u2014 historical colour print. First candidate for this limited shortlist. Book-page border retained. Review copy only; original 3452x4680. Rights per Commons: CC0. Author: Oleografia Panigati e Meneghini Milano. Original URL: https://upload.wikimedia.org/wikipedia/commons/3/36/Callistus_I._Callisto_I%2C_santo_e_papa.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original. No visible stock watermark on reviewed copy.",
+      "added_at": "2026-10-10T05:52:04.040537+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T09:38:49.097364+00:00",
+        "label": "1",
+        "sheet": "38f9b75781",
+        "evidence": "chat 2026-10-12 17:38 AWST: 'okay let's just go with all of your recommendations for the images'"
+      },
+      "superseded_by": "12dcb4c1b47a7af7fd60ea68535cde01858ed7cfbabd8c0708848730f27a76fc"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-14-small.webp",
+    "source": "production/episodes/2026-10-14--st-callistus-pope-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "14fcccecd57b80461bac09206b940fda342413bd036426a26944084880b52a25",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "83fe7df7a8a76effedc565c5205a9130e721d6a5ba2d9866f13512607193c375",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-14.webp",
+    "source": "production/episodes/2026-10-14--st-callistus-pope-martyr/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "14fcccecd57b80461bac09206b940fda342413bd036426a26944084880b52a25",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "680b2c830229db38125cdf9372a0cb4ed497dd0f4e164ea67ff63fd48eb9ad82",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
