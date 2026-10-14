@@ -2470,5 +2470,63 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "680b2c830229db38125cdf9372a0cb4ed497dd0f4e164ea67ff63fd48eb9ad82",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-15.webp",
+    "source": "production/episodes/2026-10-15--st-teresa/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "8603caad7e7e6a5621fe2276665cc0c63546ae403806b0d7223ecf0c56d3a156",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "370f276aee3c4799899790f26ff933528f4f20910f5b9e638283d6affe00ce06",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-15-small.webp",
+    "source": "production/episodes/2026-10-15--st-teresa/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "8603caad7e7e6a5621fe2276665cc0c63546ae403806b0d7223ecf0c56d3a156",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "d80a7d4969ffc1238d3785908e223a0ab089ed7e9de11c14e9640142cfc259e1",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-15.webp",
+    "source": "production/episodes/2026-10-15--st-teresa/02-images/approved/74eabe24f3--5251731.jpg",
+    "sha256": "74eabe24f3a7ae9f97bbc66f577184b3e1824a2f673a29a8c82bda4d459756dd",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "4a9bb7419322d47b71cc6e688ac6ea10a815f410bf4514de3f6760a086518c63",
+    "provenance": {
+      "id": "74eabe24f3a7ae9f97bbc66f577184b3e1824a2f673a29a8c82bda4d459756dd",
+      "file": "02-images/approved/74eabe24f3--5251731.jpg",
+      "sha256": "74eabe24f3a7ae9f97bbc66f577184b3e1824a2f673a29a8c82bda4d459756dd",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Teresa_of_%C3%81vila.jpg",
+      "notes": "15-1: Teresa in prayer \u2014 Francois Gerard. Source is an existing portrait detail. Review copy only; original 1000x1223. Rights per Commons: Public domain. Author: Fran\u00e7ois G\u00e9rard. Original URL: https://upload.wikimedia.org/wikipedia/commons/9/9c/Teresa_of_%C3%81vila.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original. No visible stock watermark on reviewed copy.",
+      "added_at": "2026-10-10T05:52:04.053603+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T09:38:49.557018+00:00",
+        "label": "1",
+        "sheet": "347c70d4a3",
+        "evidence": "chat 2026-10-12 17:38 AWST: 'okay let's just go with all of your recommendations for the images'"
+      },
+      "superseded_by": "7d9ec96c2ce0d91240c627175eefdc61d55118b9b4247dd97d28f685b5994be0"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-15-small.webp",
+    "source": "production/episodes/2026-10-15--st-teresa/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "ac28727bb309d8b3e65971c1618999dff17716d33aa55ee7b96216b494e28b2f",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "dc00361c847711f097e39b5b9aa1a412e031071bdb0cff4bcc2656f8452b8f87",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-15.webp",
+    "source": "production/episodes/2026-10-15--st-teresa/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "ac28727bb309d8b3e65971c1618999dff17716d33aa55ee7b96216b494e28b2f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "98f7e1b2cecd3e6270814df97b0c1d9048e60d65424920ca99eddab4a8bf2b7f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
