@@ -2667,5 +2667,71 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "33f0447399566182568a0c2eb26f202c08322757087e6b272e5c34a8bc0918f2",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-17.webp",
+    "source": "production/episodes/2026-10-17--st-hedwige-saint-margaret-mary-alacoque/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0de147f3d929a4f6c20028b2b70650bd56a5bda3cd7fd6461649f8a306bab2ab",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "7353e7f36c1c94733c88c7d2dd5f0bb2f0e3c60e31fe4a923b26eb9a323dc01c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-17-small.webp",
+    "source": "production/episodes/2026-10-17--st-hedwige-saint-margaret-mary-alacoque/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0de147f3d929a4f6c20028b2b70650bd56a5bda3cd7fd6461649f8a306bab2ab",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "a1dfe3984b17d910f1392724a095dd5e7a6acc183b81fbe7bf3972c9ab25fc4d",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-17.webp",
+    "source": "production/episodes/2026-10-17--st-hedwige-saint-margaret-mary-alacoque/02-images/hedwig-of-silesia/approved/3fa5478b0a--98884883.jpg",
+    "sha256": "3fa5478b0ab0281933faeeedb2caacf193a0f831459eafe4aca7173f9fabf0f9",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "3734f155675b8e37b47623906e5119fefc5720439b55db74227b82e32fcf03c6",
+    "provenance": {
+      "id": "3fa5478b0ab0281933faeeedb2caacf193a0f831459eafe4aca7173f9fabf0f9",
+      "file": "02-images/hedwig-of-silesia/approved/3fa5478b0a--98884883.jpg",
+      "sha256": "3fa5478b0ab0281933faeeedb2caacf193a0f831459eafe4aca7173f9fabf0f9",
+      "status": "approved",
+      "subject": {
+        "id": "hedwig-of-silesia",
+        "name": "Saint Hedwig of Silesia",
+        "aliases": [
+          "Hedwige",
+          "Hedwig von Schlesien",
+          "Jadwiga \u015al\u0105ska"
+        ]
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:Unknown_-_St_Hedwig_of_Silesia._The_wing_from_the_altar_retable_from_Trzebunia_-_MNK_I-518_-_National_Museum_Krak%C3%B3w.jpg",
+      "notes": "17-1: Hedwig holding a church \u2014 altar panel. Very narrow portrait; no aggressive magnification. Review copy only; original 1027x4000. Rights per Commons: Public domain. Author: anonymous. Original URL: https://upload.wikimedia.org/wikipedia/commons/c/c5/Unknown_-_St_Hedwig_of_Silesia._The_wing_from_the_altar_retable_from_Trzebunia_-_MNK_I-518_-_National_Museum_Krak%C3%B3w.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original. No visible stock watermark on reviewed copy.",
+      "added_at": "2026-10-10T05:52:04.131256+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T09:38:51.570400+00:00",
+        "label": "1",
+        "sheet": "0a48cfe3ae",
+        "evidence": "chat 2026-10-12 17:38 AWST: 'okay let's just go with all of your recommendations for the images'"
+      },
+      "superseded_by": "f7debd237d97df9a9dc9fd99d5cfd9f493eeee6b9dad227c45c1bc5eb289e340"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-17-small.webp",
+    "source": "production/episodes/2026-10-17--st-hedwige-saint-margaret-mary-alacoque/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "9e96798e71d0322fb9ff2d27c264e1804625b694a2bfd0db0ef4d167127bd136",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "7cc3474ca22343acdea8935ad272d10c840f9c1dbbc31e3791fac0de167e9192",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-17.webp",
+    "source": "production/episodes/2026-10-17--st-hedwige-saint-margaret-mary-alacoque/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "9e96798e71d0322fb9ff2d27c264e1804625b694a2bfd0db0ef4d167127bd136",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "e0f6d242f891fa9bacb847599b418d697f2b4c1e1efdef588e684337b6061af6",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
