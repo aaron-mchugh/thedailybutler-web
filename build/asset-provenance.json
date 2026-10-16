@@ -2,9 +2,9 @@
   {
     "asset": "channel-banner.webp",
     "source": "production/assets/brand/banner.png",
-    "sha256": "89bca69feeae6cea83babf9032f21ca7c7b3a4047354e74146cb9e588e1694f5",
+    "sha256": "1c5e951d6e9317103c314f7b200a694b0838f64e74c76a18b22ea235b31a7678",
     "encoder": "pillow-11.3.0:webp:1920:quality86:method6",
-    "output_sha256": "e7610905f210236ed956602e1ffb7d9cfe123ed6467bf44fd8b4618e70d17f6b",
+    "output_sha256": "f7e1c37e86742ab7fc7e9347144bb5e492abe817024b320f959124c2a2c9c5e2",
     "provenance": "Aaron-selected Butler Library banner, qa-v4, 17 September 2026."
   },
   {
