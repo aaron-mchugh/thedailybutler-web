@@ -1035,6 +1035,31 @@
         "reviewer": "Aaron",
         "notes": "Approved by Aaron (trial episode)",
         "reviewed_at": "2026-09-18T07:19:38.574848+00:00"
+      },
+      "focal": {
+        "boxes": [
+          {
+            "x": 0.2,
+            "y": 0.08,
+            "w": 0.34,
+            "h": 0.33
+          },
+          {
+            "x": 0.1,
+            "y": 0.86,
+            "w": 0.26,
+            "h": 0.14
+          },
+          {
+            "x": 0.7,
+            "y": 0.86,
+            "w": 0.28,
+            "h": 0.14
+          }
+        ],
+        "note": "Januarius's face and mitre; the glass vials of blood; his severed head",
+        "set_by": "agent (standing authority 2026-10-12)",
+        "set_at": "2026-10-16T04:02:58.051909+00:00"
       }
     }
   },
@@ -1525,6 +1550,37 @@
         "reviewer": "Aaron",
         "notes": "Approved by Aaron; retained after duplicate and resolution review",
         "reviewed_at": "2026-09-27T11:53:13.866351+00:00"
+      },
+      "focal": {
+        "boxes": [
+          {
+            "x": 0.55,
+            "y": 0.48,
+            "w": 0.26,
+            "h": 0.2
+          },
+          {
+            "x": 0.36,
+            "y": 0.36,
+            "w": 0.22,
+            "h": 0.3
+          },
+          {
+            "x": 0.8,
+            "y": 0.38,
+            "w": 0.2,
+            "h": 0.22
+          },
+          {
+            "x": 0.12,
+            "y": 0.05,
+            "w": 0.22,
+            "h": 0.45
+          }
+        ],
+        "note": "Wenceslas's face as he is struck down; the helmeted attacker; the assailant at right; the chapel door",
+        "set_by": "agent (standing authority 2026-10-12)",
+        "set_at": "2026-10-16T04:12:37.241512+00:00"
       }
     }
   },
@@ -1587,7 +1643,32 @@
       "height": 2441,
       "recommendation_label": "A",
       "script_use": "Opening: Who is like to God? / victory over Lucifer; return for Reflection.",
-      "visual_review": "Full source image inspected: identity consistent with source; no visible watermark in inspected image; historic artwork texture retained; no AI upscaling. Preserve entire portrait scene in landscape layout."
+      "visual_review": "Full source image inspected: identity consistent with source; no visible watermark in inspected image; historic artwork texture retained; no AI upscaling. Preserve entire portrait scene in landscape layout.",
+      "focal": {
+        "boxes": [
+          {
+            "x": 0.3,
+            "y": 0.08,
+            "w": 0.34,
+            "h": 0.22
+          },
+          {
+            "x": 0.55,
+            "y": 0.75,
+            "w": 0.42,
+            "h": 0.22
+          },
+          {
+            "x": 0.04,
+            "y": 0.03,
+            "w": 0.22,
+            "h": 0.3
+          }
+        ],
+        "note": "Michael's face and breastplate; Satan underfoot; the sword",
+        "set_by": "agent (standing authority 2026-10-12)",
+        "set_at": "2026-10-16T04:05:40.192628+00:00"
+      }
     }
   },
   {
@@ -2527,6 +2608,64 @@
     "sha256": "ac28727bb309d8b3e65971c1618999dff17716d33aa55ee7b96216b494e28b2f",
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "98f7e1b2cecd3e6270814df97b0c1d9048e60d65424920ca99eddab4a8bf2b7f",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-16.webp",
+    "source": "production/episodes/2026-10-16--st-gall-abbot/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "a1a4bcb598113ad9009fabdd7cd3edf3d2d1837c8e0fa5f8dbe7dae765e6ddc1",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "fe22d9f2885f36f4a857fd57e1a22216031d3596bee0bb5157d6f8fa9e27379b",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-16-small.webp",
+    "source": "production/episodes/2026-10-16--st-gall-abbot/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "a1a4bcb598113ad9009fabdd7cd3edf3d2d1837c8e0fa5f8dbe7dae765e6ddc1",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "46719fbb8d49426cafa7a1801eaedc778ab42d64125d20d4e20bf6bfb4e3ec39",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-16.webp",
+    "source": "production/episodes/2026-10-16--st-gall-abbot/02-images/approved/0aa4bc89e7--132142214.jpg",
+    "sha256": "0aa4bc89e78316eca9ba276a2e914debae2721269e269be3c3f866ed4f3c3eb5",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "5a94882a612e77c831eb6d4ed69110819661ccc38aaf9471e7ad6efa8730714a",
+    "provenance": {
+      "id": "0aa4bc89e78316eca9ba276a2e914debae2721269e269be3c3f866ed4f3c3eb5",
+      "file": "02-images/approved/0aa4bc89e7--132142214.jpg",
+      "sha256": "0aa4bc89e78316eca9ba276a2e914debae2721269e269be3c3f866ed4f3c3eb5",
+      "status": "approved",
+      "subject": null,
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gallus_Skulptur_Stiftsbibliothek_01.png",
+      "notes": "16-2: Saint Gall \u2014 historic sculpture.  Review copy only; original 2800x4128. Rights per Commons: Public domain. Author: Niklaus Weckmann. Original URL: https://upload.wikimedia.org/wikipedia/commons/b/ba/Gallus_Skulptur_Stiftsbibliothek_01.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original. No visible stock watermark on reviewed copy.",
+      "added_at": "2026-10-10T05:52:04.100325+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T09:38:50.420625+00:00",
+        "label": "2",
+        "sheet": "73a168ae16",
+        "evidence": "chat 2026-10-12 17:38 AWST: 'okay let's just go with all of your recommendations for the images'"
+      },
+      "superseded_by": "52e0e8101ec6048c622d05ef145f8176346482ac3a28b28bc15bd47eb8d24386"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-16-small.webp",
+    "source": "production/episodes/2026-10-16--st-gall-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "f2cbbc3a91b103d384f655eee9b96f80aae9d4f63542480fc26a45e178f4b4f5",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "8a947e9fdf55fc3ee438a2d82f965413e39ba4c5f1140f6723f5d8cb4f1bcd20",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-16.webp",
+    "source": "production/episodes/2026-10-16--st-gall-abbot/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "f2cbbc3a91b103d384f655eee9b96f80aae9d4f63542480fc26a45e178f4b4f5",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "33f0447399566182568a0c2eb26f202c08322757087e6b272e5c34a8bc0918f2",
     "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
