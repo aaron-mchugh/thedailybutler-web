@@ -2733,5 +2733,87 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "e0f6d242f891fa9bacb847599b418d697f2b4c1e1efdef588e684337b6061af6",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-18.webp",
+    "source": "production/episodes/2026-10-18--st-luke/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "a7c4766bb407709ca4e7bbefc1fade00d535c5ee03c9e842352c27b12328fa07",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "69745c11a0aa1252201fc9e5dd56ff3a7907f2fb3b706b5f2a387ca8b26a31d8",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-18-small.webp",
+    "source": "production/episodes/2026-10-18--st-luke/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "a7c4766bb407709ca4e7bbefc1fade00d535c5ee03c9e842352c27b12328fa07",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "bf70b54cda0c632079a60e3b961243b164c0c04a2bea179050399b9eb4fb2b7b",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-18.webp",
+    "source": "production/episodes/2026-10-18--st-luke/02-images/approved/ba66a04a32--saint-luke-the-evangelist.webp",
+    "sha256": "ba66a04a327f1ccc2ebe025720276041bdb1118436224eebce6292d98a746623",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "334b111c1640616450bbf8bfde5a616eef50e99d516a01e1049c1696d4e3a272",
+    "provenance": {
+      "id": "ba66a04a327f1ccc2ebe025720276041bdb1118436224eebce6292d98a746623",
+      "file": "02-images/approved/ba66a04a32--saint-luke-the-evangelist.webp",
+      "sha256": "ba66a04a327f1ccc2ebe025720276041bdb1118436224eebce6292d98a746623",
+      "status": "approved",
+      "subject": {
+        "id": "luke-the-evangelist",
+        "name": "Saint Luke the Evangelist",
+        "aliases": [
+          "Saint Luke Evangelist",
+          "San Luca Evangelista",
+          "Sanctus Lucas Evangelista",
+          "Saint Luc l'\u00c9vang\u00e9liste",
+          "Lukas der Evangelist",
+          "Saint Luke painting the Virgin"
+        ]
+      },
+      "source_url": "https://www.dioceseofboise.org/post/saint-luke-the-evangelist",
+      "notes": "discovered candidate: Saint Luke the Evangelist",
+      "width": 568,
+      "height": 710,
+      "added_at": "2026-10-12T08:18:00.848528+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T09:38:52.159576+00:00",
+        "label": "1",
+        "sheet": "0e3153ef8e",
+        "evidence": "chat 2026-10-12 17:38 AWST: 'okay let's just go with all of your recommendations for the images'"
+      },
+      "provenance": {
+        "title": "Saint Luke the Evangelist",
+        "license_unverified": true,
+        "source_url": "https://www.dioceseofboise.org/post/saint-luke-the-evangelist",
+        "file_page_url": "https://www.dioceseofboise.org/post/saint-luke-the-evangelist",
+        "original_url": "https://static.wixstatic.com/media/f1312c_4f5844c003d54610815f3c0b38151345~mv2.jpg/v1/fill/w_568,h_710,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f1312c_4f5844c003d54610815f3c0b38151345~mv2.jpg",
+        "download_url_final": "https://static.wixstatic.com/media/f1312c_4f5844c003d54610815f3c0b38151345~mv2.jpg/v1/fill/w_568,h_710,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f1312c_4f5844c003d54610815f3c0b38151345~mv2.jpg",
+        "provider": "searxng",
+        "engine": "google cse images",
+        "matched_term": "Saint Luke the Evangelist"
+      },
+      "superseded_by": "81537a97bcd81dcb8682d803b3642df7211647c25dd42f4fe703e859eb475615"
+    }
+  },
+  {
+    "asset": "podcast-2026-10-18-small.webp",
+    "source": "production/episodes/2026-10-18--st-luke/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d236b0daf0af94364b3c24c69e56b40cb7bb01547017abf65de57e48ff9c5e28",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "1e5171e7fcc507cea78418e339ac39628f536ba2aed53475f9b90d96c589b1ea",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-18.webp",
+    "source": "production/episodes/2026-10-18--st-luke/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d236b0daf0af94364b3c24c69e56b40cb7bb01547017abf65de57e48ff9c5e28",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6b85204238c1d26e00d23fd1f9b11687577242997ad72e0cc1ef5d0e88832519",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
