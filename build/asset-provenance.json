@@ -2815,5 +2815,115 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "6b85204238c1d26e00d23fd1f9b11687577242997ad72e0cc1ef5d0e88832519",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-19.webp",
+    "source": "production/episodes/2026-10-19--st-peter-of-alcantara/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "fcb19ccd25b5471a12a0aadb612ba99fabed1b24bef7ca1d091c5ac6db24ae67",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "0cad370cfd36d448682c998892d7f30bc72a9d93897ecd884b6a5d2d6dd7284e",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-10-19-small.webp",
+    "source": "production/episodes/2026-10-19--st-peter-of-alcantara/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "fcb19ccd25b5471a12a0aadb612ba99fabed1b24bef7ca1d091c5ac6db24ae67",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "f190dd0798ddd0575c783463dc0fc84009d5ce0374f782841a81467fe76855a2",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-10-19.webp",
+    "source": "production/episodes/2026-10-19--st-peter-of-alcantara/02-images/approved/f5ba2d8f36--saint-peter-of-alcantara-ducal-house-of-medinaceli-foundatio.jpg",
+    "sha256": "f5ba2d8f36ac3410131d4c4c1372e7f4f1548484ed20c9e3235598b544ab8044",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c9e40c77cb22998b856fb4cd38f182b0f1ff74b1696a435e7b3f0652c9f6e123",
+    "provenance": {
+      "id": "f5ba2d8f36ac3410131d4c4c1372e7f4f1548484ed20c9e3235598b544ab8044",
+      "file": "02-images/approved/f5ba2d8f36--saint-peter-of-alcantara-ducal-house-of-medinaceli-foundatio.jpg",
+      "sha256": "f5ba2d8f36ac3410131d4c4c1372e7f4f1548484ed20c9e3235598b544ab8044",
+      "status": "approved",
+      "subject": {
+        "id": "peter-of-alcantara",
+        "name": "Saint Peter of Alcantara",
+        "aliases": [
+          "Saint Peter of Alc\u00e1ntara",
+          "San Pedro de Alc\u00e1ntara franciscano",
+          "Sanctus Petrus de Alcantara",
+          "San Pietro d'Alcantara"
+        ]
+      },
+      "source_url": "https://fundacionmedinaceli.org/en/fa_collection/saint-peter-of-alcantara/",
+      "notes": "discovered candidate: Saint Peter of Alc\u00e1ntara - Ducal House of Medinaceli Foundation",
+      "width": 1920,
+      "height": 2333,
+      "added_at": "2026-10-12T08:19:24.405555+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-12T09:38:52.545441+00:00",
+        "label": "1",
+        "sheet": "ea3e6727c8",
+        "evidence": "chat 2026-10-12 17:38 AWST: 'okay let's just go with all of your recommendations for the images'"
+      },
+      "provenance": {
+        "title": "Saint Peter of Alc\u00e1ntara - Ducal House of Medinaceli Foundation",
+        "license_unverified": true,
+        "source_url": "https://fundacionmedinaceli.org/en/fa_collection/saint-peter-of-alcantara/",
+        "file_page_url": "https://fundacionmedinaceli.org/en/fa_collection/saint-peter-of-alcantara/",
+        "original_url": "https://fundacionmedinaceli.org/wp-content/uploads/2024/06/1621_fullres.jpg",
+        "download_url_final": "https://fundacionmedinaceli.org/wp-content/uploads/2024/06/1621_fullres.jpg",
+        "provider": "searxng",
+        "engine": "google cse images",
+        "matched_term": "Saint Peter of Alcantara"
+      },
+      "focal": {
+        "boxes": [
+          {
+            "x": 0.14,
+            "y": 0.12,
+            "w": 0.38,
+            "h": 0.36
+          },
+          {
+            "x": 0.43,
+            "y": 0.08,
+            "w": 0.55,
+            "h": 0.17
+          },
+          {
+            "x": 0.78,
+            "y": 0.36,
+            "w": 0.17,
+            "h": 0.3
+          },
+          {
+            "x": 0.0,
+            "y": 0.77,
+            "w": 0.87,
+            "h": 0.23
+          }
+        ],
+        "note": "head and halo, upturned in prayer; then the dove of the Holy Spirit, the crucifix, and the book, quill and skull still life",
+        "set_by": "agent (standing authority 2026-10-12)",
+        "set_at": "2026-10-12T09:42:25.578565+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-10-19-small.webp",
+    "source": "production/episodes/2026-10-19--st-peter-of-alcantara/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "2fa1890884bfdb8b6b3f7e73611700d9ce726680310697a8ae5fc1b900415b33",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "ebb58f82a2db38a6654c72e90c79c89804a22ed99fe94d412ea0aa72e2de7877",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-10-19.webp",
+    "source": "production/episodes/2026-10-19--st-peter-of-alcantara/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "2fa1890884bfdb8b6b3f7e73611700d9ce726680310697a8ae5fc1b900415b33",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "f36c3f6b5c4b10a222a2631ac285fdf106303fb722ec0da7d366ca9733e3df27",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
