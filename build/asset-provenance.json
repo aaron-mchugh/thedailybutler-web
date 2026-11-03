@@ -3027,5 +3027,105 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "6b85204238c1d26e00d23fd1f9b11687577242997ad72e0cc1ef5d0e88832519",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-11-02.webp",
+    "source": "production/episodes/2026-11-02--all-souls-and-st-malachi-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0e603da3de90dfca21029a2e6d786af5fc4d4de1385728d8df554d63b276130f",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6b8e73f56f7b224ef68e5be11b2be9e1d9fa5bd7e30765be5174035313fbc1f9",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-11-02-small.webp",
+    "source": "production/episodes/2026-11-02--all-souls-and-st-malachi-bishop/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "0e603da3de90dfca21029a2e6d786af5fc4d4de1385728d8df554d63b276130f",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "c7b317582e22460a2a279030acab78de74e0ae9e1e2a34ff8bc12974c8da0113",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-11-02.webp",
+    "source": "production/episodes/2026-11-02--all-souls-and-st-malachi-bishop/02-images/all-souls/approved/6edb8dd289--juan-francisco-de-aguilera-the-virgin-of-carmen-and-the-soul.jpg",
+    "sha256": "6edb8dd28958eed4c173f50e8feb2e74e25285abc75e47e8f7a62e40c1e2c8cf",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "be57f3ca9e865aa7cb4677418a8d4bafd8d5488186d67186e6d808342b5bceca",
+    "provenance": {
+      "id": "6edb8dd28958eed4c173f50e8feb2e74e25285abc75e47e8f7a62e40c1e2c8cf",
+      "file": "02-images/all-souls/approved/6edb8dd289--juan-francisco-de-aguilera-the-virgin-of-carmen-and-the-soul.jpg",
+      "sha256": "6edb8dd28958eed4c173f50e8feb2e74e25285abc75e47e8f7a62e40c1e2c8cf",
+      "status": "approved",
+      "subject": {
+        "id": "all-souls",
+        "name": "All Souls Day, Commemoration of the Faithful Departed",
+        "aliases": [
+          "Souls in Purgatory painting",
+          "Commemoratio omnium fidelium defunctorum",
+          "Bouguereau Day of the Dead All Souls",
+          "Anime del Purgatorio dipinto",
+          "Jour des morts peinture",
+          "Madonna of Purgatory souls painting"
+        ]
+      },
+      "source_url": "https://www.metmuseum.org/art/collection/search/747199",
+      "notes": "discovered candidate: Juan Francisco de Aguilera - The Virgin of Carmen and the Souls of ...",
+      "width": 913,
+      "height": 1200,
+      "added_at": "2026-10-17T05:07:05.726137+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-19T01:42:53.259528+00:00",
+        "label": "7",
+        "sheet": "2120076430",
+        "evidence": "chat 2026-10-19: Gate 1 picks for 1-8 Nov"
+      },
+      "provenance": {
+        "title": "Juan Francisco de Aguilera - The Virgin of Carmen and the Souls of ...",
+        "license_unverified": true,
+        "source_url": "https://www.metmuseum.org/art/collection/search/747199",
+        "file_page_url": "https://www.metmuseum.org/art/collection/search/747199",
+        "original_url": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/747199/1789055/main-image",
+        "download_url_final": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/747199/1789055/main-image",
+        "provider": "searxng",
+        "engine": "google cse images",
+        "matched_term": "Souls in Purgatory painting"
+      },
+      "focal": {
+        "boxes": [
+          {
+            "x": 0.25,
+            "y": 0.08,
+            "w": 0.45,
+            "h": 0.32
+          },
+          {
+            "x": 0.0,
+            "y": 0.62,
+            "w": 1.0,
+            "h": 0.36
+          }
+        ],
+        "note": "the Virgin of Carmen with the Child",
+        "set_by": "agent (standing authority 2026-10-12)",
+        "set_at": "2026-10-19T02:18:58.596246+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-11-02-small.webp",
+    "source": "production/episodes/2026-11-02--all-souls-and-st-malachi-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "df5c9459dcfcd3fe93eef1acbb1dc69fdc7e50b3aa9ffa1d74cab30cefef3e62",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "008dd1590ad76b9a8a1f3cc2c892acf57a50aea2d54a34820e81576541be7ab7",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-11-02.webp",
+    "source": "production/episodes/2026-11-02--all-souls-and-st-malachi-bishop/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "df5c9459dcfcd3fe93eef1acbb1dc69fdc7e50b3aa9ffa1d74cab30cefef3e62",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d0739d191632e7a8b1e3db48f8a8d3aaf2dd2b216ba8635d5f39eedfd3ed978c",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
