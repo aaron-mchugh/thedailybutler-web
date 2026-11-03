@@ -2925,5 +2925,107 @@
     "encoder": "pillow-11.3.0:webp:960:quality86:method6",
     "output_sha256": "f36c3f6b5c4b10a222a2631ac285fdf106303fb722ec0da7d366ca9733e3df27",
     "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-11-01.webp",
+    "source": "production/episodes/2026-11-01--all-saints/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "b2cf6df3bab51d1b8a8297a7791c840860fcf9c1a567316307ae74de2b5b4371",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "d6c498631d366f925695c4362d92c0ebaa79967ad29a7ed6175c59836de70372",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "episode-2026-11-01-small.webp",
+    "source": "production/episodes/2026-11-01--all-saints/05-thumbnail/final/thumbnail_yt.png",
+    "sha256": "b2cf6df3bab51d1b8a8297a7791c840860fcf9c1a567316307ae74de2b5b4371",
+    "encoder": "pillow-11.3.0:webp:480:quality86:method6",
+    "output_sha256": "d4785832ebbb717123e2a770d90a6051e06904f9118237c02ed39ce22ed504ed",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "art-2026-11-01.webp",
+    "source": "production/episodes/2026-11-01--all-saints/02-images/approved/137d3df4de--albrecht-d-rer-adoration-of-the-trinity-landauer-altar-googl.jpg",
+    "sha256": "137d3df4dee890524678cbd02b9690130c5550d22ca6778621b24fc6fe6ab5b2",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "c2441be523ad265835a95c1994fbc2962bea562e40cd7b058be8d7d465c1d82f",
+    "provenance": {
+      "id": "137d3df4dee890524678cbd02b9690130c5550d22ca6778621b24fc6fe6ab5b2",
+      "file": "02-images/approved/137d3df4de--albrecht-d-rer-adoration-of-the-trinity-landauer-altar-googl.jpg",
+      "sha256": "137d3df4dee890524678cbd02b9690130c5550d22ca6778621b24fc6fe6ab5b2",
+      "status": "approved",
+      "subject": {
+        "id": "all-saints",
+        "name": "All Saints Day, Feast of All Saints",
+        "aliases": [
+          "Adoration of the Trinity All Saints painting",
+          "Fra Angelico Forerunners of Christ with Saints and Martyrs",
+          "Durer Landauer Altarpiece All Saints",
+          "Omnium Sanctorum painting",
+          "Toussaint tous les saints peinture",
+          "Ognissanti dipinto paradiso santi",
+          "Last Judgment Paradise choir of saints painting"
+        ]
+      },
+      "source_url": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_(Landauer_Altar)_-_Google_Art_Project.jpg",
+      "notes": "Commons original (Google Art Project, 4969x5434); supersedes the smaller web copies of the same painting",
+      "width": 4969,
+      "height": 5434,
+      "added_at": "2026-10-17T05:07:08.067523+00:00",
+      "review": {
+        "reviewer": "Aaron",
+        "notes": "",
+        "reviewed_at": "2026-10-19T01:42:52.678803+00:00",
+        "label": "10",
+        "sheet": "632e8f8b4d",
+        "evidence": "chat 2026-10-19: Gate 1 picks for 1-8 Nov"
+      },
+      "provenance": {
+        "title": "Adoration of the Trinity (Landauer Altarpiece)",
+        "artist": "Albrecht D\u00fcrer",
+        "license": "Public domain",
+        "original_url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Albrecht_D%C3%BCrer_-_Adoration_of_the_Trinity_%28Landauer_Altar%29_-_Google_Art_Project.jpg"
+      },
+      "focal": {
+        "boxes": [
+          {
+            "x": 0.3,
+            "y": 0.0,
+            "w": 0.4,
+            "h": 0.48
+          },
+          {
+            "x": 0.06,
+            "y": 0.24,
+            "w": 0.34,
+            "h": 0.32
+          },
+          {
+            "x": 0.15,
+            "y": 0.52,
+            "w": 0.65,
+            "h": 0.4
+          }
+        ],
+        "note": "the Trinity: God the Father holding the crucified Christ, the dove above",
+        "set_by": "agent (standing authority 2026-10-12)",
+        "set_at": "2026-10-19T01:49:37.951980+00:00"
+      }
+    }
+  },
+  {
+    "asset": "podcast-2026-11-01-small.webp",
+    "source": "production/episodes/2026-11-01--all-saints/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d236b0daf0af94364b3c24c69e56b40cb7bb01547017abf65de57e48ff9c5e28",
+    "encoder": "pillow-11.3.0:webp:320:quality86:method6",
+    "output_sha256": "1e5171e7fcc507cea78418e339ac39628f536ba2aed53475f9b90d96c589b1ea",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
+  },
+  {
+    "asset": "podcast-2026-11-01.webp",
+    "source": "production/episodes/2026-11-01--all-saints/05-thumbnail/podcast-final/episode-art.png",
+    "sha256": "d236b0daf0af94364b3c24c69e56b40cb7bb01547017abf65de57e48ff9c5e28",
+    "encoder": "pillow-11.3.0:webp:960:quality86:method6",
+    "output_sha256": "6b85204238c1d26e00d23fd1f9b11687577242997ad72e0cc1ef5d0e88832519",
+    "provenance": "Existing channel artwork; resized and encoded for the website."
   }
 ]
